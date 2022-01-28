@@ -1,5 +1,5 @@
 {
-	"node": "n8n-nodes.onshapeTrigger",
+	"node": "n8n-nodes-base.onshapeTrigger",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [

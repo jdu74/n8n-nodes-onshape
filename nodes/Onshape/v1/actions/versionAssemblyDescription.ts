@@ -21,7 +21,7 @@ export const versionDescription: INodeTypeDescription = {
 	credentials: 
 	[
 		{
-			name: 'APIKeys',
+			name: 'onshapeApiKeys',
 			required: true,
 			displayOptions: {
 				show: {
@@ -32,7 +32,7 @@ export const versionDescription: INodeTypeDescription = {
 			},
 		},
 		{
-			name: 'OAuth2',
+			name: 'onshapeOAuth2',
 			required: true,
 			displayOptions: {
 				show: {
@@ -50,11 +50,11 @@ export const versionDescription: INodeTypeDescription = {
 			type: 'options',
 			options: [
 				{
-					name: 'APIKeys',
+					name: 'onshapeApiKeys',
 					value: 'apiKeys',
 				},
 				{
-					name: 'OAuth2',
+					name: 'onshapeOAuth2',
 					value: 'oAuth2',
 				},
 			],

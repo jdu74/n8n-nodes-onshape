@@ -5,7 +5,7 @@ import {
 } from 'n8n-workflow';
 
 export class OnshapeAPIKeys implements ICredentialType {
-	name = 'APIKeys';
+	name = 'onshapeApiKeys';
 	displayName = 'OnShape API Keys';
 	documentationUrl = 'onshape';
 	properties: INodeProperties[] = [

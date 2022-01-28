@@ -5,7 +5,7 @@ import {
 } from 'n8n-workflow';
 
 export class OnshapeOAuth2 implements ICredentialType {
-	name = 'OAuth2';
+	name = 'onshapeOAuth2';
 	extends = [
 		'oAuth2Api',
 	];
