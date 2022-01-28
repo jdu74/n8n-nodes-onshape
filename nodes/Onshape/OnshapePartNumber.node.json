@@ -1,0 +1,12 @@
+{
+	"node": "n8n-nodes.onshapepartnumber",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Cad & Plm"
+	],
+	"resources": {
+		"credentialDocumentation": [{}],
+		"primaryDocumentation": [{}]
+	}
+}

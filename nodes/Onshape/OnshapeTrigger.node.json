@@ -1,0 +1,20 @@
+{
+	"node": "n8n-nodes.onshapeTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Cad & Plm"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://onshape-public.github.io/docs/oauth/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://cad.onshape.com/glassworks/explorer/"
+			}
+		]
+	}
+}
