@@ -51,34 +51,6 @@ export const updateWorkflowableTestObjectDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'WorkflowableTestObject',
-				],
-				operation: [
-					'POST /api/workflowabletestobject/{oid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -152,17 +124,17 @@ export const updateWorkflowableTestObjectDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'value',
-										displayName: 'value',
-										description: 'value - object',
-										type: 'json',
-										default: '',
-									},
-									{
 										name: 'propertyId',
 										displayName: 'propertyId',
 										description: 'propertyId - string',
 										type: 'string',
+										default: '',
+									},
+									{
+										name: 'value',
+										displayName: 'value',
+										description: 'value - object',
+										type: 'json',
 										default: '',
 									},
 								],
@@ -172,5 +144,33 @@ export const updateWorkflowableTestObjectDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'WorkflowableTestObject',
+				],
+				operation: [
+					'POST /api/workflowabletestobject/{oid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

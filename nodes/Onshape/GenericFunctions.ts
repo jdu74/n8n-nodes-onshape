@@ -1,24 +1,24 @@
 import {
-	OptionsWithUri
-} from 'request';
-
-import {
 	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
-	IDataObject,
 	IHookFunctions,
 	ILoadOptionsFunctions,
 	IWebhookFunctions,
+} from 'n8n-core';
+
+import {
+	OptionsWithUri,
+} from 'request';
+
+import {
+	IDataObject,
+	IPollFunctions,
 	NodeApiError,
-	NodeOperationError,
 } from 'n8n-workflow';
 
 import { buildHeaders } from './onshape';
 
 export async function apiRequest(
-	this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions,
+	this: IExecuteFunctions | IWebhookFunctions | IHookFunctions | ILoadOptionsFunctions | IPollFunctions,
 	method: string,
 	resource: string,
 	body: any = {},
@@ -28,14 +28,13 @@ export async function apiRequest(
 	option: IDataObject = {}): Promise<any> {
 
 	const endpoint = 'https://cad.onshape.com';
-
 	const options: OptionsWithUri = {
 		method,
 		qs: query,
 		body,
 		headers,
 		uri: uri || `${endpoint}${resource}`,
-		json: true,
+		json: (option.json === undefined || option.json),
 	};
 
 	if (!Object.keys(body).length)
@@ -57,5 +56,4 @@ export async function apiRequest(
 	} catch (error: any) {
 		throw new NodeApiError(this.getNode(), error);
 	}
-
 }

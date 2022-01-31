@@ -87,34 +87,6 @@ export const updateReferencesDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Element',
-				],
-				operation: [
-					'POST /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -228,6 +200,13 @@ export const updateReferencesDescription: INodeProperties[] = [
 												default: '',
 											},
 											{
+												name: 'revision',
+												displayName: 'revision',
+												description: 'revision - string',
+												type: 'string',
+												default: '',
+											},
+											{
 												name: 'versionId',
 												displayName: 'versionId',
 												description: 'versionId - string',
@@ -235,9 +214,9 @@ export const updateReferencesDescription: INodeProperties[] = [
 												default: '',
 											},
 											{
-												name: 'revision',
-												displayName: 'revision',
-												description: 'revision - string',
+												name: 'partNumber',
+												displayName: 'partNumber',
+												description: 'partNumber - string',
 												type: 'string',
 												default: '',
 											},
@@ -266,13 +245,6 @@ export const updateReferencesDescription: INodeProperties[] = [
 												name: 'partId',
 												displayName: 'partId',
 												description: 'partId - string',
-												type: 'string',
-												default: '',
-											},
-											{
-												name: 'partNumber',
-												displayName: 'partNumber',
-												description: 'partNumber - string',
 												type: 'string',
 												default: '',
 											},
@@ -301,6 +273,13 @@ export const updateReferencesDescription: INodeProperties[] = [
 												default: '',
 											},
 											{
+												name: 'revision',
+												displayName: 'revision',
+												description: 'revision - string',
+												type: 'string',
+												default: '',
+											},
+											{
 												name: 'versionId',
 												displayName: 'versionId',
 												description: 'versionId - string',
@@ -308,9 +287,9 @@ export const updateReferencesDescription: INodeProperties[] = [
 												default: '',
 											},
 											{
-												name: 'revision',
-												displayName: 'revision',
-												description: 'revision - string',
+												name: 'partNumber',
+												displayName: 'partNumber',
+												description: 'partNumber - string',
 												type: 'string',
 												default: '',
 											},
@@ -339,13 +318,6 @@ export const updateReferencesDescription: INodeProperties[] = [
 												name: 'partId',
 												displayName: 'partId',
 												description: 'partId - string',
-												type: 'string',
-												default: '',
-											},
-											{
-												name: 'partNumber',
-												displayName: 'partNumber',
-												description: 'partNumber - string',
 												type: 'string',
 												default: '',
 											},
@@ -379,5 +351,33 @@ export const updateReferencesDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Element',
+				],
+				operation: [
+					'POST /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

@@ -69,34 +69,6 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Document',
-				],
-				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/moveelement',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -147,13 +119,6 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 			},
 		},
 		options: [
-			{
-				name: 'generateUnknownMessages',
-				displayName: 'generateUnknownMessages',
-				description: 'generateUnknownMessages - boolean',
-				type: 'boolean',
-				default: false,
-			},
 			{
 				name: 'needNewVersion',
 				displayName: 'needNewVersion',
@@ -208,6 +173,13 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
+				name: 'generateUnknownMessages',
+				displayName: 'generateUnknownMessages',
+				description: 'generateUnknownMessages - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
 				displayName: 'importData',
 				name: 'importData',
 				description: 'importData - array',
@@ -257,13 +229,6 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 				name: 'ownerEmail',
 				displayName: 'ownerEmail',
 				description: 'ownerEmail - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
 				type: 'string',
 				default: '',
 			},
@@ -353,18 +318,18 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'isPublic',
-				displayName: 'isPublic',
-				description: 'isPublic - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
 				name: 'versionName',
 				displayName: 'versionName',
 				description: 'versionName - string',
 				type: 'string',
 				default: '',
+			},
+			{
+				name: 'isPublic',
+				displayName: 'isPublic',
+				description: 'isPublic - boolean',
+				type: 'boolean',
+				default: false,
 			},
 			{
 				name: 'targetDocumentId',
@@ -408,6 +373,41 @@ export const moveElementsToDocumentDescription: INodeProperties[] = [
 				type: 'boolean',
 				default: false,
 			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Document',
+				],
+				operation: [
+					'POST /api/documents/d/{did}/w/{wid}/moveelement',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

@@ -61,32 +61,6 @@ export const createTranslationDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Translation',
-				],
-				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'multipart/form-data',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -382,5 +356,31 @@ export const createTranslationDescription: INodeProperties[] = [
 				default: false,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Translation',
+				],
+				operation: [
+					'POST /api/translations/d/{did}/w/{wid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 ];

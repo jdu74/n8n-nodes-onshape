@@ -87,34 +87,6 @@ export const createInstanceDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Assembly',
-				],
-				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -226,13 +198,6 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'versionId',
-				displayName: 'versionId',
-				description: 'versionId - string',
-				type: 'string',
-				default: '',
-			},
-			{
 				name: 'revision',
 				displayName: 'revision',
 				description: 'revision - string',
@@ -240,9 +205,9 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'microversionId',
-				displayName: 'microversionId',
-				description: 'microversionId - string',
+				name: 'versionId',
+				displayName: 'versionId',
+				description: 'versionId - string',
 				type: 'string',
 				default: '',
 			},
@@ -254,6 +219,13 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
+				name: 'documentId',
+				displayName: 'documentId',
+				description: 'documentId - string',
+				type: 'string',
+				default: '',
+			},
+			{
 				name: 'elementId',
 				displayName: 'elementId',
 				description: 'elementId - string',
@@ -261,9 +233,9 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'documentId',
-				displayName: 'documentId',
-				description: 'documentId - string',
+				name: 'microversionId',
+				displayName: 'microversionId',
+				description: 'microversionId - string',
 				type: 'string',
 				default: '',
 			},
@@ -282,5 +254,33 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Assembly',
+				],
+				operation: [
+					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

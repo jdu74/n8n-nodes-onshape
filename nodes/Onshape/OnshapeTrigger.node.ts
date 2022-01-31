@@ -128,7 +128,7 @@ export class OnshapeTrigger implements INodeType {
 		],
 		credentials: [
 			{
-				name: 'APIKeys',
+				name: 'onshapeApiKeys',
 				required: true,
 				displayOptions: {
 					show: {
@@ -139,7 +139,7 @@ export class OnshapeTrigger implements INodeType {
 				},
 			},
 			{
-				name: 'OAuth2',
+				name: 'onshapeOAuth2',
 				required: true,
 				displayOptions: {
 					show: {
@@ -157,7 +157,7 @@ export class OnshapeTrigger implements INodeType {
 				type: 'options',
 				options: [
 					{
-						name: 'API Keys',
+						name: 'ApiKeys',
 						value: 'apiKeys',
 					},
 					{
@@ -181,6 +181,18 @@ export class OnshapeTrigger implements INodeType {
 				],
 			},
 			{
+				displayName: "clientId",
+				name: "clientId",
+				description: "clientId",
+				type: "string",
+				default: "",
+				displayOptions: {
+					show: {
+						event: ['onshape.user.lifecycle.updateappsettings'],
+					},
+				},
+			},
+			{
 				displayName: "companyId/documentId",
 				name: "idType",
 				description: "idType",
@@ -190,7 +202,7 @@ export class OnshapeTrigger implements INodeType {
 					show: {
 						event: [
 							...this.lstEventsDocumentGroup.filter(e => e.value !== 'onshape.document.lifecycle.statechange').map(e => e.value),
-							...this.lstEventsWorkflowGroup.map(e => e.value),],
+						],
 					},
 				},
 			},
@@ -203,38 +215,8 @@ export class OnshapeTrigger implements INodeType {
 				displayOptions: {
 					show: {
 						event: [
-							...this.lstEventsAppGroup.map(e => e.value),
+							...this.lstEventsWorkflowGroup.map(e => e.value),
 						],
-					},
-				},
-			},
-			{
-				displayName: "documentId",
-				name: "documentId",
-				description: "documentId",
-				type: "string",
-				default: "",
-				displayOptions: {
-					show: {
-						event: [
-							...this.lstEventsDocumentGroup.filter(e => e.value !== 'onshape.document.lifecycle.statechange').map(e => e.value),
-							...this.lstEventsDocumentGroup.map(e => e.value),
-						],
-						idType: [true]
-					},
-				},
-			},
-			{
-				displayName: "documentId",
-				name: "documentId",
-				description: "documentId",
-				type: "string",
-				default: "",
-				displayOptions: {
-					show: {
-						event: [
-							...this.lstEventsDocumentGroup.filter(e => e.value === 'onshape.document.lifecycle.statechange').map(e => e.value),
-						]
 					},
 				},
 			},
@@ -254,6 +236,33 @@ export class OnshapeTrigger implements INodeType {
 					},
 				},
 			},
+			{
+				displayName: "documentId",
+				name: "documentId",
+				description: "documentId",
+				type: "string",
+				default: "",
+				displayOptions: {
+					show: {
+						event: [
+							...this.lstEventsDocumentGroup.filter(e => e.value !== 'onshape.document.lifecycle.statechange').map(e => e.value)
+						],
+						idType: [true]
+					},
+				},
+			},
+			{
+				displayName: "documentId",
+				name: "documentId",
+				description: "documentId",
+				type: "string",
+				default: "",
+				displayOptions: {
+					show: {
+						event: ['onshape.document.lifecycle.statechange']
+					},
+				},
+			},
 		],
 	};
 
@@ -264,10 +273,14 @@ export class OnshapeTrigger implements INodeType {
 				const webhookData = this.getWorkflowStaticData('node');
 				const webhookUrl = this.getNodeWebhookUrl('default');
 				const event = this.getNodeParameter('event') as string;
-				const { items: webhooks } = await apiRequest.call(this, 'GET', '/api/webhooks');
-				for (const webhook of webhooks) {
-					if (webhook.target_url === webhookUrl && webhook.event === snakeCase(event)) {
-						webhookData.webhookId = webhook.hook_id;
+				//@ts-ignore
+				const b = getId.call(this, event)
+				const eventDesc = event + '-' + Object.keys(b)[0] + ':' + Object.values(b)[0];
+
+				const webhooks = await apiRequest.call(this, 'GET', '/api/webhooks');
+				for (const webhook of webhooks?.items) {
+					if (webhook.url === webhookUrl && webhook.description === eventDesc && webhook.events.includes(event)) {
+						webhookData.webhookId = webhook.id;
 						return true;
 					}
 				}
@@ -282,10 +295,13 @@ export class OnshapeTrigger implements INodeType {
 					events: [event],
 					options: { collapseEvents: true }
 				};
-				const idType = this.getNodeParameter('idType');
-				idType ? body.documentId = this.getNodeParameter('documentId') : this.getNodeParameter('companyId');
+
+				//@ts-ignore
+				const b = getId.call(this, event)
+				body[Object.keys(b)[0]] = Object.values(b)[0] as string
+				body.description = event + '-' + Object.keys(b)[0] + ':' + Object.values(b)[0];
 				const webhook = await apiRequest.call(this, 'POST', '/api/webhooks', body);
-				webhookData.webhookId = webhook.hook_id;
+				webhookData.webhookId = webhook.id;
 				return true;
 			},
 			async delete(this: IHookFunctions): Promise<boolean> {
@@ -309,4 +325,28 @@ export class OnshapeTrigger implements INodeType {
 			],
 		};
 	}
+
+}
+
+export function getId(this: IWebhookFunctions, event: string) {
+	const result: any = {}
+	switch (event) {
+		case 'onshape.document.lifecycle.statechange': {
+			result.documentId = this.getNodeParameter('documentId');
+			break;
+		}
+		case 'onshape.user.lifecycle.updateappsettings': {
+			result.clientId = this.getNodeParameter('clientId');
+			break;
+		}
+		case 'onshape.workflow.transition': {
+			result.companyId = this.getNodeParameter('companyId');
+			break;
+		}
+		default: {
+			const idType = this.getNodeParameter('idType');
+			idType ? result.documentId = this.getNodeParameter('documentId') : this.getNodeParameter('companyId');
+		}
+	}
+	return result;
 }

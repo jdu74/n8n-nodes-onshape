@@ -33,34 +33,6 @@ export const createAliasDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Alias',
-				],
-				operation: [
-					'POST /api/aliases',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -111,62 +83,6 @@ export const createAliasDescription: INodeProperties[] = [
 			},
 		},
 		options: [
-			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'entries',
-				name: 'entries',
-				description: 'entries - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'entriesProperties',
-						name: 'entriesProperties',
-						values: [
-							{
-								displayName: 'entries',
-								name: 'entries',
-								description: 'entries - object',
-								type: 'collection',
-								default: '',
-								placeholder: 'Add Field',
-								options: [
-									{
-										name: 'userId',
-										displayName: 'userId',
-										description: 'userId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'email',
-										displayName: 'email',
-										description: 'email - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'teamId',
-										displayName: 'teamId',
-										description: 'teamId - string',
-										type: 'string',
-										default: '',
-									},
-								],
-							},
-						],
-					},
-				],
-			},
 			{
 				name: 'description',
 				displayName: 'description',
@@ -272,6 +188,90 @@ export const createAliasDescription: INodeProperties[] = [
 					},
 				],
 			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'entries',
+				name: 'entries',
+				description: 'entries - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'entriesProperties',
+						name: 'entriesProperties',
+						values: [
+							{
+								displayName: 'entries',
+								name: 'entries',
+								description: 'entries - object',
+								type: 'collection',
+								default: '',
+								placeholder: 'Add Field',
+								options: [
+									{
+										name: 'userId',
+										displayName: 'userId',
+										description: 'userId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'email',
+										displayName: 'email',
+										description: 'email - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'teamId',
+										displayName: 'teamId',
+										description: 'teamId - string',
+										type: 'string',
+										default: '',
+									},
+								],
+							},
+						],
+					},
+				],
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Alias',
+				],
+				operation: [
+					'POST /api/aliases',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

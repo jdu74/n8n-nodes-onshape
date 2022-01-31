@@ -51,34 +51,6 @@ export const updateCommentDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Comment',
-				],
-				operation: [
-					'POST /api/comments/{cid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -135,20 +107,6 @@ export const updateCommentDescription: INodeProperties[] = [
 				description: 'objectType - integer',
 				type: 'number',
 				default: 0,
-			},
-			{
-				name: 'message',
-				displayName: 'message',
-				description: 'message - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'id',
-				displayName: 'id',
-				description: 'id - string',
-				type: 'string',
-				default: '',
 			},
 			{
 				name: 'versionId',
@@ -301,6 +259,48 @@ export const updateCommentDescription: INodeProperties[] = [
 				type: 'string',
 				default: '',
 			},
+			{
+				name: 'message',
+				displayName: 'message',
+				description: 'message - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'id',
+				displayName: 'id',
+				description: 'id - string',
+				type: 'string',
+				default: '',
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Comment',
+				],
+				operation: [
+					'POST /api/comments/{cid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

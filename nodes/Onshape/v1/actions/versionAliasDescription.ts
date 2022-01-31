@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Create and manage enterprise aliases. Aliases are distribution lists for the Release management workflow. They are defined and managed by administrators at the enterprise level only. Users and Teams can be assigned to an alias. - 1.141.3124-86273aed0a97',
+	description: 'Create and manage enterprise aliases. Aliases are distribution lists for the Release management workflow. They are defined and managed by administrators at the enterprise level only. Users and Teams can be assigned to an alias. - 1.141.3299-c9756493fe75',
 	version: 1,
 	defaults: {
 		name: 'Onshape - Alias'
@@ -50,11 +50,11 @@ export const versionDescription: INodeTypeDescription = {
 			type: 'options',
 			options: [
 				{
-					name: 'onshapeApiKeys',
+					name: 'ApiKeys',
 					value: 'apiKeys',
 				},
 				{
-					name: 'onshapeOAuth2',
+					name: 'OAuth2',
 					value: 'oAuth2',
 				},
 			],

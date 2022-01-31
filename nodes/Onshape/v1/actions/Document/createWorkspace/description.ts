@@ -51,34 +51,6 @@ export const createWorkspaceDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Document',
-				],
-				operation: [
-					'POST /api/documents/d/{did}/workspaces',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -133,13 +105,6 @@ export const createWorkspaceDescription: INodeProperties[] = [
 				name: 'clientInteractionMode',
 				displayName: 'clientInteractionMode',
 				description: 'clientInteractionMode - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
 				type: 'string',
 				default: '',
 			},
@@ -206,6 +171,41 @@ export const createWorkspaceDescription: INodeProperties[] = [
 				type: 'number',
 				default: 0,
 			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Document',
+				],
+				operation: [
+					'POST /api/documents/d/{did}/workspaces',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

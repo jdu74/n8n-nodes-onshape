@@ -77,34 +77,6 @@ export const nextNumbersDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'PartNumber',
-				],
-				operation: [
-					'POST /api/partnumber/nextnumbers',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -178,13 +150,6 @@ export const nextNumbersDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'configuration',
-										displayName: 'configuration',
-										description: 'configuration - string',
-										type: 'string',
-										default: '',
-									},
-									{
 										name: 'elementType',
 										displayName: 'elementType',
 										description: 'elementType - integer',
@@ -192,9 +157,16 @@ export const nextNumbersDescription: INodeProperties[] = [
 										default: 0,
 									},
 									{
-										name: 'id',
-										displayName: 'id',
-										description: 'id - string',
+										name: 'configuration',
+										displayName: 'configuration',
+										description: 'configuration - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'mimeType',
+										displayName: 'mimeType',
+										description: 'mimeType - string',
 										type: 'string',
 										default: '',
 									},
@@ -206,9 +178,9 @@ export const nextNumbersDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										name: 'mimeType',
-										displayName: 'mimeType',
-										description: 'mimeType - string',
+										name: 'partNumber',
+										displayName: 'partNumber',
+										description: 'partNumber - string',
 										type: 'string',
 										default: '',
 									},
@@ -237,13 +209,6 @@ export const nextNumbersDescription: INodeProperties[] = [
 										name: 'partId',
 										displayName: 'partId',
 										description: 'partId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'partNumber',
-										displayName: 'partNumber',
-										description: 'partNumber - string',
 										type: 'string',
 										default: '',
 									},
@@ -289,6 +254,13 @@ export const nextNumbersDescription: INodeProperties[] = [
 											},
 										],
 									},
+									{
+										name: 'id',
+										displayName: 'id',
+										description: 'id - string',
+										type: 'string',
+										default: '',
+									},
 								],
 							},
 						],
@@ -321,5 +293,33 @@ export const nextNumbersDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'PartNumber',
+				],
+				operation: [
+					'POST /api/partnumber/nextnumbers',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

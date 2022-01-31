@@ -69,34 +69,6 @@ export const createElementDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'AppElement',
-				],
-				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -147,44 +119,6 @@ export const createElementDescription: INodeProperties[] = [
 			},
 		},
 		options: [
-			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'location',
-				name: 'location',
-				description: 'location - object',
-				type: 'collection',
-				default: '',
-				placeholder: 'Add Field',
-				options: [
-					{
-						name: 'groupId',
-						displayName: 'groupId',
-						description: 'groupId - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'position',
-						displayName: 'position',
-						description: 'position - integer',
-						type: 'number',
-						default: 0,
-					},
-					{
-						name: 'elementId',
-						displayName: 'elementId',
-						description: 'elementId - string',
-						type: 'string',
-						default: '',
-					},
-				],
-			},
 			{
 				name: 'description',
 				displayName: 'description',
@@ -255,6 +189,72 @@ export const createElementDescription: INodeProperties[] = [
 				type: 'json',
 				default: '',
 			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'location',
+				name: 'location',
+				description: 'location - object',
+				type: 'collection',
+				default: '',
+				placeholder: 'Add Field',
+				options: [
+					{
+						name: 'groupId',
+						displayName: 'groupId',
+						description: 'groupId - string',
+						type: 'string',
+						default: '',
+					},
+					{
+						name: 'position',
+						displayName: 'position',
+						description: 'position - integer',
+						type: 'number',
+						default: 0,
+					},
+					{
+						name: 'elementId',
+						displayName: 'elementId',
+						description: 'elementId - string',
+						type: 'string',
+						default: '',
+					},
+				],
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'AppElement',
+				],
+				operation: [
+					'POST /api/appelements/d/{did}/w/{wid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

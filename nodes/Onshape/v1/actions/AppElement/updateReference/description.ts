@@ -123,34 +123,6 @@ export const updateReferenceDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'AppElement',
-				],
-				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -216,16 +188,16 @@ export const updateReferenceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'partNumber',
-				displayName: 'partNumber',
-				description: 'partNumber - string',
+				name: 'parentChangeId',
+				displayName: 'parentChangeId',
+				description: 'parentChangeId - string',
 				type: 'string',
 				default: '',
 			},
 			{
-				name: 'parentChangeId',
-				displayName: 'parentChangeId',
-				description: 'parentChangeId - string',
+				name: 'partNumber',
+				displayName: 'partNumber',
+				description: 'partNumber - string',
 				type: 'string',
 				default: '',
 			},
@@ -367,5 +339,33 @@ export const updateReferenceDescription: INodeProperties[] = [
 				default: false,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'AppElement',
+				],
+				operation: [
+					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

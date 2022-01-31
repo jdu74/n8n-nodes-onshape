@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Modify and access user account information, such as plan subscription and App Store purchases. Cancel recurring subscriptions. Mark purchases consumed by the user. - 1.141.3124-86273aed0a97',
+	description: 'Modify and access user account information, such as plan subscription and App Store purchases. Cancel recurring subscriptions. Mark purchases consumed by the user. - 1.141.3299-c9756493fe75',
 	version: 1,
 	defaults: {
 		name: 'Onshape - Account'
@@ -50,11 +50,11 @@ export const versionDescription: INodeTypeDescription = {
 			type: 'options',
 			options: [
 				{
-					name: 'onshapeApiKeys',
+					name: 'ApiKeys',
 					value: 'apiKeys',
 				},
 				{
-					name: 'onshapeOAuth2',
+					name: 'OAuth2',
 					value: 'oAuth2',
 				},
 			],

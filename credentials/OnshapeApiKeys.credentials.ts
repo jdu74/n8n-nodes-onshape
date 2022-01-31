@@ -4,7 +4,7 @@ import {
 	NodePropertyTypes,
 } from 'n8n-workflow';
 
-export class OnshapeApiKeys implements ICredentialType {
+export class OnshapeAPIKeys implements ICredentialType {
 	name = 'onshapeApiKeys';
 	displayName = 'OnShape API Keys';
 	documentationUrl = 'onshape';

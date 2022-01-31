@@ -33,34 +33,6 @@ export const createWebhookDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Webhook',
-				],
-				operation: [
-					'POST /api/webhooks',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -119,13 +91,6 @@ export const createWebhookDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'id',
-				displayName: 'id',
-				description: 'id - string',
-				type: 'string',
-				default: '',
-			},
-			{
 				name: 'data',
 				displayName: 'data',
 				description: 'data - string',
@@ -136,6 +101,30 @@ export const createWebhookDescription: INodeProperties[] = [
 				name: 'description',
 				displayName: 'description',
 				description: 'description - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'options',
+				name: 'options',
+				description: 'options - object',
+				type: 'collection',
+				default: '',
+				placeholder: 'Add Field',
+				options: [
+					{
+						name: 'collapseEvents',
+						displayName: 'collapseEvents',
+						description: 'collapseEvents - boolean',
+						type: 'boolean',
+						default: false,
+					},
+				],
+			},
+			{
+				name: 'id',
+				displayName: 'id',
+				description: 'id - string',
 				type: 'string',
 				default: '',
 			},
@@ -159,23 +148,6 @@ export const createWebhookDescription: INodeProperties[] = [
 				description: 'versionId - string',
 				type: 'string',
 				default: '',
-			},
-			{
-				displayName: 'options',
-				name: 'options',
-				description: 'options - object',
-				type: 'collection',
-				default: '',
-				placeholder: 'Add Field',
-				options: [
-					{
-						name: 'collapseEvents',
-						displayName: 'collapseEvents',
-						description: 'collapseEvents - boolean',
-						type: 'boolean',
-						default: false,
-					},
-				],
 			},
 			{
 				name: 'companyId',
@@ -266,5 +238,33 @@ export const createWebhookDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Webhook',
+				],
+				operation: [
+					'POST /api/webhooks',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

@@ -51,34 +51,6 @@ export const shareDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Folder',
-				],
-				operation: [
-					'POST /api/folders/{fid}/share',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -129,6 +101,73 @@ export const shareDescription: INodeProperties[] = [
 			},
 		},
 		options: [
+			{
+				name: 'workspaceId',
+				displayName: 'workspaceId',
+				description: 'workspaceId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'elementId',
+				displayName: 'elementId',
+				description: 'elementId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'documentId',
+				displayName: 'documentId',
+				description: 'documentId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'folderId',
+				displayName: 'folderId',
+				description: 'folderId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'permissionSet',
+				name: 'permissionSet',
+				description: 'permissionSet - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'permissionSetProperties',
+						name: 'permissionSetProperties',
+						values: [
+							{
+								name: 'permissionSet',
+								displayName: 'permissionSet',
+								description: 'permissionSet - string',
+								type: 'string',
+								default: '',
+							},
+						],
+					},
+				],
+			},
+			{
+				name: 'update',
+				displayName: 'update',
+				description: 'update - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'encodedConfiguration',
+				displayName: 'encodedConfiguration',
+				description: 'encodedConfiguration - string',
+				type: 'string',
+				default: '',
+			},
 			{
 				name: 'message',
 				displayName: 'message',
@@ -213,73 +252,34 @@ export const shareDescription: INodeProperties[] = [
 				type: 'number',
 				default: 0,
 			},
-			{
-				name: 'workspaceId',
-				displayName: 'workspaceId',
-				description: 'workspaceId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'elementId',
-				displayName: 'elementId',
-				description: 'elementId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'documentId',
-				displayName: 'documentId',
-				description: 'documentId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'folderId',
-				displayName: 'folderId',
-				description: 'folderId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'permissionSet',
-				name: 'permissionSet',
-				description: 'permissionSet - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'permissionSetProperties',
-						name: 'permissionSetProperties',
-						values: [
-							{
-								name: 'permissionSet',
-								displayName: 'permissionSet',
-								description: 'permissionSet - string',
-								type: 'string',
-								default: '',
-							},
-						],
-					},
+		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Folder',
+				],
+				operation: [
+					'POST /api/folders/{fid}/share',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
-			{
-				name: 'update',
-				displayName: 'update',
-				description: 'update - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'encodedConfiguration',
-				displayName: 'encodedConfiguration',
-				description: 'encodedConfiguration - string',
-				type: 'string',
-				default: '',
-			},
-		],
+		},
 	},
 ];

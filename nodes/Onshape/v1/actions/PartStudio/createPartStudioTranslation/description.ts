@@ -105,34 +105,6 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'PartStudio',
-				],
-				operation: [
-					'POST /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -210,87 +182,6 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				description: 'linkDocumentId - string',
 				type: 'string',
 				default: '',
-			},
-			{
-				name: 'imageWidth',
-				displayName: 'imageWidth',
-				description: 'imageWidth - integer',
-				type: 'number',
-				default: 0,
-			},
-			{
-				name: 'imageHeight',
-				displayName: 'imageHeight',
-				description: 'imageHeight - integer',
-				type: 'number',
-				default: 0,
-			},
-			{
-				name: 'splinesAsPolylines',
-				displayName: 'splinesAsPolylines',
-				description: 'splinesAsPolylines - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'textAsGeometry',
-				displayName: 'textAsGeometry',
-				description: 'textAsGeometry - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'showOverriddenDimensions',
-				displayName: 'showOverriddenDimensions',
-				description: 'showOverriddenDimensions - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'currentSheetOnly',
-				displayName: 'currentSheetOnly',
-				description: 'currentSheetOnly - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				displayName: 'sheetIndices',
-				name: 'sheetIndices',
-				description: 'sheetIndices - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'sheetIndicesProperties',
-						name: 'sheetIndicesProperties',
-						values: [
-							{
-								name: 'sheetIndices',
-								displayName: 'sheetIndices',
-								description: 'sheetIndices - integer',
-								type: 'number',
-								default: 0,
-							},
-						],
-					},
-				],
-			},
-			{
-				name: 'colorMethod',
-				displayName: 'colorMethod',
-				description: 'colorMethod - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'selectablePdfText',
-				displayName: 'selectablePdfText',
-				description: 'selectablePdfText - boolean',
-				type: 'boolean',
-				default: false,
 			},
 			{
 				name: 'versionString',
@@ -388,6 +279,101 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
+				name: 'flatten',
+				displayName: 'flatten',
+				description: 'flatten - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'includeExportIds',
+				displayName: 'includeExportIds',
+				description: 'includeExportIds - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'imageWidth',
+				displayName: 'imageWidth',
+				description: 'imageWidth - integer',
+				type: 'number',
+				default: 0,
+			},
+			{
+				name: 'imageHeight',
+				displayName: 'imageHeight',
+				description: 'imageHeight - integer',
+				type: 'number',
+				default: 0,
+			},
+			{
+				name: 'splinesAsPolylines',
+				displayName: 'splinesAsPolylines',
+				description: 'splinesAsPolylines - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'textAsGeometry',
+				displayName: 'textAsGeometry',
+				description: 'textAsGeometry - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'showOverriddenDimensions',
+				displayName: 'showOverriddenDimensions',
+				description: 'showOverriddenDimensions - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'currentSheetOnly',
+				displayName: 'currentSheetOnly',
+				description: 'currentSheetOnly - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				displayName: 'sheetIndices',
+				name: 'sheetIndices',
+				description: 'sheetIndices - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'sheetIndicesProperties',
+						name: 'sheetIndicesProperties',
+						values: [
+							{
+								name: 'sheetIndices',
+								displayName: 'sheetIndices',
+								description: 'sheetIndices - integer',
+								type: 'number',
+								default: 0,
+							},
+						],
+					},
+				],
+			},
+			{
+				name: 'colorMethod',
+				displayName: 'colorMethod',
+				description: 'colorMethod - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'selectablePdfText',
+				displayName: 'selectablePdfText',
+				description: 'selectablePdfText - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
 				name: 'grouping',
 				displayName: 'grouping',
 				description: 'grouping - boolean',
@@ -430,13 +416,6 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'storeInDocument',
-				displayName: 'storeInDocument',
-				description: 'storeInDocument - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
 				name: 'fromUserId',
 				displayName: 'fromUserId',
 				description: 'fromUserId - string',
@@ -449,6 +428,13 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				description: 'cloudStorageAccountId - string',
 				type: 'string',
 				default: '',
+			},
+			{
+				name: 'storeInDocument',
+				displayName: 'storeInDocument',
+				description: 'storeInDocument - boolean',
+				type: 'boolean',
+				default: false,
 			},
 			{
 				name: 'connectionId',
@@ -491,20 +477,6 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				description: 'formatName - string',
 				type: 'string',
 				default: '',
-			},
-			{
-				name: 'flatten',
-				displayName: 'flatten',
-				description: 'flatten - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'includeExportIds',
-				displayName: 'includeExportIds',
-				description: 'includeExportIds - boolean',
-				type: 'boolean',
-				default: false,
 			},
 			{
 				name: 'processedForeignId',
@@ -640,5 +612,33 @@ export const createPartStudioTranslationDescription: INodeProperties[] = [
 				default: false,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'PartStudio',
+				],
+				operation: [
+					'POST /api/partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

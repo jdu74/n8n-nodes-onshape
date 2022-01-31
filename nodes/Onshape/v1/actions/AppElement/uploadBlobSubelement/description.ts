@@ -97,32 +97,6 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'AppElement',
-				],
-				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'multipart/form-data',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -193,9 +167,9 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 			{
 				name: 'file',
 				displayName: 'file',
-				description: 'file - object',
-				type: 'json',
-				default: '',
+				description: 'file - binary',
+				type: 'string',
+				default: 'data',
 			},
 			{
 				name: 'fileContentLength',
@@ -205,5 +179,31 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 				default: -1,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'AppElement',
+				],
+				operation: [
+					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 ];

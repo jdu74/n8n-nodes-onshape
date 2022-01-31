@@ -88,34 +88,6 @@ export const createReleasePackageDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'ReleasePackage',
-				],
-				operation: [
-					'POST /api/releasepackages/release/{wfid}',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -203,60 +175,25 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										displayName: 'properties',
-										name: 'properties',
-										description: 'properties - array',
-										type: 'fixedCollection',
-										typeOptions: {
-											multipleValues: true,
-										},
-										default: '',
-										options: [
-											{
-												displayName: 'propertiesProperties',
-												name: 'propertiesProperties',
-												values: [
-													{
-														displayName: 'properties',
-														name: 'properties',
-														description: 'properties - object',
-														type: 'collection',
-														default: '',
-														placeholder: 'Add Field',
-														options: [
-															{
-																name: 'value',
-																displayName: 'value',
-																description: 'value - object',
-																type: 'json',
-																default: '',
-															},
-															{
-																name: 'propertyId',
-																displayName: 'propertyId',
-																description: 'propertyId - string',
-																type: 'string',
-																default: '',
-															},
-														],
-													},
-												],
-											},
-										],
-									},
-									{
-										name: 'id',
-										displayName: 'id',
-										description: 'id - string',
-										type: 'string',
-										default: '',
-									},
-									{
 										name: 'versionId',
 										displayName: 'versionId',
 										description: 'versionId - string',
 										type: 'string',
 										default: '',
+									},
+									{
+										name: 'partNumber',
+										displayName: 'partNumber',
+										description: 'partNumber - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'isIncluded',
+										displayName: 'isIncluded',
+										description: 'isIncluded - boolean',
+										type: 'boolean',
+										default: false,
 									},
 									{
 										name: 'workspaceId',
@@ -294,18 +231,53 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										name: 'partNumber',
-										displayName: 'partNumber',
-										description: 'partNumber - string',
-										type: 'string',
+										displayName: 'properties',
+										name: 'properties',
+										description: 'properties - array',
+										type: 'fixedCollection',
+										typeOptions: {
+											multipleValues: true,
+										},
 										default: '',
+										options: [
+											{
+												displayName: 'propertiesProperties',
+												name: 'propertiesProperties',
+												values: [
+													{
+														displayName: 'properties',
+														name: 'properties',
+														description: 'properties - object',
+														type: 'collection',
+														default: '',
+														placeholder: 'Add Field',
+														options: [
+															{
+																name: 'propertyId',
+																displayName: 'propertyId',
+																description: 'propertyId - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'value',
+																displayName: 'value',
+																description: 'value - object',
+																type: 'json',
+																default: '',
+															},
+														],
+													},
+												],
+											},
+										],
 									},
 									{
-										name: 'isIncluded',
-										displayName: 'isIncluded',
-										description: 'isIncluded - boolean',
-										type: 'boolean',
-										default: false,
+										name: 'id',
+										displayName: 'id',
+										description: 'id - string',
+										type: 'string',
+										default: '',
 									},
 								],
 							},
@@ -314,5 +286,33 @@ export const createReleasePackageDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'ReleasePackage',
+				],
+				operation: [
+					'POST /api/releasepackages/release/{wfid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

@@ -185,34 +185,6 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'JSON Object',
-		name: 'jsonObject2-json(body)',
-		description: 'jsonObject - json',
-		type: 'json',
-		default: '',
-		typeOptions: {
-			alwaysOpenEditWindow: true,
-		},
-		displayOptions: {
-			show: {
-				resource: [
-					'Part',
-				],
-				operation: [
-					'POST /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
-				],
-				jsonParameters: [
-					true,
-				],
-				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
-					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				],
-			},
-		},
-	},
-	{
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
@@ -326,13 +298,6 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
-				type: 'string',
-				default: '',
-			},
-			{
 				name: 'description',
 				displayName: 'description',
 				description: 'description - string',
@@ -343,6 +308,13 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 				name: 'revision',
 				displayName: 'revision',
 				description: 'revision - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'partNumber',
+				displayName: 'partNumber',
+				description: 'partNumber - string',
 				type: 'string',
 				default: '',
 			},
@@ -364,13 +336,6 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 				name: 'project',
 				displayName: 'project',
 				description: 'project - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'partNumber',
-				displayName: 'partNumber',
-				description: 'partNumber - string',
 				type: 'string',
 				default: '',
 			},
@@ -440,16 +405,16 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 								default: '',
 							},
 							{
-								name: 'elementId',
-								displayName: 'elementId',
-								description: 'elementId - string',
+								name: 'documentId',
+								displayName: 'documentId',
+								description: 'documentId - string',
 								type: 'string',
 								default: '',
 							},
 							{
-								name: 'documentId',
-								displayName: 'documentId',
-								description: 'documentId - string',
+								name: 'elementId',
+								displayName: 'elementId',
+								description: 'elementId - string',
 								type: 'string',
 								default: '',
 							},
@@ -466,6 +431,13 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 						name: 'displayName',
 						displayName: 'displayName',
 						description: 'displayName - string',
+						type: 'string',
+						default: '',
+					},
+					{
+						name: 'libraryName',
+						displayName: 'libraryName',
+						description: 'libraryName - string',
 						type: 'string',
 						default: '',
 					},
@@ -506,6 +478,20 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 												default: '',
 											},
 											{
+												name: 'description',
+												displayName: 'description',
+												description: 'description - string',
+												type: 'string',
+												default: '',
+											},
+											{
+												name: 'category',
+												displayName: 'category',
+												description: 'category - string',
+												type: 'string',
+												default: '',
+											},
+											{
 												name: 'name',
 												displayName: 'name',
 												description: 'name - string',
@@ -526,20 +512,6 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 												type: 'string',
 												default: '',
 											},
-											{
-												name: 'description',
-												displayName: 'description',
-												description: 'description - string',
-												type: 'string',
-												default: '',
-											},
-											{
-												name: 'category',
-												displayName: 'category',
-												description: 'category - string',
-												type: 'string',
-												default: '',
-											},
 										],
 									},
 								],
@@ -550,13 +522,6 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 						name: 'id',
 						displayName: 'id',
 						description: 'id - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'libraryName',
-						displayName: 'libraryName',
-						description: 'libraryName - string',
 						type: 'string',
 						default: '',
 					},
@@ -628,6 +593,41 @@ export const updateStandardContentPartMetadataDescription: INodeProperties[] = [
 					},
 				],
 			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Part',
+				],
+				operation: [
+					'POST /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
+					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
+				],
+			},
+		},
 	},
 ];

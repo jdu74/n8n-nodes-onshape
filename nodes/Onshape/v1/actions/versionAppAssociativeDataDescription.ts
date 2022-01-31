@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Manage application-specific metadata that is used to associate application data to Onshape data - 1.141.3124-86273aed0a97',
+	description: 'Manage application-specific metadata that is used to associate application data to Onshape data - 1.141.3299-c9756493fe75',
 	version: 1,
 	defaults: {
 		name: 'Onshape - AppAssociativeData'
@@ -50,11 +50,11 @@ export const versionDescription: INodeTypeDescription = {
 			type: 'options',
 			options: [
 				{
-					name: 'onshapeApiKeys',
+					name: 'ApiKeys',
 					value: 'apiKeys',
 				},
 				{
-					name: 'onshapeOAuth2',
+					name: 'OAuth2',
 					value: 'oAuth2',
 				},
 			],
