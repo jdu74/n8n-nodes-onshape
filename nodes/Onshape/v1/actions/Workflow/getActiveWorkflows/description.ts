@@ -14,7 +14,7 @@ export const getActiveWorkflowsDescription: INodeProperties[] = [
 					'Workflow',
 				],
 				operation: [
-					'GET /api/workflow/active',
+					'GET /workflow/active',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const getRevisionHistoryInCompanyByElementIdDescription: INodeProperties[
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},

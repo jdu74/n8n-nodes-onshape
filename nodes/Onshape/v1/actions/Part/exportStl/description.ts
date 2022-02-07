@@ -14,7 +14,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const exportStlDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/stl',
 				],
 			},
 		},

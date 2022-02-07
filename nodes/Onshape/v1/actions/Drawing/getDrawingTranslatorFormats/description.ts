@@ -14,7 +14,7 @@ export const getDrawingTranslatorFormatsDescription: INodeProperties[] = [
 					'Drawing',
 				],
 				operation: [
-					'GET /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+					'GET /drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDrawingTranslatorFormatsDescription: INodeProperties[] = [
 					'Drawing',
 				],
 				operation: [
-					'GET /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+					'GET /drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getDrawingTranslatorFormatsDescription: INodeProperties[] = [
 					'Drawing',
 				],
 				operation: [
-					'GET /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+					'GET /drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
 				],
 			},
 		},

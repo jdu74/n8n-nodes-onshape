@@ -14,7 +14,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -153,7 +153,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 				jsonContentType: [
 					'application/json;charset=UTF-8; qs=0.09',
@@ -179,7 +179,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 				jsonParameters: [
 					false,
@@ -279,7 +279,7 @@ export const setApplicationElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'POST /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 				jsonParameters: [
 					true,

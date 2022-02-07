@@ -14,7 +14,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getBoundingBoxesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/boundingboxes',
 				],
 			},
 		},

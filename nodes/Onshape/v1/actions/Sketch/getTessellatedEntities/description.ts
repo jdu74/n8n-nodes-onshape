@@ -14,7 +14,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getTessellatedEntitiesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 				],
 			},
 		},

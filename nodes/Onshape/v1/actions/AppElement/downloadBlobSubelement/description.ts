@@ -14,7 +14,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const downloadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+					'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},

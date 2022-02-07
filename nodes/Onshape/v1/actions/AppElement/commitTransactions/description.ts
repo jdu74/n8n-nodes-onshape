@@ -14,7 +14,7 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 			},
 		},
@@ -79,29 +79,21 @@ export const commitTransactionsDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -117,12 +109,10 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -143,25 +133,37 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
+			{
+				name: 'allowMerge',
+				displayName: 'allowMerge',
+				description: 'allowMerge - boolean',
+				type: 'boolean',
+				default: false,
+			},
 			{
 				name: 'description',
 				displayName: 'description',
 				description: 'description - string',
 				type: 'string',
 				default: '',
+			},
+			{
+				name: 'returnError',
+				displayName: 'returnError',
+				description: 'returnError - boolean',
+				type: 'boolean',
+				default: false,
 			},
 			{
 				displayName: 'transactionIds',
@@ -188,20 +190,6 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					},
 				],
 			},
-			{
-				name: 'allowMerge',
-				displayName: 'allowMerge',
-				description: 'allowMerge - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'returnError',
-				displayName: 'returnError',
-				description: 'returnError - boolean',
-				type: 'boolean',
-				default: false,
-			},
 		],
 	},
 	{
@@ -219,15 +207,13 @@ export const commitTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/transactions',
+					'POST /appelements/d/{did}/w/{wid}/transactions',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

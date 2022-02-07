@@ -118,14 +118,6 @@ export class OnshapeTrigger implements INodeType {
 		},
 		inputs: [],
 		outputs: ['main'],
-		webhooks: [
-			{
-				name: 'default',
-				httpMethod: 'POST',
-				responseMode: 'onReceived',
-				path: 'webhook',
-			},
-		],
 		credentials: [
 			{
 				name: 'onshapeApiKeys',
@@ -150,6 +142,15 @@ export class OnshapeTrigger implements INodeType {
 				},
 			},
 		],
+		webhooks: [
+			{
+				name: 'default',
+				isFullPath: true,
+				httpMethod: 'POST',
+				responseMode: 'onReceived',
+				path: '={{$parameter["path"]}}',
+			},
+		],
 		properties: [
 			{
 				displayName: 'Authentication',
@@ -167,6 +168,15 @@ export class OnshapeTrigger implements INodeType {
 				],
 				default: 'apiKeys',
 				description: 'Method of authentication.',
+			},
+			{
+				displayName: 'Path',
+				name: 'path',
+				type: 'string',
+				default: '',
+				placeholder: 'webhook',
+				required: true,
+				description: 'The path to listen to.',
 			},
 			{
 				displayName: 'Event',
@@ -263,7 +273,9 @@ export class OnshapeTrigger implements INodeType {
 					},
 				},
 			},
+
 		],
+
 	};
 
 	// @ts-ignore
@@ -277,7 +289,7 @@ export class OnshapeTrigger implements INodeType {
 				const b = getId.call(this, event)
 				const eventDesc = event + '-' + Object.keys(b)[0] + ':' + Object.values(b)[0];
 
-				const webhooks = await apiRequest.call(this, 'GET', '/api/webhooks');
+				const webhooks = await apiRequest.call(this, 'GET', '/webhooks');
 				for (const webhook of webhooks?.items) {
 					if (webhook.url === webhookUrl && webhook.description === eventDesc && webhook.events.includes(event)) {
 						webhookData.webhookId = webhook.id;
@@ -300,14 +312,14 @@ export class OnshapeTrigger implements INodeType {
 				const b = getId.call(this, event)
 				body[Object.keys(b)[0]] = Object.values(b)[0] as string
 				body.description = event + '-' + Object.keys(b)[0] + ':' + Object.values(b)[0];
-				const webhook = await apiRequest.call(this, 'POST', '/api/webhooks', body);
+				const webhook = await apiRequest.call(this, 'POST', '/webhooks', body);
 				webhookData.webhookId = webhook.id;
 				return true;
 			},
 			async delete(this: IHookFunctions): Promise<boolean> {
 				const webhookData = this.getWorkflowStaticData('node');
 				try {
-					await apiRequest.call(this, 'DELETE', `/api/webhooks/${webhookData.webhookId}`);
+					await apiRequest.call(this, 'DELETE', `/webhooks/${webhookData.webhookId}`);
 				} catch (error) {
 					return false;
 				}

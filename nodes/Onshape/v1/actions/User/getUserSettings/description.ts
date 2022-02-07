@@ -14,7 +14,7 @@ export const getUserSettingsDescription: INodeProperties[] = [
 					'User',
 				],
 				operation: [
-					'GET /api/users/{uid}/settings',
+					'GET /users/{uid}/settings',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getUserSettingsDescription: INodeProperties[] = [
 					'User',
 				],
 				operation: [
-					'GET /api/users/{uid}/settings',
+					'GET /users/{uid}/settings',
 				],
 			},
 		},

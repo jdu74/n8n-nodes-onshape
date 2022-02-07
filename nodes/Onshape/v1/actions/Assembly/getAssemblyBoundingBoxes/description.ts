@@ -14,7 +14,7 @@ export const getAssemblyBoundingBoxesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAssemblyBoundingBoxesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getAssemblyBoundingBoxesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getAssemblyBoundingBoxesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getAssemblyBoundingBoxesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				],
 			},
 		},

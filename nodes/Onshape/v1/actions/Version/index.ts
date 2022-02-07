@@ -23,16 +23,16 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'testVersionsGet',
-				value: 'GET /api/versions/test',
-				description: 'get /api/versions/test',
+				value: 'GET /versions/test',
+				description: 'get /versions/test',
 			},
 			{
 				name: 'testVersionsPost',
-				value: 'POST /api/versions/test',
-				description: 'post /api/versions/test',
+				value: 'POST /versions/test',
+				description: 'post /versions/test',
 			},
 		],
-		default: 'GET /api/versions/test',
+		default: 'GET /versions/test',
 		description: 'The operation to perform',
 	},
 	...testVersionsGet.description,

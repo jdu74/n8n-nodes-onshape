@@ -14,7 +14,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -49,7 +49,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -72,7 +72,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 				jsonContentType: [
 					'multipart/form-data',
@@ -96,7 +96,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 				jsonParameters: [
 					false,
@@ -107,6 +107,13 @@ export const createTranslationDescription: INodeProperties[] = [
 			},
 		},
 		options: [
+			{
+				name: 'file',
+				displayName: 'file',
+				description: 'file - binary',
+				type: 'string',
+				default: 'data',
+			},
 			{
 				name: 'allowFaultyParts',
 				displayName: 'allowFaultyParts',
@@ -141,79 +148,6 @@ export const createTranslationDescription: INodeProperties[] = [
 				description: 'extractAssemblyHierarchy - boolean',
 				type: 'boolean',
 				default: false,
-			},
-			{
-				displayName: 'file',
-				name: 'file',
-				description: 'file - object',
-				type: 'collection',
-				default: '',
-				placeholder: 'Add Field',
-				options: [
-					{
-						name: 'type',
-						displayName: 'type',
-						description: 'type - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'parameters',
-						displayName: 'parameters',
-						description: 'parameters - object',
-						type: 'json',
-						default: '',
-					},
-					{
-						name: 'fileName',
-						displayName: 'fileName',
-						description: 'fileName - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'creationDate',
-						displayName: 'creationDate',
-						description: 'creationDate - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'modificationDate',
-						displayName: 'modificationDate',
-						description: 'modificationDate - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'readDate',
-						displayName: 'readDate',
-						description: 'readDate - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'size',
-						displayName: 'size',
-						description: 'size - integer',
-						type: 'number',
-						default: 0,
-					},
-					{
-						name: 'name',
-						displayName: 'name',
-						description: 'name - string',
-						type: 'string',
-						default: '',
-					},
-				],
-			},
-			{
-				name: 'fileContentLength',
-				displayName: 'fileContentLength',
-				description: 'fileContentLength - integer',
-				type: 'number',
-				default: -1,
 			},
 			{
 				name: 'flattenAssemblies',
@@ -372,7 +306,7 @@ export const createTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'POST /api/translations/d/{did}/w/{wid}',
+					'POST /translations/d/{did}/w/{wid}',
 				],
 				jsonParameters: [
 					true,

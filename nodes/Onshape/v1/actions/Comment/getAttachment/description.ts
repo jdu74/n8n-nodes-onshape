@@ -14,7 +14,7 @@ export const getAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'GET /api/comments/{cid}/attachment/{fdid}.{ext}',
+					'GET /comments/{cid}/attachment/{fdid}.{ext}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'GET /api/comments/{cid}/attachment/{fdid}.{ext}',
+					'GET /comments/{cid}/attachment/{fdid}.{ext}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'GET /api/comments/{cid}/attachment/{fdid}.{ext}',
+					'GET /comments/{cid}/attachment/{fdid}.{ext}',
 				],
 			},
 		},

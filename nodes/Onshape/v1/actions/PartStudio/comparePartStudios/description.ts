@@ -14,7 +14,7 @@ export const comparePartStudiosDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const comparePartStudiosDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const comparePartStudiosDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const comparePartStudiosDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const comparePartStudiosDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},

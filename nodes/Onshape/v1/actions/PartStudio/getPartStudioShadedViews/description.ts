@@ -14,7 +14,7 @@ export const getPartStudioShadedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartStudioShadedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartStudioShadedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartStudioShadedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getPartStudioShadedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				],
 			},
 		},

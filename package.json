@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-onshape",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Module for Onshape API use.",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://n8n.io",

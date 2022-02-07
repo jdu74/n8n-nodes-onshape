@@ -14,7 +14,7 @@ export const getCategoryPropertiesDescription: INodeProperties[] = [
 					'MetadataCategory',
 				],
 				operation: [
-					'GET /api/metadatacategory/categoryproperties',
+					'GET /metadatacategory/categoryproperties',
 				],
 			},
 		},

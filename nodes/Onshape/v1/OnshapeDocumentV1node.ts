@@ -31,7 +31,7 @@ export class OnshapeDocumentV1 implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 
 		const operation = this.getNodeParameter('operation', 0) as string;
-		const isJson = !(operation === 'GET /api/documents/d/{did}/externaldata/{fid}');
+		const isJson = !(operation === 'GET /documents/d/{did}/externaldata/{fid}');
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];
 		const length = items.length as number;
@@ -61,7 +61,7 @@ export class OnshapeDocumentV1 implements INodeType {
 			return [this.helpers.returnJsonArray(returnData)]
 		else {
 			const binary = await Promise.all(returnData.map(async (el: any) => {
-				return { json: {}, binary: { ['data']: await this.helpers.prepareBinaryData(Buffer.from(el, 'utf-8'), 'data', 'text/plain') } };
+				return { json: {}, binary: { data: await this.helpers.prepareBinaryData(Buffer.from(el), 'data') } };
 			}));
 			return [binary]
 		}

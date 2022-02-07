@@ -25,21 +25,21 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getFolderAcl',
-				value: 'GET /api/folders/{fid}/acl',
-				description: 'Get Access Control List - get /api/folders/{fid}/acl',
+				value: 'GET /folders/{fid}/acl',
+				description: 'Get Access Control List - get /folders/{fid}/acl',
 			},
 			{
 				name: 'share',
-				value: 'POST /api/folders/{fid}/share',
-				description: 'Share Folder - post /api/folders/{fid}/share',
+				value: 'POST /folders/{fid}/share',
+				description: 'Share Folder - post /folders/{fid}/share',
 			},
 			{
 				name: 'unShare',
-				value: 'DELETE /api/folders/{fid}/share/{eid}',
-				description: 'Unshare Folder - delete /api/folders/{fid}/share/{eid}',
+				value: 'DELETE /folders/{fid}/share/{eid}',
+				description: 'Unshare Folder - delete /folders/{fid}/share/{eid}',
 			},
 		],
-		default: 'GET /api/folders/{fid}/acl',
+		default: 'GET /folders/{fid}/acl',
 		description: 'The operation to perform',
 	},
 	...getFolderAcl.description,

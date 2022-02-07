@@ -14,7 +14,7 @@ export const getLatestInDocumentDescription: INodeProperties[] = [
 					'Insertable',
 				],
 				operation: [
-					'GET /api/insertables/d/{did}/latest',
+					'GET /insertables/d/{did}/latest',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getLatestInDocumentDescription: INodeProperties[] = [
 					'Insertable',
 				],
 				operation: [
-					'GET /api/insertables/d/{did}/latest',
+					'GET /insertables/d/{did}/latest',
 				],
 			},
 		},

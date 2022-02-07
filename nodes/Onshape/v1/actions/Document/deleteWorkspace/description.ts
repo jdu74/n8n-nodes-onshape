@@ -14,7 +14,7 @@ export const deleteWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/d/{did}/workspaces/{wid}',
+					'DELETE /documents/d/{did}/workspaces/{wid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/d/{did}/workspaces/{wid}',
+					'DELETE /documents/d/{did}/workspaces/{wid}',
 				],
 			},
 		},

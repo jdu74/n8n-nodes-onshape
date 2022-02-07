@@ -14,7 +14,7 @@ export const getRevisionHistoryInCompanyByPartNumberDescription: INodeProperties
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/partnumber/{pnum}',
+					'GET /revisions/companies/{cid}/partnumber/{pnum}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getRevisionHistoryInCompanyByPartNumberDescription: INodeProperties
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/partnumber/{pnum}',
+					'GET /revisions/companies/{cid}/partnumber/{pnum}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getRevisionHistoryInCompanyByPartNumberDescription: INodeProperties
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/partnumber/{pnum}',
+					'GET /revisions/companies/{cid}/partnumber/{pnum}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getRevisionHistoryInCompanyByPartNumberDescription: INodeProperties
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/partnumber/{pnum}',
+					'GET /revisions/companies/{cid}/partnumber/{pnum}',
 				],
 			},
 		},

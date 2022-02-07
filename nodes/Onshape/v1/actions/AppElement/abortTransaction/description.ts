@@ -14,7 +14,7 @@ export const abortTransactionDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const abortTransactionDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const abortTransactionDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const abortTransactionDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const abortTransactionDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
 				],
 			},
 		},

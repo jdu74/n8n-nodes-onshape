@@ -14,7 +14,7 @@ export const createVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/versions',
+					'POST /documents/d/{did}/versions',
 				],
 			},
 		},
@@ -24,29 +24,21 @@ export const createVersionDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/versions',
+					'POST /documents/d/{did}/versions',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -62,12 +54,10 @@ export const createVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/versions',
+					'POST /documents/d/{did}/versions',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -88,15 +78,13 @@ export const createVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/versions',
+					'POST /documents/d/{did}/versions',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -116,27 +104,6 @@ export const createVersionDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'versionId',
-				displayName: 'versionId',
-				description: 'versionId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'microversionId',
-				displayName: 'microversionId',
-				description: 'microversionId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'workspaceId',
-				displayName: 'workspaceId',
-				description: 'workspaceId - string',
-				type: 'string',
-				default: '',
-			},
-			{
 				name: 'documentId',
 				displayName: 'documentId',
 				description: 'documentId - string',
@@ -144,9 +111,9 @@ export const createVersionDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'readOnly',
-				displayName: 'readOnly',
-				description: 'readOnly - boolean',
+				name: 'fromHistory',
+				displayName: 'fromHistory',
+				description: 'fromHistory - boolean',
 				type: 'boolean',
 				default: false,
 			},
@@ -158,11 +125,18 @@ export const createVersionDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'fromHistory',
-				displayName: 'fromHistory',
-				description: 'fromHistory - boolean',
-				type: 'boolean',
-				default: false,
+				name: 'microversionId',
+				displayName: 'microversionId',
+				description: 'microversionId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				name: 'purpose',
@@ -172,9 +146,23 @@ export const createVersionDescription: INodeProperties[] = [
 				default: 0,
 			},
 			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
+				name: 'readOnly',
+				displayName: 'readOnly',
+				description: 'readOnly - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'versionId',
+				displayName: 'versionId',
+				description: 'versionId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'workspaceId',
+				displayName: 'workspaceId',
+				description: 'workspaceId - string',
 				type: 'string',
 				default: '',
 			},
@@ -195,15 +183,13 @@ export const createVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/versions',
+					'POST /documents/d/{did}/versions',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

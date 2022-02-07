@@ -14,7 +14,7 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 			},
 		},
@@ -42,29 +42,21 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -80,12 +72,10 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -106,47 +96,17 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
-			{
-				name: 'projectId',
-				displayName: 'projectId',
-				description: 'projectId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'ownerId',
-				displayName: 'ownerId',
-				description: 'ownerId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'parentId',
-				displayName: 'parentId',
-				description: 'parentId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'isPublic',
-				displayName: 'isPublic',
-				description: 'isPublic - boolean',
-				type: 'boolean',
-				default: false,
-			},
 			{
 				displayName: 'betaCapabilityIds',
 				name: 'betaCapabilityIds',
@@ -173,6 +133,27 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 				],
 			},
 			{
+				name: 'isPublic',
+				displayName: 'isPublic',
+				description: 'isPublic - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'newName',
+				displayName: 'newName',
+				description: 'newName - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'ownerId',
+				displayName: 'ownerId',
+				description: 'ownerId - string',
+				type: 'string',
+				default: '',
+			},
+			{
 				name: 'ownerTypeIndex',
 				displayName: 'ownerTypeIndex',
 				description: 'ownerTypeIndex - integer',
@@ -180,9 +161,16 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 				default: 0,
 			},
 			{
-				name: 'newName',
-				displayName: 'newName',
-				description: 'newName - string',
+				name: 'parentId',
+				displayName: 'parentId',
+				description: 'parentId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'projectId',
+				displayName: 'projectId',
+				description: 'projectId - string',
 				type: 'string',
 				default: '',
 			},
@@ -203,15 +191,13 @@ export const copyWorkspaceDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/workspaces/{wid}/copy',
+					'POST /documents/{did}/workspaces/{wid}/copy',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

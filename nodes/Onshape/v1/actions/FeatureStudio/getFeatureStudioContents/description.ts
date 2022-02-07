@@ -14,7 +14,7 @@ export const getFeatureStudioContentsDescription: INodeProperties[] = [
 					'FeatureStudio',
 				],
 				operation: [
-					'GET /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getFeatureStudioContentsDescription: INodeProperties[] = [
 					'FeatureStudio',
 				],
 				operation: [
-					'GET /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getFeatureStudioContentsDescription: INodeProperties[] = [
 					'FeatureStudio',
 				],
 				operation: [
-					'GET /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getFeatureStudioContentsDescription: INodeProperties[] = [
 					'FeatureStudio',
 				],
 				operation: [
-					'GET /api/featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /featurestudios/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},

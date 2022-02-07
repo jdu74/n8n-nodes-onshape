@@ -14,7 +14,7 @@ export const unregisterWebhookDescription: INodeProperties[] = [
 					'Webhook',
 				],
 				operation: [
-					'DELETE /api/webhooks/{webhookid}',
+					'DELETE /webhooks/{webhookid}',
 				],
 			},
 		},

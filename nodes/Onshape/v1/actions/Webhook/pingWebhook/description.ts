@@ -14,7 +14,7 @@ export const pingWebhookDescription: INodeProperties[] = [
 					'Webhook',
 				],
 				operation: [
-					'POST /api/webhooks/{webhookid}/ping',
+					'POST /webhooks/{webhookid}/ping',
 				],
 			},
 		},

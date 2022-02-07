@@ -14,7 +14,7 @@ export const getThumbnailForDocumentOldDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/document/{did}',
+					'GET /thumbnails/document/{did}',
 				],
 			},
 		},

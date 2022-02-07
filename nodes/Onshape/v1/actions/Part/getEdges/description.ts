@@ -14,7 +14,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},
@@ -140,7 +140,7 @@ export const getEdgesDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/tessellatededges',
 				],
 			},
 		},

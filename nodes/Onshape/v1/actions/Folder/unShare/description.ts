@@ -14,7 +14,7 @@ export const unShareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'DELETE /api/folders/{fid}/share/{eid}',
+					'DELETE /folders/{fid}/share/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const unShareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'DELETE /api/folders/{fid}/share/{eid}',
+					'DELETE /folders/{fid}/share/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const unShareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'DELETE /api/folders/{fid}/share/{eid}',
+					'DELETE /folders/{fid}/share/{eid}',
 				],
 			},
 		},

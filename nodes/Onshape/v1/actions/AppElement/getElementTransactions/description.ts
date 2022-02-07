@@ -14,7 +14,7 @@ export const getElementTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+					'GET /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getElementTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+					'GET /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getElementTransactionsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+					'GET /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
 				],
 			},
 		},

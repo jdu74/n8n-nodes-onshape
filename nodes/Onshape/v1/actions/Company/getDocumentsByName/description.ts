@@ -14,7 +14,7 @@ export const getDocumentsByNameDescription: INodeProperties[] = [
 					'Company',
 				],
 				operation: [
-					'GET /api/companies/{cid}/documentsbyname',
+					'GET /companies/{cid}/documentsbyname',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDocumentsByNameDescription: INodeProperties[] = [
 					'Company',
 				],
 				operation: [
-					'GET /api/companies/{cid}/documentsbyname',
+					'GET /companies/{cid}/documentsbyname',
 				],
 			},
 		},

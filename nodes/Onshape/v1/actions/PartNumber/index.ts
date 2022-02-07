@@ -21,11 +21,11 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'nextNumbers',
-				value: 'POST /api/partnumber/nextnumbers',
-				description: 'post /api/partnumber/nextnumbers',
+				value: 'POST /partnumber/nextnumbers',
+				description: 'post /partnumber/nextnumbers',
 			},
 		],
-		default: 'POST /api/partnumber/nextnumbers',
+		default: 'POST /partnumber/nextnumbers',
 		description: 'The operation to perform',
 	},
 	...nextNumbers.description,

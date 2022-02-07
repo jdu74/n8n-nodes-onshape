@@ -1,13 +1,13 @@
 import * as createDrawingAppElement from './createDrawingAppElement';
-import * as createDrawingTranslation from './createDrawingTranslation';
 import * as getDrawingTranslatorFormats from './getDrawingTranslatorFormats';
+import * as createDrawingTranslation from './createDrawingTranslation';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
 	createDrawingAppElement,
-	createDrawingTranslation,
 	getDrawingTranslatorFormats,
+	createDrawingTranslation,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -25,24 +25,24 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'createDrawingAppElement',
-				value: 'POST /api/drawings/create',
-				description: 'post /api/drawings/create',
-			},
-			{
-				name: 'createDrawingTranslation',
-				value: 'POST /api/drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-				description: 'Create Drawing translation - post /api/drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				value: 'POST /drawings/create',
+				description: 'post /drawings/create',
 			},
 			{
 				name: 'getDrawingTranslatorFormats',
-				value: 'GET /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
-				description: 'get /api/drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+				value: 'GET /drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+				description: 'get /drawings/d/{did}/w/{wid}/e/{eid}/translationformats',
+			},
+			{
+				name: 'createDrawingTranslation',
+				value: 'POST /drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				description: 'Create Drawing translation - post /drawings/d/{did}/{wv}/{wvid}/e/{eid}/translations',
 			},
 		],
-		default: 'POST /api/drawings/create',
+		default: 'POST /drawings/create',
 		description: 'The operation to perform',
 	},
 	...createDrawingAppElement.description,
-	...createDrawingTranslation.description,
 	...getDrawingTranslatorFormats.description,
+	...createDrawingTranslation.description,
 ];

@@ -14,7 +14,7 @@ export const shareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'POST /api/folders/{fid}/share',
+					'POST /folders/{fid}/share',
 				],
 			},
 		},
@@ -24,29 +24,21 @@ export const shareDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Folder',
 				],
 				operation: [
-					'POST /api/folders/{fid}/share',
+					'POST /folders/{fid}/share',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -62,12 +54,10 @@ export const shareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'POST /api/folders/{fid}/share',
+					'POST /folders/{fid}/share',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -88,23 +78,21 @@ export const shareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'POST /api/folders/{fid}/share',
+					'POST /folders/{fid}/share',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'workspaceId',
-				displayName: 'workspaceId',
-				description: 'workspaceId - string',
+				name: 'documentId',
+				displayName: 'documentId',
+				description: 'documentId - string',
 				type: 'string',
 				default: '',
 			},
@@ -116,11 +104,81 @@ export const shareDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'documentId',
-				displayName: 'documentId',
-				description: 'documentId - string',
+				name: 'encodedConfiguration',
+				displayName: 'encodedConfiguration',
+				description: 'encodedConfiguration - string',
 				type: 'string',
 				default: '',
+			},
+			{
+				displayName: 'entries',
+				name: 'entries',
+				description: 'entries - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'entriesProperties',
+						name: 'entriesProperties',
+						values: [
+							{
+								displayName: 'entries',
+								name: 'entries',
+								description: 'entries - object',
+								type: 'collection',
+								default: '',
+								placeholder: 'Add Field',
+								options: [
+									{
+										name: 'applicationId',
+										displayName: 'applicationId',
+										description: 'applicationId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'companyId',
+										displayName: 'companyId',
+										description: 'companyId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'email',
+										displayName: 'email',
+										description: 'email - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'entryType',
+										displayName: 'entryType',
+										description: 'entryType - integer',
+										type: 'number',
+										default: 0,
+									},
+									{
+										name: 'teamId',
+										displayName: 'teamId',
+										description: 'teamId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'userId',
+										displayName: 'userId',
+										description: 'userId - string',
+										type: 'string',
+										default: '',
+									},
+								],
+							},
+						],
+					},
+				],
 			},
 			{
 				name: 'folderId',
@@ -128,6 +186,20 @@ export const shareDescription: INodeProperties[] = [
 				description: 'folderId - string',
 				type: 'string',
 				default: '',
+			},
+			{
+				name: 'message',
+				displayName: 'message',
+				description: 'message - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'permission',
+				displayName: 'permission',
+				description: 'permission - integer',
+				type: 'number',
+				default: 0,
 			},
 			{
 				displayName: 'permissionSet',
@@ -162,95 +234,11 @@ export const shareDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'encodedConfiguration',
-				displayName: 'encodedConfiguration',
-				description: 'encodedConfiguration - string',
+				name: 'workspaceId',
+				displayName: 'workspaceId',
+				description: 'workspaceId - string',
 				type: 'string',
 				default: '',
-			},
-			{
-				name: 'message',
-				displayName: 'message',
-				description: 'message - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'entries',
-				name: 'entries',
-				description: 'entries - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'entriesProperties',
-						name: 'entriesProperties',
-						values: [
-							{
-								displayName: 'entries',
-								name: 'entries',
-								description: 'entries - object',
-								type: 'collection',
-								default: '',
-								placeholder: 'Add Field',
-								options: [
-									{
-										name: 'userId',
-										displayName: 'userId',
-										description: 'userId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'email',
-										displayName: 'email',
-										description: 'email - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'companyId',
-										displayName: 'companyId',
-										description: 'companyId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'applicationId',
-										displayName: 'applicationId',
-										description: 'applicationId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'teamId',
-										displayName: 'teamId',
-										description: 'teamId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'entryType',
-										displayName: 'entryType',
-										description: 'entryType - integer',
-										type: 'number',
-										default: 0,
-									},
-								],
-							},
-						],
-					},
-				],
-			},
-			{
-				name: 'permission',
-				displayName: 'permission',
-				description: 'permission - integer',
-				type: 'number',
-				default: 0,
 			},
 		],
 	},
@@ -269,15 +257,13 @@ export const shareDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'POST /api/folders/{fid}/share',
+					'POST /folders/{fid}/share',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

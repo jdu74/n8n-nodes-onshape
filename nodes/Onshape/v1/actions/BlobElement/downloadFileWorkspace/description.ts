@@ -14,7 +14,7 @@ export const downloadFileWorkspaceDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+					'GET /blobelements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const downloadFileWorkspaceDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+					'GET /blobelements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const downloadFileWorkspaceDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+					'GET /blobelements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const downloadFileWorkspaceDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+					'GET /blobelements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},

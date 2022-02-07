@@ -1,13 +1,13 @@
-import * as getMembers from './getMembers';
 import * as find from './find';
 import * as getTeam from './getTeam';
+import * as getMembers from './getMembers';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	getMembers,
 	find,
 	getTeam,
+	getMembers,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -24,25 +24,25 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'getMembers',
-				value: 'GET /api/teams/{tid}/members',
-				description: 'get /api/teams/{tid}/members',
-			},
-			{
 				name: 'find',
-				value: 'GET /api/teams',
-				description: 'get /api/teams',
+				value: 'GET /teams',
+				description: 'get /teams',
 			},
 			{
 				name: 'getTeam',
-				value: 'GET /api/teams/{tid}',
-				description: 'get /api/teams/{tid}',
+				value: 'GET /teams/{tid}',
+				description: 'get /teams/{tid}',
+			},
+			{
+				name: 'getMembers',
+				value: 'GET /teams/{tid}/members',
+				description: 'get /teams/{tid}/members',
 			},
 		],
-		default: 'GET /api/teams/{tid}/members',
+		default: 'GET /teams',
 		description: 'The operation to perform',
 	},
-	...getMembers.description,
 	...find.description,
 	...getTeam.description,
+	...getMembers.description,
 ];

@@ -14,7 +14,7 @@ export const getConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getFeatureScriptRepresentationDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getFeatureScriptRepresentationDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getFeatureScriptRepresentationDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getFeatureScriptRepresentationDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getFeatureScriptRepresentationDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescriptrepresentation',
 				],
 			},
 		},

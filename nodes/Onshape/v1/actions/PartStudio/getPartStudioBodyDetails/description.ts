@@ -14,7 +14,7 @@ export const getPartStudioBodyDetailsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartStudioBodyDetailsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartStudioBodyDetailsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartStudioBodyDetailsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getPartStudioBodyDetailsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/bodydetails',
 				],
 			},
 		},

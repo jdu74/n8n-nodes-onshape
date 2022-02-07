@@ -14,7 +14,7 @@ export const getOpenApiDescription: INodeProperties[] = [
 					'OpenApi',
 				],
 				operation: [
-					'GET /api/openapi',
+					'GET /openapi',
 				],
 			},
 		},

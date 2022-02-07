@@ -14,7 +14,7 @@ export const getDocumentThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/s/{sz}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDocumentThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/s/{sz}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getDocumentThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/s/{sz}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getDocumentThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/s/{sz}',
 				],
 			},
 		},

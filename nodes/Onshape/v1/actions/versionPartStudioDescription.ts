@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Modify, change, and get PartStudios. - 1.141.3299-c9756493fe75',
+	description: 'Modify, change, and get PartStudios. - 1.142.3474-2cce0e0bb830',
 	version: 1,
 	defaults: {
 		name: 'Onshape - PartStudio'

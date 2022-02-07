@@ -14,7 +14,7 @@ export const getElementTranslatorFormatsByVersionOrWorkspaceDescription: INodePr
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+					'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getElementTranslatorFormatsByVersionOrWorkspaceDescription: INodePr
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+					'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getElementTranslatorFormatsByVersionOrWorkspaceDescription: INodePr
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+					'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getElementTranslatorFormatsByVersionOrWorkspaceDescription: INodePr
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+					'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getElementTranslatorFormatsByVersionOrWorkspaceDescription: INodePr
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+					'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 				],
 			},
 		},

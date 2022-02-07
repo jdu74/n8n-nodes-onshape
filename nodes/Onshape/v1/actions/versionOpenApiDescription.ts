@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Endpoints for getting the OpenAPI specification for the Onshape API. - 1.141.3299-c9756493fe75',
+	description: 'Endpoints for getting the OpenAPI specification for the Onshape API. - 1.142.3474-2cce0e0bb830',
 	version: 1,
 	defaults: {
 		name: 'Onshape - OpenApi'

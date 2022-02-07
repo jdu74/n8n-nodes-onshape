@@ -14,7 +14,7 @@ export const compareAppElementJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const compareAppElementJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const compareAppElementJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const compareAppElementJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const compareAppElementJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
 				],
 			},
 		},

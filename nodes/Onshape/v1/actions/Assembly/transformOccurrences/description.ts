@@ -14,7 +14,7 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 			},
 		},
@@ -60,29 +60,21 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -98,12 +90,10 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -124,43 +114,23 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
-				displayName: 'transform',
-				name: 'transform',
-				description: 'transform - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'transformProperties',
-						name: 'transformProperties',
-						values: [
-							{
-								name: 'transform',
-								displayName: 'transform',
-								description: 'transform - number',
-								type: 'number',
-								default: '',
-							},
-						],
-					},
-				],
+				name: 'isRelative',
+				displayName: 'isRelative',
+				description: 'isRelative - boolean',
+				type: 'boolean',
+				default: false,
 			},
 			{
 				displayName: 'occurrences',
@@ -188,11 +158,29 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 				],
 			},
 			{
-				name: 'isRelative',
-				displayName: 'isRelative',
-				description: 'isRelative - boolean',
-				type: 'boolean',
-				default: false,
+				displayName: 'transform',
+				name: 'transform',
+				description: 'transform - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'transformProperties',
+						name: 'transformProperties',
+						values: [
+							{
+								name: 'transform',
+								displayName: 'transform',
+								description: 'transform - number',
+								type: 'number',
+								default: '',
+							},
+						],
+					},
+				],
 			},
 		],
 	},
@@ -211,15 +199,13 @@ export const transformOccurrencesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

@@ -1,27 +1,27 @@
-import * as getVEOPStandardContentMetadata from './getVEOPStandardContentMetadata';
-import * as updateVEOPStandardContentPartMetadata from './updateVEOPStandardContentPartMetadata';
+import * as getWMVEsMetadata from './getWMVEsMetadata';
 import * as getWMVEMetadata from './getWMVEMetadata';
 import * as updateWVEMetadata from './updateWVEMetadata';
+import * as getWMVEPsMetadata from './getWMVEPsMetadata';
 import * as getWMVEPMetadata from './getWMVEPMetadata';
 import * as updateWVEPMetadata from './updateWVEPMetadata';
-import * as getWMVEPsMetadata from './getWMVEPsMetadata';
-import * as getWMVEsMetadata from './getWMVEsMetadata';
 import * as getWVMetadata from './getWVMetadata';
 import * as updateWVMetadata from './updateWVMetadata';
+import * as getVEOPStandardContentMetadata from './getVEOPStandardContentMetadata';
+import * as updateVEOPStandardContentPartMetadata from './updateVEOPStandardContentPartMetadata';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	getVEOPStandardContentMetadata,
-	updateVEOPStandardContentPartMetadata,
+	getWMVEsMetadata,
 	getWMVEMetadata,
 	updateWVEMetadata,
+	getWMVEPsMetadata,
 	getWMVEPMetadata,
 	updateWVEPMetadata,
-	getWMVEPsMetadata,
-	getWMVEsMetadata,
 	getWVMetadata,
 	updateWVMetadata,
+	getVEOPStandardContentMetadata,
+	updateVEOPStandardContentPartMetadata,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -38,67 +38,67 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'getVEOPStandardContentMetadata',
-				value: 'GET /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
-				description: 'get /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
-			},
-			{
-				name: 'updateVEOPStandardContentPartMetadata',
-				value: 'POST /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
-				description: 'post /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
+				name: 'getWMVEsMetadata',
+				value: 'GET /metadata/d/{did}/{wvm}/{wvmid}/e',
+				description: 'get /metadata/d/{did}/{wvm}/{wvmid}/e',
 			},
 			{
 				name: 'getWMVEMetadata',
-				value: 'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
-				description: 'get /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				value: 'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				description: 'get /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 			},
 			{
 				name: 'updateWVEMetadata',
-				value: 'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
-				description: 'post /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
-			},
-			{
-				name: 'getWMVEPMetadata',
-				value: 'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
-				description: 'get /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
-			},
-			{
-				name: 'updateWVEPMetadata',
-				value: 'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
-				description: 'post /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+				value: 'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				description: 'post /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 			},
 			{
 				name: 'getWMVEPsMetadata',
-				value: 'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
-				description: 'get /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+				value: 'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+				description: 'get /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 			},
 			{
-				name: 'getWMVEsMetadata',
-				value: 'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e',
-				description: 'get /api/metadata/d/{did}/{wvm}/{wvmid}/e',
+				name: 'getWMVEPMetadata',
+				value: 'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+				description: 'get /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+			},
+			{
+				name: 'updateWVEPMetadata',
+				value: 'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+				description: 'post /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 			},
 			{
 				name: 'getWVMetadata',
-				value: 'GET /api/metadata/d/{did}/{wv}/{wvid}',
-				description: 'get /api/metadata/d/{did}/{wv}/{wvid}',
+				value: 'GET /metadata/d/{did}/{wv}/{wvid}',
+				description: 'get /metadata/d/{did}/{wv}/{wvid}',
 			},
 			{
 				name: 'updateWVMetadata',
-				value: 'POST /api/metadata/d/{did}/{wv}/{wvid}',
-				description: 'post /api/metadata/d/{did}/{wv}/{wvid}',
+				value: 'POST /metadata/d/{did}/{wv}/{wvid}',
+				description: 'post /metadata/d/{did}/{wv}/{wvid}',
+			},
+			{
+				name: 'getVEOPStandardContentMetadata',
+				value: 'GET /metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
+				description: 'get /metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
+			},
+			{
+				name: 'updateVEOPStandardContentPartMetadata',
+				value: 'POST /metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
+				description: 'post /metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
 			},
 		],
-		default: 'GET /api/metadata/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/p/{pid}',
+		default: 'GET /metadata/d/{did}/{wvm}/{wvmid}/e',
 		description: 'The operation to perform',
 	},
-	...getVEOPStandardContentMetadata.description,
-	...updateVEOPStandardContentPartMetadata.description,
+	...getWMVEsMetadata.description,
 	...getWMVEMetadata.description,
 	...updateWVEMetadata.description,
+	...getWMVEPsMetadata.description,
 	...getWMVEPMetadata.description,
 	...updateWVEPMetadata.description,
-	...getWMVEPsMetadata.description,
-	...getWMVEsMetadata.description,
 	...getWVMetadata.description,
 	...updateWVMetadata.description,
+	...getVEOPStandardContentMetadata.description,
+	...updateVEOPStandardContentPartMetadata.description,
 ];

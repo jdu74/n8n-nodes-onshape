@@ -14,7 +14,7 @@ export const getCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'GET /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'GET /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'GET /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},

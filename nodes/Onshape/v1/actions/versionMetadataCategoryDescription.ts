@@ -11,7 +11,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'MetadataCategory - 1.141.3299-c9756493fe75',
+	description: 'MetadataCategory - 1.142.3474-2cce0e0bb830',
 	version: 1,
 	defaults: {
 		name: 'Onshape - MetadataCategory'

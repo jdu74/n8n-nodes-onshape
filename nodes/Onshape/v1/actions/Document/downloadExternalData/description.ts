@@ -14,7 +14,7 @@ export const downloadExternalDataDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/externaldata/{fid}',
+					'GET /documents/d/{did}/externaldata/{fid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const downloadExternalDataDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/externaldata/{fid}',
+					'GET /documents/d/{did}/externaldata/{fid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const downloadExternalDataDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/externaldata/{fid}',
+					'GET /documents/d/{did}/externaldata/{fid}',
 				],
 			},
 		},

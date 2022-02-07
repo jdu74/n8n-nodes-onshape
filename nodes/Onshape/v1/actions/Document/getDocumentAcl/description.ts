@@ -14,7 +14,7 @@ export const getDocumentAclDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/{did}/acl',
+					'GET /documents/{did}/acl',
 				],
 			},
 		},

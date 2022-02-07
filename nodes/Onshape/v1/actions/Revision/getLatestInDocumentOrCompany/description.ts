@@ -14,7 +14,7 @@ export const getLatestInDocumentOrCompanyDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/{cd}/{cdid}/p/{pnum}/latest',
+					'GET /revisions/{cd}/{cdid}/p/{pnum}/latest',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getLatestInDocumentOrCompanyDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/{cd}/{cdid}/p/{pnum}/latest',
+					'GET /revisions/{cd}/{cdid}/p/{pnum}/latest',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getLatestInDocumentOrCompanyDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/{cd}/{cdid}/p/{pnum}/latest',
+					'GET /revisions/{cd}/{cdid}/p/{pnum}/latest',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getLatestInDocumentOrCompanyDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/{cd}/{cdid}/p/{pnum}/latest',
+					'GET /revisions/{cd}/{cdid}/p/{pnum}/latest',
 				],
 			},
 		},

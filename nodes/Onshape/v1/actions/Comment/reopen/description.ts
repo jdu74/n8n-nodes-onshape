@@ -14,7 +14,7 @@ export const reopenDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/reopen',
+					'POST /comments/{cid}/reopen',
 				],
 			},
 		},

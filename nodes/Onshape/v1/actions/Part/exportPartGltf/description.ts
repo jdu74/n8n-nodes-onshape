@@ -14,7 +14,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},
@@ -140,7 +140,7 @@ export const exportPartGltfDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf',
 				],
 			},
 		},

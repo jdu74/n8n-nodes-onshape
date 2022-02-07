@@ -14,7 +14,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const deleteReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},

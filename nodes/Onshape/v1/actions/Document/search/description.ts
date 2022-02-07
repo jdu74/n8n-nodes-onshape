@@ -6,29 +6,21 @@ export const searchDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/search',
+					'POST /documents/search',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -44,12 +36,10 @@ export const searchDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/search',
+					'POST /documents/search',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -70,23 +60,49 @@ export const searchDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/search',
+					'POST /documents/search',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
+				name: 'documentFilter',
+				displayName: 'documentFilter',
+				description: 'documentFilter - integer',
+				type: 'number',
+				default: 0,
+			},
+			{
+				name: 'foundIn',
+				displayName: 'foundIn',
+				description: 'foundIn - string',
+				type: 'string',
+				default: '',
+			},
+			{
 				name: 'limit',
 				displayName: 'limit',
 				description: 'limit - integer',
+				type: 'number',
+				default: 0,
+			},
+			{
+				name: 'luceneSyntax',
+				displayName: 'luceneSyntax',
+				description: 'luceneSyntax - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'offset',
+				displayName: 'offset',
+				description: 'offset - integer',
 				type: 'number',
 				default: 0,
 			},
@@ -105,11 +121,11 @@ export const searchDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'documentFilter',
-				displayName: 'documentFilter',
-				description: 'documentFilter - integer',
-				type: 'number',
-				default: 0,
+				name: 'rawQuery',
+				displayName: 'rawQuery',
+				description: 'rawQuery - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				name: 'sortColumn',
@@ -126,9 +142,9 @@ export const searchDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'foundIn',
-				displayName: 'foundIn',
-				description: 'foundIn - string',
+				name: 'type',
+				displayName: 'type',
+				description: 'type - string',
 				type: 'string',
 				default: '',
 			},
@@ -138,34 +154,6 @@ export const searchDescription: INodeProperties[] = [
 				description: 'when - string',
 				type: 'string',
 				default: '',
-			},
-			{
-				name: 'luceneSyntax',
-				displayName: 'luceneSyntax',
-				description: 'luceneSyntax - boolean',
-				type: 'boolean',
-				default: false,
-			},
-			{
-				name: 'type',
-				displayName: 'type',
-				description: 'type - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'rawQuery',
-				displayName: 'rawQuery',
-				description: 'rawQuery - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'offset',
-				displayName: 'offset',
-				description: 'offset - integer',
-				type: 'number',
-				default: 0,
 			},
 		],
 	},
@@ -184,15 +172,13 @@ export const searchDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/search',
+					'POST /documents/search',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

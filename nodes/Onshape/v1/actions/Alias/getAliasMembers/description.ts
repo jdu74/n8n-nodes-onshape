@@ -14,7 +14,7 @@ export const getAliasMembersDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'GET /api/aliases/{aid}/members',
+					'GET /aliases/{aid}/members',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAliasMembersDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'GET /api/aliases/{aid}/members',
+					'GET /aliases/{aid}/members',
 				],
 			},
 		},

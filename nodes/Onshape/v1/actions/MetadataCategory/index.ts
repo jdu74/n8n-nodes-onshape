@@ -21,11 +21,11 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getCategoryProperties',
-				value: 'GET /api/metadatacategory/categoryproperties',
-				description: 'get /api/metadatacategory/categoryproperties',
+				value: 'GET /metadatacategory/categoryproperties',
+				description: 'get /metadatacategory/categoryproperties',
 			},
 		],
-		default: 'GET /api/metadatacategory/categoryproperties',
+		default: 'GET /metadatacategory/categoryproperties',
 		description: 'The operation to perform',
 	},
 	...getCategoryProperties.description,

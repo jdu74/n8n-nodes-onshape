@@ -25,21 +25,21 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getActiveWorkflows',
-				value: 'GET /api/workflow/active',
-				description: 'get /api/workflow/active',
+				value: 'GET /workflow/active',
+				description: 'get /workflow/active',
 			},
 			{
 				name: 'getAllowedApprovers',
-				value: 'GET /api/workflow/c/{companyId}/approvers',
-				description: 'get /api/workflow/c/{companyId}/approvers',
+				value: 'GET /workflow/c/{companyId}/approvers',
+				description: 'get /workflow/c/{companyId}/approvers',
 			},
 			{
 				name: 'getAuditLog',
-				value: 'GET /api/workflow/obj/{objectId}/auditlog',
-				description: 'get /api/workflow/obj/{objectId}/auditlog',
+				value: 'GET /workflow/obj/{objectId}/auditlog',
+				description: 'get /workflow/obj/{objectId}/auditlog',
 			},
 		],
-		default: 'GET /api/workflow/active',
+		default: 'GET /workflow/active',
 		description: 'The operation to perform',
 	},
 	...getActiveWorkflows.description,

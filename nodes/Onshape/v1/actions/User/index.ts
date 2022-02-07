@@ -1,15 +1,15 @@
 import * as session from './session';
-import * as getUserSettings from './getUserSettings';
-import * as getUserSettingsCurrentLoggedInUser from './getUserSettingsCurrentLoggedInUser';
 import * as sessionInfo from './sessionInfo';
+import * as getUserSettingsCurrentLoggedInUser from './getUserSettingsCurrentLoggedInUser';
+import * as getUserSettings from './getUserSettings';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
 	session,
-	getUserSettings,
-	getUserSettingsCurrentLoggedInUser,
 	sessionInfo,
+	getUserSettingsCurrentLoggedInUser,
+	getUserSettings,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -27,30 +27,30 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'session',
-				value: 'POST /api/users/session',
-				description: 'post /api/users/session',
-			},
-			{
-				name: 'getUserSettings',
-				value: 'GET /api/users/{uid}/settings',
-				description: 'get /api/users/{uid}/settings',
-			},
-			{
-				name: 'getUserSettingsCurrentLoggedInUser',
-				value: 'GET /api/users/settings',
-				description: 'get /api/users/settings',
+				value: 'POST /users/session',
+				description: 'post /users/session',
 			},
 			{
 				name: 'sessionInfo',
-				value: 'GET /api/users/sessioninfo',
-				description: 'get /api/users/sessioninfo',
+				value: 'GET /users/sessioninfo',
+				description: 'get /users/sessioninfo',
+			},
+			{
+				name: 'getUserSettingsCurrentLoggedInUser',
+				value: 'GET /users/settings',
+				description: 'get /users/settings',
+			},
+			{
+				name: 'getUserSettings',
+				value: 'GET /users/{uid}/settings',
+				description: 'get /users/{uid}/settings',
 			},
 		],
-		default: 'POST /api/users/session',
+		default: 'POST /users/session',
 		description: 'The operation to perform',
 	},
 	...session.description,
-	...getUserSettings.description,
-	...getUserSettingsCurrentLoggedInUser.description,
 	...sessionInfo.description,
+	...getUserSettingsCurrentLoggedInUser.description,
+	...getUserSettings.description,
 ];

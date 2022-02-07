@@ -14,7 +14,7 @@ export const getWMVEPsMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getWMVEPsMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getWMVEPsMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getWMVEPsMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getWMVEPsMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/p',
 				],
 			},
 		},

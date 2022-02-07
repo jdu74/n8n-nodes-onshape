@@ -14,7 +14,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getElementThumbnailWithApiConfigurationDescription: INodeProperties
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
 				],
 			},
 		},

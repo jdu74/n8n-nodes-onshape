@@ -14,7 +14,7 @@ export const getBillOfMaterialsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getBillOfMaterialsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getBillOfMaterialsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getBillOfMaterialsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getBillOfMaterialsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const restoreFromHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/w/{wid}/restore/{vm}/{vmid}',
+					'POST /documents/{did}/w/{wid}/restore/{vm}/{vmid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const restoreFromHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/w/{wid}/restore/{vm}/{vmid}',
+					'POST /documents/{did}/w/{wid}/restore/{vm}/{vmid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const restoreFromHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/w/{wid}/restore/{vm}/{vmid}',
+					'POST /documents/{did}/w/{wid}/restore/{vm}/{vmid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const restoreFromHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/w/{wid}/restore/{vm}/{vmid}',
+					'POST /documents/{did}/w/{wid}/restore/{vm}/{vmid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const restoreFromHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/{did}/w/{wid}/restore/{vm}/{vmid}',
+					'POST /documents/{did}/w/{wid}/restore/{vm}/{vmid}',
 				],
 			},
 		},

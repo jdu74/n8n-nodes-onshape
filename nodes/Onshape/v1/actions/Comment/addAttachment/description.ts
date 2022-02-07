@@ -14,7 +14,7 @@ export const addAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/attachment',
+					'POST /comments/{cid}/attachment',
 				],
 			},
 		},
@@ -31,7 +31,7 @@ export const addAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/attachment',
+					'POST /comments/{cid}/attachment',
 				],
 			},
 		},
@@ -54,7 +54,7 @@ export const addAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/attachment',
+					'POST /comments/{cid}/attachment',
 				],
 				jsonContentType: [
 					'multipart/form-data',
@@ -78,7 +78,7 @@ export const addAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/attachment',
+					'POST /comments/{cid}/attachment',
 				],
 				jsonParameters: [
 					false,
@@ -90,130 +90,11 @@ export const addAttachmentDescription: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'contentDisposition',
-				displayName: 'contentDisposition',
-				description: 'contentDisposition - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'entity',
-				displayName: 'entity',
-				description: 'entity - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'headers',
-				displayName: 'headers',
-				description: 'headers - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				displayName: 'mediaType',
-				name: 'mediaType',
-				description: 'mediaType - object',
-				type: 'collection',
-				default: '',
-				placeholder: 'Add Field',
-				options: [
-					{
-						name: 'type',
-						displayName: 'type',
-						description: 'type - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'subtype',
-						displayName: 'subtype',
-						description: 'subtype - string',
-						type: 'string',
-						default: '',
-					},
-					{
-						name: 'parameters',
-						displayName: 'parameters',
-						description: 'parameters - object',
-						type: 'json',
-						default: '',
-					},
-					{
-						name: 'wildcardType',
-						displayName: 'wildcardType',
-						description: 'wildcardType - boolean',
-						type: 'boolean',
-						default: false,
-					},
-					{
-						name: 'wildcardSubtype',
-						displayName: 'wildcardSubtype',
-						description: 'wildcardSubtype - boolean',
-						type: 'boolean',
-						default: false,
-					},
-				],
-			},
-			{
-				name: 'messageBodyWorkers',
-				displayName: 'messageBodyWorkers',
-				description: 'messageBodyWorkers - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'parent',
-				displayName: 'parent',
-				description: 'parent - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'providers',
-				displayName: 'providers',
-				description: 'providers - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				displayName: 'bodyParts',
-				name: 'bodyParts',
-				description: 'bodyParts - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'bodyPartsProperties',
-						name: 'bodyPartsProperties',
-						values: [
-							{
-								name: 'bodyParts',
-								displayName: 'bodyParts',
-								description: 'bodyParts - object',
-								type: 'json',
-								default: '',
-							},
-						],
-					},
-				],
-			},
-			{
-				name: 'fields',
-				displayName: 'fields',
-				description: 'fields - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'parameterizedHeaders',
-				displayName: 'parameterizedHeaders',
-				description: 'parameterizedHeaders - object',
-				type: 'json',
-				default: '',
+				name: 'file',
+				displayName: 'file',
+				description: 'file - binary',
+				type: 'string',
+				default: 'data',
 			},
 		],
 	},
@@ -232,7 +113,7 @@ export const addAttachmentDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/attachment',
+					'POST /comments/{cid}/attachment',
 				],
 				jsonParameters: [
 					true,

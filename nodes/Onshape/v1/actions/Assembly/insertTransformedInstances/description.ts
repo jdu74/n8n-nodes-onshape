@@ -14,7 +14,7 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 			},
 		},
@@ -60,29 +60,21 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -98,12 +90,10 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -124,15 +114,13 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -160,31 +148,6 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										displayName: 'transform',
-										name: 'transform',
-										description: 'transform - array',
-										type: 'fixedCollection',
-										typeOptions: {
-											multipleValues: true,
-										},
-										default: '',
-										options: [
-											{
-												displayName: 'transformProperties',
-												name: 'transformProperties',
-												values: [
-													{
-														name: 'transform',
-														displayName: 'transform',
-														description: 'transform - number',
-														type: 'number',
-														default: '',
-													},
-												],
-											},
-										],
-									},
-									{
 										displayName: 'instances',
 										name: 'instances',
 										description: 'instances - array',
@@ -207,11 +170,32 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 														placeholder: 'Add Field',
 														options: [
 															{
-																name: 'isWholePartStudio',
-																displayName: 'isWholePartStudio',
-																description: 'isWholePartStudio - boolean',
-																type: 'boolean',
-																default: false,
+																name: 'configuration',
+																displayName: 'configuration',
+																description: 'configuration - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'documentId',
+																displayName: 'documentId',
+																description: 'documentId - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'elementId',
+																displayName: 'elementId',
+																description: 'elementId - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'featureId',
+																displayName: 'featureId',
+																description: 'featureId - string',
+																type: 'string',
+																default: '',
 															},
 															{
 																displayName: 'includePartTypes',
@@ -239,6 +223,13 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 																],
 															},
 															{
+																name: 'isAssembly',
+																displayName: 'isAssembly',
+																description: 'isAssembly - boolean',
+																type: 'boolean',
+																default: false,
+															},
+															{
 																name: 'isHidden',
 																displayName: 'isHidden',
 																description: 'isHidden - boolean',
@@ -253,16 +244,30 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 																default: false,
 															},
 															{
-																name: 'isAssembly',
-																displayName: 'isAssembly',
-																description: 'isAssembly - boolean',
+																name: 'isWholePartStudio',
+																displayName: 'isWholePartStudio',
+																description: 'isWholePartStudio - boolean',
 																type: 'boolean',
 																default: false,
 															},
 															{
-																name: 'configuration',
-																displayName: 'configuration',
-																description: 'configuration - string',
+																name: 'microversionId',
+																displayName: 'microversionId',
+																description: 'microversionId - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'partId',
+																displayName: 'partId',
+																description: 'partId - string',
+																type: 'string',
+																default: '',
+															},
+															{
+																name: 'partNumber',
+																displayName: 'partNumber',
+																description: 'partNumber - string',
 																type: 'string',
 																default: '',
 															},
@@ -280,49 +285,32 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 																type: 'string',
 																default: '',
 															},
-															{
-																name: 'partNumber',
-																displayName: 'partNumber',
-																description: 'partNumber - string',
-																type: 'string',
-																default: '',
-															},
-															{
-																name: 'documentId',
-																displayName: 'documentId',
-																description: 'documentId - string',
-																type: 'string',
-																default: '',
-															},
-															{
-																name: 'elementId',
-																displayName: 'elementId',
-																description: 'elementId - string',
-																type: 'string',
-																default: '',
-															},
-															{
-																name: 'microversionId',
-																displayName: 'microversionId',
-																description: 'microversionId - string',
-																type: 'string',
-																default: '',
-															},
-															{
-																name: 'partId',
-																displayName: 'partId',
-																description: 'partId - string',
-																type: 'string',
-																default: '',
-															},
-															{
-																name: 'featureId',
-																displayName: 'featureId',
-																description: 'featureId - string',
-																type: 'string',
-																default: '',
-															},
 														],
+													},
+												],
+											},
+										],
+									},
+									{
+										displayName: 'transform',
+										name: 'transform',
+										description: 'transform - array',
+										type: 'fixedCollection',
+										typeOptions: {
+											multipleValues: true,
+										},
+										default: '',
+										options: [
+											{
+												displayName: 'transformProperties',
+												name: 'transformProperties',
+												values: [
+													{
+														name: 'transform',
+														displayName: 'transform',
+														description: 'transform - number',
+														type: 'number',
+														default: '',
 													},
 												],
 											},
@@ -351,15 +339,13 @@ export const insertTransformedInstancesDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

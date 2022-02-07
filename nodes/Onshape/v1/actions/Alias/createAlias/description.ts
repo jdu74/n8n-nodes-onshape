@@ -6,29 +6,21 @@ export const createAliasDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Alias',
 				],
 				operation: [
-					'POST /api/aliases',
+					'POST /aliases',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -44,12 +36,10 @@ export const createAliasDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'POST /api/aliases',
+					'POST /aliases',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -70,26 +60,17 @@ export const createAliasDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'POST /api/aliases',
+					'POST /aliases',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
-			{
-				name: 'description',
-				displayName: 'description',
-				description: 'description - string',
-				type: 'string',
-				default: '',
-			},
 			{
 				displayName: 'additions',
 				name: 'additions',
@@ -113,13 +94,6 @@ export const createAliasDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'userId',
-										displayName: 'userId',
-										description: 'userId - string',
-										type: 'string',
-										default: '',
-									},
-									{
 										name: 'email',
 										displayName: 'email',
 										description: 'email - string',
@@ -133,34 +107,6 @@ export const createAliasDescription: INodeProperties[] = [
 										type: 'string',
 										default: '',
 									},
-								],
-							},
-						],
-					},
-				],
-			},
-			{
-				displayName: 'removals',
-				name: 'removals',
-				description: 'removals - array',
-				type: 'fixedCollection',
-				typeOptions: {
-					multipleValues: true,
-				},
-				default: '',
-				options: [
-					{
-						displayName: 'removalsProperties',
-						name: 'removalsProperties',
-						values: [
-							{
-								displayName: 'removals',
-								name: 'removals',
-								description: 'removals - object',
-								type: 'collection',
-								default: '',
-								placeholder: 'Add Field',
-								options: [
 									{
 										name: 'userId',
 										displayName: 'userId',
@@ -168,20 +114,6 @@ export const createAliasDescription: INodeProperties[] = [
 										type: 'string',
 										default: '',
 									},
-									{
-										name: 'email',
-										displayName: 'email',
-										description: 'email - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'teamId',
-										displayName: 'teamId',
-										description: 'teamId - string',
-										type: 'string',
-										default: '',
-									},
 								],
 							},
 						],
@@ -189,9 +121,9 @@ export const createAliasDescription: INodeProperties[] = [
 				],
 			},
 			{
-				name: 'name',
-				displayName: 'name',
-				description: 'name - string',
+				name: 'description',
+				displayName: 'description',
+				description: 'description - string',
 				type: 'string',
 				default: '',
 			},
@@ -218,12 +150,61 @@ export const createAliasDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
+										name: 'email',
+										displayName: 'email',
+										description: 'email - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'teamId',
+										displayName: 'teamId',
+										description: 'teamId - string',
+										type: 'string',
+										default: '',
+									},
+									{
 										name: 'userId',
 										displayName: 'userId',
 										description: 'userId - string',
 										type: 'string',
 										default: '',
 									},
+								],
+							},
+						],
+					},
+				],
+			},
+			{
+				name: 'name',
+				displayName: 'name',
+				description: 'name - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				displayName: 'removals',
+				name: 'removals',
+				description: 'removals - array',
+				type: 'fixedCollection',
+				typeOptions: {
+					multipleValues: true,
+				},
+				default: '',
+				options: [
+					{
+						displayName: 'removalsProperties',
+						name: 'removalsProperties',
+						values: [
+							{
+								displayName: 'removals',
+								name: 'removals',
+								description: 'removals - object',
+								type: 'collection',
+								default: '',
+								placeholder: 'Add Field',
+								options: [
 									{
 										name: 'email',
 										displayName: 'email',
@@ -235,6 +216,13 @@ export const createAliasDescription: INodeProperties[] = [
 										name: 'teamId',
 										displayName: 'teamId',
 										description: 'teamId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'userId',
+										displayName: 'userId',
+										description: 'userId - string',
 										type: 'string',
 										default: '',
 									},
@@ -261,15 +249,13 @@ export const createAliasDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'POST /api/aliases',
+					'POST /aliases',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getPartsWMVDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartsWMVDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartsWMVDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartsWMVDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}',
 				],
 			},
 		},

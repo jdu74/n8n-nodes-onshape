@@ -14,7 +14,7 @@ export const getDocumentPermissionSetDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/{did}/permissionset',
+					'GET /documents/{did}/permissionset',
 				],
 			},
 		},

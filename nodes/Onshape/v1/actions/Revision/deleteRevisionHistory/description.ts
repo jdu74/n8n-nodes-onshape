@@ -14,7 +14,7 @@ export const deleteRevisionHistoryDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'DELETE /api/revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
+					'DELETE /revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteRevisionHistoryDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'DELETE /api/revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
+					'DELETE /revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteRevisionHistoryDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'DELETE /api/revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
+					'DELETE /revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteRevisionHistoryDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'DELETE /api/revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
+					'DELETE /revisions/companies/{cid}/partnumber/{pnum}/elementType/{et}',
 				],
 			},
 		},

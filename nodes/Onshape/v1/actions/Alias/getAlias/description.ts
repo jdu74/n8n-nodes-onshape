@@ -14,7 +14,7 @@ export const getAliasDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'GET /api/aliases/{aid}',
+					'GET /aliases/{aid}',
 				],
 			},
 		},

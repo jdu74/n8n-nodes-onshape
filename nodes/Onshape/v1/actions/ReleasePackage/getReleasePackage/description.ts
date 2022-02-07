@@ -14,7 +14,7 @@ export const getReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'GET /api/releasepackages/{rpid}',
+					'GET /releasepackages/{rpid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'GET /api/releasepackages/{rpid}',
+					'GET /releasepackages/{rpid}',
 				],
 			},
 		},

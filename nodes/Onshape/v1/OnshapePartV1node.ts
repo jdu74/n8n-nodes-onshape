@@ -32,8 +32,8 @@ export class OnshapePartV1 implements INodeType {
 
 		const operation = this.getNodeParameter('operation', 0) as string;
 		const isJson =
-			!(operation === 'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/parasolid') &&
-			!(operation === 'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf');
+			!(operation === 'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/parasolid') &&
+			!(operation === 'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf');
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];
 		const length = items.length as number;

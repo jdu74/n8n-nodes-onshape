@@ -14,7 +14,7 @@ export const getAppElementHistoryDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAppElementHistoryDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getAppElementHistoryDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getAppElementHistoryDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getWebhooksDescription: INodeProperties[] = [
 					'Webhook',
 				],
 				operation: [
-					'GET /api/webhooks',
+					'GET /webhooks',
 				],
 			},
 		},

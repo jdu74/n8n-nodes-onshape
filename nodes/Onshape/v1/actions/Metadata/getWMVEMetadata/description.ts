@@ -14,7 +14,7 @@ export const getWMVEMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getWMVEMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getWMVEMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getWMVEMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getWMVEMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},

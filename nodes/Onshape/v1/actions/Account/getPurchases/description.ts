@@ -14,7 +14,7 @@ export const getPurchasesDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'GET /api/accounts/purchases',
+					'GET /accounts/purchases',
 				],
 			},
 		},

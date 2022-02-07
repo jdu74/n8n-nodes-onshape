@@ -14,7 +14,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const getStandardContentPartMetadataDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
+					'GET /parts/standardcontent/d/{did}/v/{vid}/e/{eid}/{otype}/{oid}/partid/{partid}/metadata',
 				],
 			},
 		},

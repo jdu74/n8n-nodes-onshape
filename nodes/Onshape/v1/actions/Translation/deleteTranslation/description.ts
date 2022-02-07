@@ -14,7 +14,7 @@ export const deleteTranslationDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'DELETE /api/translations/{tid}',
+					'DELETE /translations/{tid}',
 				],
 			},
 		},

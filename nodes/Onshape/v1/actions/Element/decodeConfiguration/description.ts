@@ -14,7 +14,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const decodeConfigurationDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+					'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
 				],
 			},
 		},

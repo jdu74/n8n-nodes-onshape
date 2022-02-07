@@ -14,7 +14,7 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -78,29 +78,21 @@ export const updateAppElementDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -116,12 +108,10 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -142,40 +132,17 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
-			{
-				name: 'description',
-				displayName: 'description',
-				description: 'description - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'parentChangeId',
-				displayName: 'parentChangeId',
-				description: 'parentChangeId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'transactionId',
-				displayName: 'transactionId',
-				description: 'transactionId - string',
-				type: 'string',
-				default: '',
-			},
 			{
 				displayName: 'changes',
 				name: 'changes',
@@ -199,16 +166,16 @@ export const updateAppElementDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'delta',
-										displayName: 'delta',
-										description: 'delta - string',
+										name: 'baseContent',
+										displayName: 'baseContent',
+										description: 'baseContent - string',
 										type: 'string',
 										default: '',
 									},
 									{
-										name: 'baseContent',
-										displayName: 'baseContent',
-										description: 'baseContent - string',
+										name: 'delta',
+										displayName: 'delta',
+										description: 'delta - string',
 										type: 'string',
 										default: '',
 									},
@@ -226,10 +193,24 @@ export const updateAppElementDescription: INodeProperties[] = [
 				],
 			},
 			{
+				name: 'description',
+				displayName: 'description',
+				description: 'description - string',
+				type: 'string',
+				default: '',
+			},
+			{
 				name: 'jsonTreeEdit',
 				displayName: 'jsonTreeEdit',
 				description: 'jsonTreeEdit - object',
 				type: 'json',
+				default: '',
+			},
+			{
+				name: 'parentChangeId',
+				displayName: 'parentChangeId',
+				description: 'parentChangeId - string',
+				type: 'string',
 				default: '',
 			},
 			{
@@ -288,6 +269,13 @@ export const updateAppElementDescription: INodeProperties[] = [
 				type: 'boolean',
 				default: false,
 			},
+			{
+				name: 'transactionId',
+				displayName: 'transactionId',
+				description: 'transactionId - string',
+				type: 'string',
+				default: '',
+			},
 		],
 	},
 	{
@@ -305,15 +293,13 @@ export const updateAppElementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

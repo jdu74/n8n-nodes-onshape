@@ -25,21 +25,21 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'findCompany',
-				value: 'GET /api/companies',
-				description: 'Get User companies. - get /api/companies',
+				value: 'GET /companies',
+				description: 'Get User companies. - get /companies',
 			},
 			{
 				name: 'getCompany',
-				value: 'GET /api/companies/{cid}',
-				description: 'Get company. - get /api/companies/{cid}',
+				value: 'GET /companies/{cid}',
+				description: 'Get company. - get /companies/{cid}',
 			},
 			{
 				name: 'getDocumentsByName',
-				value: 'GET /api/companies/{cid}/documentsbyname',
-				description: 'get /api/companies/{cid}/documentsbyname',
+				value: 'GET /companies/{cid}/documentsbyname',
+				description: 'get /companies/{cid}/documentsbyname',
 			},
 		],
-		default: 'GET /api/companies',
+		default: 'GET /companies',
 		description: 'The operation to perform',
 	},
 	...findCompany.description,

@@ -2,6 +2,23 @@ import { INodeProperties } from "n8n-workflow";
 
 export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 	{
+		displayName: 'URL ?',
+		name: 'isUrl',
+		description: 'isUrl - boolean',
+		type: 'boolean',
+		default: false,
+		displayOptions: {
+			show: {
+				resource: [
+					'Thumbnail',
+				],
+				operation: [
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+			},
+		},
+	},
+	{
 		name: 'did-string(path)',
 		displayName: 'did',
 		description: 'did - string (path)',
@@ -14,7 +31,10 @@ export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+				isUrl: [
+					false,
 				],
 			},
 		},
@@ -32,7 +52,10 @@ export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+				isUrl: [
+					false,
 				],
 			},
 		},
@@ -50,7 +73,31 @@ export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+				isUrl: [
+					false,
+				],
+			},
+		},
+	},
+	{
+		name: 'url-string',
+		displayName: 'url',
+		description: 'url - string',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: [
+					'Thumbnail',
+				],
+				operation: [
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+				isUrl: [
+					true,
 				],
 			},
 		},
@@ -68,7 +115,7 @@ export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
 				],
 			},
 		},
@@ -86,7 +133,10 @@ export const getElementThumbnailWithSizeDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+					'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/s/{sz}',
+				],
+				isUrl: [
+					false,
 				],
 			},
 		},

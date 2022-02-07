@@ -14,7 +14,7 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 			},
 		},
@@ -86,29 +86,21 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -124,12 +116,10 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -150,26 +140,17 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
-			{
-				name: 'standardContentParametersId',
-				displayName: 'standardContentParametersId',
-				description: 'standardContentParametersId - string',
-				type: 'string',
-				default: '',
-			},
 			{
 				displayName: 'parameters',
 				name: 'parameters',
@@ -212,6 +193,13 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					},
 				],
 			},
+			{
+				name: 'standardContentParametersId',
+				displayName: 'standardContentParametersId',
+				description: 'standardContentParametersId - string',
+				type: 'string',
+				default: '',
+			},
 		],
 	},
 	{
@@ -229,15 +217,13 @@ export const encodeConfigurationMapDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
+					'POST /elements/d/{did}/e/{eid}/configurationencodings',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

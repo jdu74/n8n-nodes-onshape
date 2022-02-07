@@ -14,7 +14,7 @@ export const deleteInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const findDescription: INodeProperties[] = [
 					'Team',
 				],
 				operation: [
-					'GET /api/teams',
+					'GET /teams',
 				],
 			},
 		},

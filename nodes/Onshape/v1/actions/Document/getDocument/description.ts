@@ -14,7 +14,7 @@ export const getDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/{did}',
+					'GET /documents/{did}',
 				],
 			},
 		},

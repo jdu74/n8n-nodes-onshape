@@ -14,7 +14,7 @@ export const getAllowedApproversDescription: INodeProperties[] = [
 					'Workflow',
 				],
 				operation: [
-					'GET /api/workflow/c/{companyId}/approvers',
+					'GET /workflow/c/{companyId}/approvers',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAllowedApproversDescription: INodeProperties[] = [
 					'Workflow',
 				],
 				operation: [
-					'GET /api/workflow/c/{companyId}/approvers',
+					'GET /workflow/c/{companyId}/approvers',
 				],
 			},
 		},

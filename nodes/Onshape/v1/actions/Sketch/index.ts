@@ -1,12 +1,12 @@
-import * as getSketchBoundingBoxes from './getSketchBoundingBoxes';
 import * as getSketchInfo from './getSketchInfo';
+import * as getSketchBoundingBoxes from './getSketchBoundingBoxes';
 import * as getTessellatedEntities from './getTessellatedEntities';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	getSketchBoundingBoxes,
 	getSketchInfo,
+	getSketchBoundingBoxes,
 	getTessellatedEntities,
 };
 
@@ -24,25 +24,25 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'getSketchBoundingBoxes',
-				value: 'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
-				description: 'get /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+				name: 'getSketchInfo',
+				value: 'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+				description: 'get /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 			},
 			{
-				name: 'getSketchInfo',
-				value: 'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
-				description: 'get /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+				name: 'getSketchBoundingBoxes',
+				value: 'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+				description: 'get /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 			},
 			{
 				name: 'getTessellatedEntities',
-				value: 'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
-				description: 'get /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+				value: 'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
+				description: 'get /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/tessellatedentities',
 			},
 		],
-		default: 'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+		default: 'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 		description: 'The operation to perform',
 	},
-	...getSketchBoundingBoxes.description,
 	...getSketchInfo.description,
+	...getSketchBoundingBoxes.description,
 	...getTessellatedEntities.description,
 ];

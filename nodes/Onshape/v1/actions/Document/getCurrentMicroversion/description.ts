@@ -14,7 +14,7 @@ export const getCurrentMicroversionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion',
+					'GET /documents/d/{did}/{wv}/{wvid}/currentmicroversion',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getCurrentMicroversionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion',
+					'GET /documents/d/{did}/{wv}/{wvid}/currentmicroversion',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getCurrentMicroversionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/currentmicroversion',
+					'GET /documents/d/{did}/{wv}/{wvid}/currentmicroversion',
 				],
 			},
 		},

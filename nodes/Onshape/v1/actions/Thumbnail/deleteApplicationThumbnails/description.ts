@@ -14,7 +14,7 @@ export const deleteApplicationThumbnailsDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'DELETE /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteApplicationThumbnailsDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'DELETE /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteApplicationThumbnailsDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'DELETE /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteApplicationThumbnailsDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'DELETE /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},

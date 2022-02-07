@@ -14,7 +14,7 @@ export const getFeatureSpecsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getFeatureSpecsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getFeatureSpecsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getFeatureSpecsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},

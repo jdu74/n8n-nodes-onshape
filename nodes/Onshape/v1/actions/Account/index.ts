@@ -1,15 +1,15 @@
-import * as cancelPurchaseNew from './cancelPurchaseNew';
-import * as consumePurchase from './consumePurchase';
 import * as getPlanPurchases from './getPlanPurchases';
 import * as getPurchases from './getPurchases';
+import * as consumePurchase from './consumePurchase';
+import * as cancelPurchaseNew from './cancelPurchaseNew';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	cancelPurchaseNew,
-	consumePurchase,
 	getPlanPurchases,
 	getPurchases,
+	consumePurchase,
+	cancelPurchaseNew,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -26,31 +26,31 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'cancelPurchaseNew',
-				value: 'DELETE /api/accounts/{aid}/purchases/{pid}',
-				description: 'Cancel recurring subscription for the account - delete /api/accounts/{aid}/purchases/{pid}',
-			},
-			{
-				name: 'consumePurchase',
-				value: 'POST /api/accounts/purchases/{pid}/consume',
-				description: 'Mark purchase consumed by the user - post /api/accounts/purchases/{pid}/consume',
-			},
-			{
 				name: 'getPlanPurchases',
-				value: 'GET /api/accounts/plans/{planId}/purchases',
-				description: 'Retrieve an array of plan purchases for the account - get /api/accounts/plans/{planId}/purchases',
+				value: 'GET /accounts/plans/{planId}/purchases',
+				description: 'Retrieve an array of plan purchases for the account - get /accounts/plans/{planId}/purchases',
 			},
 			{
 				name: 'getPurchases',
-				value: 'GET /api/accounts/purchases',
-				description: 'Retrieve an array of the user’s App Store purchases - get /api/accounts/purchases',
+				value: 'GET /accounts/purchases',
+				description: 'Retrieve an array of the user’s App Store purchases - get /accounts/purchases',
+			},
+			{
+				name: 'consumePurchase',
+				value: 'POST /accounts/purchases/{pid}/consume',
+				description: 'Mark purchase consumed by the user - post /accounts/purchases/{pid}/consume',
+			},
+			{
+				name: 'cancelPurchaseNew',
+				value: 'DELETE /accounts/{aid}/purchases/{pid}',
+				description: 'Cancel recurring subscription for the account - delete /accounts/{aid}/purchases/{pid}',
 			},
 		],
-		default: 'DELETE /api/accounts/{aid}/purchases/{pid}',
+		default: 'GET /accounts/plans/{planId}/purchases',
 		description: 'The operation to perform',
 	},
-	...cancelPurchaseNew.description,
-	...consumePurchase.description,
 	...getPlanPurchases.description,
 	...getPurchases.description,
+	...consumePurchase.description,
+	...cancelPurchaseNew.description,
 ];

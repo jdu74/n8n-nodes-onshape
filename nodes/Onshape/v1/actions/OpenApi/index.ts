@@ -23,16 +23,16 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getOpenApi',
-				value: 'GET /api/openapi',
-				description: 'OpenAPI spec documentation for the Onshape REST API. - get /api/openapi',
+				value: 'GET /openapi',
+				description: 'OpenAPI spec documentation for the Onshape REST API. - get /openapi',
 			},
 			{
 				name: 'getTags',
-				value: 'GET /api/openapi/tags',
-				description: 'get /api/openapi/tags',
+				value: 'GET /openapi/tags',
+				description: 'get /openapi/tags',
 			},
 		],
-		default: 'GET /api/openapi',
+		default: 'GET /openapi',
 		description: 'The operation to perform',
 	},
 	...getOpenApi.description,

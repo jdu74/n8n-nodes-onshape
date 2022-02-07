@@ -14,7 +14,7 @@ export const getUserAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/users/{uid}',
+					'GET /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getUserAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/users/{uid}',
+					'GET /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getUserAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'GET /api/applications/clients/{cid}/settings/users/{uid}',
+					'GET /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},

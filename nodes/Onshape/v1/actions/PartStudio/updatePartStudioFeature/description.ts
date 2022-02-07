@@ -14,7 +14,7 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -78,29 +78,21 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -116,12 +108,10 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -142,15 +132,13 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -170,11 +158,11 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 				default: 0,
 			},
 			{
-				name: 'serializationVersion',
-				displayName: 'serializationVersion',
-				description: 'serializationVersion - string',
-				type: 'string',
-				default: '',
+				name: 'microversionSkew',
+				displayName: 'microversionSkew',
+				description: 'microversionSkew - boolean',
+				type: 'boolean',
+				default: false,
 			},
 			{
 				name: 'rejectMicroversionSkew',
@@ -184,11 +172,11 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'microversionSkew',
-				displayName: 'microversionSkew',
-				description: 'microversionSkew - boolean',
-				type: 'boolean',
-				default: false,
+				name: 'serializationVersion',
+				displayName: 'serializationVersion',
+				description: 'serializationVersion - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				name: 'sourceMicroversion',
@@ -214,15 +202,13 @@ export const updatePartStudioFeatureDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'POST /partstudios/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

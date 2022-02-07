@@ -14,7 +14,7 @@ export const resolveDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'POST /api/comments/{cid}/resolve',
+					'POST /comments/{cid}/resolve',
 				],
 			},
 		},

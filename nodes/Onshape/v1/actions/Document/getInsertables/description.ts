@@ -14,7 +14,7 @@ export const getInsertablesDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/insertables',
+					'GET /documents/d/{did}/{wv}/{wvid}/insertables',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getInsertablesDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/insertables',
+					'GET /documents/d/{did}/{wv}/{wvid}/insertables',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getInsertablesDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/insertables',
+					'GET /documents/d/{did}/{wv}/{wvid}/insertables',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getInsertablesDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wv}/{wvid}/insertables',
+					'GET /documents/d/{did}/{wv}/{wvid}/insertables',
 				],
 			},
 		},

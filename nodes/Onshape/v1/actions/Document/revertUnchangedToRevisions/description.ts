@@ -14,7 +14,7 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 			},
 		},
@@ -42,29 +42,21 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -80,12 +72,10 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -106,19 +96,38 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
+			{
+				name: 'companyId',
+				displayName: 'companyId',
+				description: 'companyId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'connectionId',
+				displayName: 'connectionId',
+				description: 'connectionId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'doUpdate',
+				displayName: 'doUpdate',
+				description: 'doUpdate - boolean',
+				type: 'boolean',
+				default: false,
+			},
 			{
 				displayName: 'elements',
 				name: 'elements',
@@ -186,27 +195,6 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					},
 				],
 			},
-			{
-				name: 'companyId',
-				displayName: 'companyId',
-				description: 'companyId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'connectionId',
-				displayName: 'connectionId',
-				description: 'connectionId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'doUpdate',
-				displayName: 'doUpdate',
-				description: 'doUpdate - boolean',
-				type: 'boolean',
-				default: false,
-			},
 		],
 	},
 	{
@@ -224,15 +212,13 @@ export const revertUnchangedToRevisionsDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

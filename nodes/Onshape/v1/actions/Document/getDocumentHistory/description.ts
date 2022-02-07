@@ -14,7 +14,7 @@ export const getDocumentHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wm}/{wmid}/documenthistory',
+					'GET /documents/d/{did}/{wm}/{wmid}/documenthistory',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDocumentHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wm}/{wmid}/documenthistory',
+					'GET /documents/d/{did}/{wm}/{wmid}/documenthistory',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getDocumentHistoryDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wm}/{wmid}/documenthistory',
+					'GET /documents/d/{did}/{wm}/{wmid}/documenthistory',
 				],
 			},
 		},

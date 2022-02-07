@@ -21,11 +21,11 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getLatestInDocument',
-				value: 'GET /api/insertables/d/{did}/latest',
-				description: 'Insertables for a document - get /api/insertables/d/{did}/latest',
+				value: 'GET /insertables/d/{did}/latest',
+				description: 'Insertables for a document - get /insertables/d/{did}/latest',
 			},
 		],
-		default: 'GET /api/insertables/d/{did}/latest',
+		default: 'GET /insertables/d/{did}/latest',
 		description: 'The operation to perform',
 	},
 	...getLatestInDocument.description,

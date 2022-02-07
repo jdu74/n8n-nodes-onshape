@@ -14,7 +14,7 @@ export const getDocumentScopePrototypeDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/{did}/scope',
+					'GET /documents/{did}/scope',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDocumentScopePrototypeDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/{did}/scope',
+					'GET /documents/{did}/scope',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const deleteCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'DELETE /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'DELETE /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'DELETE /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'DELETE /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteCompanyAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'DELETE /api/applications/clients/{cid}/settings/companies/{cpid}',
+					'DELETE /applications/clients/{cid}/settings/companies/{cpid}',
 				],
 			},
 		},

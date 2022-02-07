@@ -14,7 +14,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -140,7 +140,7 @@ export const getWMVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'GET /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},

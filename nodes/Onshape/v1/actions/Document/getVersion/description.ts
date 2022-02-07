@@ -14,7 +14,7 @@ export const getVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/versions/{vid}',
+					'GET /documents/d/{did}/versions/{vid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/versions/{vid}',
+					'GET /documents/d/{did}/versions/{vid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getVersionDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/versions/{vid}',
+					'GET /documents/d/{did}/versions/{vid}',
 				],
 			},
 		},

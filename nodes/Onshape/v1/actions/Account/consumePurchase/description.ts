@@ -14,7 +14,7 @@ export const consumePurchaseDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'POST /api/accounts/purchases/{pid}/consume',
+					'POST /accounts/purchases/{pid}/consume',
 				],
 			},
 		},
@@ -24,29 +24,21 @@ export const consumePurchaseDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Account',
 				],
 				operation: [
-					'POST /api/accounts/purchases/{pid}/consume',
+					'POST /accounts/purchases/{pid}/consume',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -62,12 +54,10 @@ export const consumePurchaseDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'POST /api/accounts/purchases/{pid}/consume',
+					'POST /accounts/purchases/{pid}/consume',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -88,25 +78,23 @@ export const consumePurchaseDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'POST /api/accounts/purchases/{pid}/consume',
+					'POST /accounts/purchases/{pid}/consume',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'userId',
-				displayName: 'userId',
-				description: 'userId - string',
-				type: 'string',
-				default: '',
+				name: 'consumedQuantity',
+				displayName: 'consumedQuantity',
+				description: 'consumedQuantity - integer',
+				type: 'number',
+				default: 0,
 			},
 			{
 				name: 'purchaseId',
@@ -116,11 +104,11 @@ export const consumePurchaseDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'consumedQuantity',
-				displayName: 'consumedQuantity',
-				description: 'consumedQuantity - integer',
-				type: 'number',
-				default: 0,
+				name: 'userId',
+				displayName: 'userId',
+				description: 'userId - string',
+				type: 'string',
+				default: '',
 			},
 		],
 	},
@@ -139,15 +127,13 @@ export const consumePurchaseDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'POST /api/accounts/purchases/{pid}/consume',
+					'POST /accounts/purchases/{pid}/consume',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

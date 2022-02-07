@@ -14,7 +14,7 @@ export const getWorkflowableTestObjectDescription: INodeProperties[] = [
 					'WorkflowableTestObject',
 				],
 				operation: [
-					'GET /api/workflowabletestobject/{oid}',
+					'GET /workflowabletestobject/{oid}',
 				],
 			},
 		},

@@ -21,11 +21,11 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getClientPlans',
-				value: 'GET /api/billing/plans/client/{cid}',
-				description: 'Retrieve billing plans and their information for an application by client ID - get /api/billing/plans/client/{cid}',
+				value: 'GET /billing/plans/client/{cid}',
+				description: 'Retrieve billing plans and their information for an application by client ID - get /billing/plans/client/{cid}',
 			},
 		],
-		default: 'GET /api/billing/plans/client/{cid}',
+		default: 'GET /billing/plans/client/{cid}',
 		description: 'The operation to perform',
 	},
 	...getClientPlans.description,

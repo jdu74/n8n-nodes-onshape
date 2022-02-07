@@ -14,7 +14,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const resolveReferenceDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				],
 			},
 		},

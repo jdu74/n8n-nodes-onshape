@@ -14,7 +14,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},
@@ -122,7 +122,7 @@ export const getRevisionHistoryInCompanyByPartIdDescription: INodeProperties[] =
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
+					'GET /revisions/companies/{cid}/d/{did}/{wv}/{wvid}/e/{eid}/p/{pid}',
 				],
 			},
 		},

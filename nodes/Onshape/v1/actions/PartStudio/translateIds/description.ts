@@ -14,7 +14,7 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 			},
 		},
@@ -78,29 +78,21 @@ export const translateIdsDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -116,12 +108,10 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -142,15 +132,13 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -188,16 +176,16 @@ export const translateIdsDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'sourceDocumentMicroversion',
-				displayName: 'sourceDocumentMicroversion',
-				description: 'sourceDocumentMicroversion - string',
+				name: 'sourceConfiguration',
+				displayName: 'sourceConfiguration',
+				description: 'sourceConfiguration - string',
 				type: 'string',
 				default: '',
 			},
 			{
-				name: 'sourceConfiguration',
-				displayName: 'sourceConfiguration',
-				description: 'sourceConfiguration - string',
+				name: 'sourceDocumentMicroversion',
+				displayName: 'sourceDocumentMicroversion',
+				description: 'sourceDocumentMicroversion - string',
 				type: 'string',
 				default: '',
 			},
@@ -225,15 +213,13 @@ export const translateIdsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/idtranslations',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

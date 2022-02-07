@@ -14,7 +14,7 @@ export const createWorkflowableTestObjectDescription: INodeProperties[] = [
 					'WorkflowableTestObject',
 				],
 				operation: [
-					'POST /api/workflowabletestobject/testobject/{wfid}',
+					'POST /workflowabletestobject/testobject/{wfid}',
 				],
 			},
 		},

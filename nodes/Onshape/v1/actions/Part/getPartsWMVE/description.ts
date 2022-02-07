@@ -14,7 +14,7 @@ export const getPartsWMVEDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartsWMVEDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartsWMVEDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartsWMVEDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getPartsWMVEDescription: INodeProperties[] = [
 					'Part',
 				],
 				operation: [
-					'GET /api/parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
+					'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}',
 				],
 			},
 		},

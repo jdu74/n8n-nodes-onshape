@@ -14,7 +14,7 @@ export const deleteAttachmentsDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'DELETE /api/comments/{cid}/attachment',
+					'DELETE /comments/{cid}/attachment',
 				],
 			},
 		},

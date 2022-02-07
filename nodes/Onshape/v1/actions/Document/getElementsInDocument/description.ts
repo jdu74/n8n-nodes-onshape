@@ -14,7 +14,7 @@ export const getElementsInDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wvm}/{wvmid}/elements',
+					'GET /documents/d/{did}/{wvm}/{wvmid}/elements',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getElementsInDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wvm}/{wvmid}/elements',
+					'GET /documents/d/{did}/{wvm}/{wvmid}/elements',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getElementsInDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wvm}/{wvmid}/elements',
+					'GET /documents/d/{did}/{wvm}/{wvmid}/elements',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getElementsInDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/{wvm}/{wvmid}/elements',
+					'GET /documents/d/{did}/{wvm}/{wvmid}/elements',
 				],
 			},
 		},

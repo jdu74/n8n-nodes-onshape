@@ -14,7 +14,7 @@ export const getWVMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wv}/{wvid}',
+					'GET /metadata/d/{did}/{wv}/{wvid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getWVMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wv}/{wvid}',
+					'GET /metadata/d/{did}/{wv}/{wvid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getWVMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wv}/{wvid}',
+					'GET /metadata/d/{did}/{wv}/{wvid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getWVMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'GET /api/metadata/d/{did}/{wv}/{wvid}',
+					'GET /metadata/d/{did}/{wv}/{wvid}',
 				],
 			},
 		},

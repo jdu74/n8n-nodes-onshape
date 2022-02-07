@@ -14,7 +14,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -85,7 +85,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -108,7 +108,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 				jsonContentType: [
 					'multipart/form-data',
@@ -132,7 +132,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 				jsonParameters: [
 					false,
@@ -195,7 +195,7 @@ export const uploadBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 				jsonParameters: [
 					true,

@@ -14,7 +14,7 @@ export const transitionWorkflowableTestObjectDescription: INodeProperties[] = [
 					'WorkflowableTestObject',
 				],
 				operation: [
-					'POST /api/workflowabletestobject/{oid}/{transition}',
+					'POST /workflowabletestobject/{oid}/{transition}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const transitionWorkflowableTestObjectDescription: INodeProperties[] = [
 					'WorkflowableTestObject',
 				],
 				operation: [
-					'POST /api/workflowabletestobject/{oid}/{transition}',
+					'POST /workflowabletestobject/{oid}/{transition}',
 				],
 			},
 		},

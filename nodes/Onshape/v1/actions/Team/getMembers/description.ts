@@ -14,7 +14,7 @@ export const getMembersDescription: INodeProperties[] = [
 					'Team',
 				],
 				operation: [
-					'GET /api/teams/{tid}/members',
+					'GET /teams/{tid}/members',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getMembersDescription: INodeProperties[] = [
 					'Team',
 				],
 				operation: [
-					'GET /api/teams/{tid}/members',
+					'GET /teams/{tid}/members',
 				],
 			},
 		},

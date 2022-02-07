@@ -14,7 +14,7 @@ export const unShareDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/{did}/share/{eid}',
+					'DELETE /documents/{did}/share/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const unShareDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/{did}/share/{eid}',
+					'DELETE /documents/{did}/share/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const unShareDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/{did}/share/{eid}',
+					'DELETE /documents/{did}/share/{eid}',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getClientPlansDescription: INodeProperties[] = [
 					'Billing',
 				],
 				operation: [
-					'GET /api/billing/plans/client/{cid}',
+					'GET /billing/plans/client/{cid}',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},
@@ -42,29 +42,21 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -80,12 +72,10 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -106,15 +96,13 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -142,17 +130,17 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'value',
-										displayName: 'value',
-										description: 'value - object',
-										type: 'json',
-										default: '',
-									},
-									{
 										name: 'key',
 										displayName: 'key',
 										description: 'key - string',
 										type: 'string',
+										default: '',
+									},
+									{
+										name: 'value',
+										displayName: 'value',
+										description: 'value - object',
+										type: 'json',
 										default: '',
 									},
 								],
@@ -178,15 +166,13 @@ export const updateAppSettingsDescription: INodeProperties[] = [
 					'APIApplication',
 				],
 				operation: [
-					'POST /api/applications/clients/{cid}/settings/users/{uid}',
+					'POST /applications/clients/{cid}/settings/users/{uid}',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

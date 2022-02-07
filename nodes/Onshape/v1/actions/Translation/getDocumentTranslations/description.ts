@@ -14,7 +14,7 @@ export const getDocumentTranslationsDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'GET /api/translations/d/{did}',
+					'GET /translations/d/{did}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getDocumentTranslationsDescription: INodeProperties[] = [
 					'Translation',
 				],
 				operation: [
-					'GET /api/translations/d/{did}',
+					'GET /translations/d/{did}',
 				],
 			},
 		},

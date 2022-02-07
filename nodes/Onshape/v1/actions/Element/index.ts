@@ -1,23 +1,23 @@
 import * as copyElementFromSourceDocument from './copyElementFromSourceDocument';
-import * as decodeConfiguration from './decodeConfiguration';
-import * as deleteElement from './deleteElement';
 import * as encodeConfigurationMap from './encodeConfigurationMap';
+import * as deleteElement from './deleteElement';
+import * as updateReferences from './updateReferences';
 import * as getConfiguration from './getConfiguration';
 import * as updateConfiguration from './updateConfiguration';
+import * as decodeConfiguration from './decodeConfiguration';
 import * as getElementTranslatorFormatsByVersionOrWorkspace from './getElementTranslatorFormatsByVersionOrWorkspace';
-import * as updateReferences from './updateReferences';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
 	copyElementFromSourceDocument,
-	decodeConfiguration,
-	deleteElement,
 	encodeConfigurationMap,
+	deleteElement,
+	updateReferences,
 	getConfiguration,
 	updateConfiguration,
+	decodeConfiguration,
 	getElementTranslatorFormatsByVersionOrWorkspace,
-	updateReferences,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -35,54 +35,54 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'copyElementFromSourceDocument',
-				value: 'POST /api/elements/copyelement/{did}/workspace/{wid}',
-				description: 'Copy Element - post /api/elements/copyelement/{did}/workspace/{wid}',
-			},
-			{
-				name: 'decodeConfiguration',
-				value: 'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
-				description: 'Decode Configuration String - get /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
-			},
-			{
-				name: 'deleteElement',
-				value: 'DELETE /api/elements/d/{did}/w/{wid}/e/{eid}',
-				description: 'Delete Element - delete /api/elements/d/{did}/w/{wid}/e/{eid}',
+				value: 'POST /elements/copyelement/{did}/workspace/{wid}',
+				description: 'Copy Element - post /elements/copyelement/{did}/workspace/{wid}',
 			},
 			{
 				name: 'encodeConfigurationMap',
-				value: 'POST /api/elements/d/{did}/e/{eid}/configurationencodings',
-				description: 'Encode Configuration - post /api/elements/d/{did}/e/{eid}/configurationencodings',
+				value: 'POST /elements/d/{did}/e/{eid}/configurationencodings',
+				description: 'Encode Configuration - post /elements/d/{did}/e/{eid}/configurationencodings',
 			},
 			{
-				name: 'getConfiguration',
-				value: 'GET /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
-				description: 'Get Configuration - get /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
-			},
-			{
-				name: 'updateConfiguration',
-				value: 'POST /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
-				description: 'Update Configuration - post /api/elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
-			},
-			{
-				name: 'getElementTranslatorFormatsByVersionOrWorkspace',
-				value: 'GET /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
-				description: 'Get Element Translator Formats - get /api/elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+				name: 'deleteElement',
+				value: 'DELETE /elements/d/{did}/w/{wid}/e/{eid}',
+				description: 'Delete Element - delete /elements/d/{did}/w/{wid}/e/{eid}',
 			},
 			{
 				name: 'updateReferences',
-				value: 'POST /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
-				description: 'Update or replace node references - post /api/elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
+				value: 'POST /elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
+				description: 'Update or replace node references - post /elements/d/{did}/w/{wid}/e/{eid}/updatereferences',
+			},
+			{
+				name: 'getConfiguration',
+				value: 'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+				description: 'Get Configuration - get /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+			},
+			{
+				name: 'updateConfiguration',
+				value: 'POST /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+				description: 'Update Configuration - post /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configuration',
+			},
+			{
+				name: 'decodeConfiguration',
+				value: 'GET /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+				description: 'Decode Configuration String - get /elements/d/{did}/{wvm}/{wvmid}/e/{eid}/configurationencodings/{cid}',
+			},
+			{
+				name: 'getElementTranslatorFormatsByVersionOrWorkspace',
+				value: 'GET /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
+				description: 'Get Element Translator Formats - get /elements/translatorFormats/{did}/{wv}/{wvid}/{eid}',
 			},
 		],
-		default: 'POST /api/elements/copyelement/{did}/workspace/{wid}',
+		default: 'POST /elements/copyelement/{did}/workspace/{wid}',
 		description: 'The operation to perform',
 	},
 	...copyElementFromSourceDocument.description,
-	...decodeConfiguration.description,
-	...deleteElement.description,
 	...encodeConfigurationMap.description,
+	...deleteElement.description,
+	...updateReferences.description,
 	...getConfiguration.description,
 	...updateConfiguration.description,
+	...decodeConfiguration.description,
 	...getElementTranslatorFormatsByVersionOrWorkspace.description,
-	...updateReferences.description,
 ];

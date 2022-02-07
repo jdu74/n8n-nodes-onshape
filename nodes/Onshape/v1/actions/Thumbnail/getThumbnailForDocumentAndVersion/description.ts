@@ -14,7 +14,7 @@ export const getThumbnailForDocumentAndVersionDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/v/{vid}',
+					'GET /thumbnails/d/{did}/v/{vid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getThumbnailForDocumentAndVersionDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/v/{vid}',
+					'GET /thumbnails/d/{did}/v/{vid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getThumbnailForDocumentAndVersionDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/v/{vid}',
+					'GET /thumbnails/d/{did}/v/{vid}',
 				],
 			},
 		},

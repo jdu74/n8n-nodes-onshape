@@ -14,7 +14,7 @@ export const getFolderAclDescription: INodeProperties[] = [
 					'Folder',
 				],
 				operation: [
-					'GET /api/folders/{fid}/acl',
+					'GET /folders/{fid}/acl',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const cancelPurchaseNewDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'DELETE /api/accounts/{aid}/purchases/{pid}',
+					'DELETE /accounts/{aid}/purchases/{pid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const cancelPurchaseNewDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'DELETE /api/accounts/{aid}/purchases/{pid}',
+					'DELETE /accounts/{aid}/purchases/{pid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const cancelPurchaseNewDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'DELETE /api/accounts/{aid}/purchases/{pid}',
+					'DELETE /accounts/{aid}/purchases/{pid}',
 				],
 			},
 		},

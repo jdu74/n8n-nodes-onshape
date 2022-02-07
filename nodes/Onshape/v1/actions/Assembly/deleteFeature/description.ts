@@ -14,7 +14,7 @@ export const deleteFeatureDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteFeatureDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteFeatureDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteFeatureDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+					'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				],
 			},
 		},

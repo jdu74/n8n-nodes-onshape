@@ -14,7 +14,7 @@ export const createReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const createReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 			},
 		},
@@ -61,29 +61,21 @@ export const createReleasePackageDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -99,12 +91,10 @@ export const createReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -125,15 +115,13 @@ export const createReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -175,30 +163,9 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										name: 'versionId',
-										displayName: 'versionId',
-										description: 'versionId - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'partNumber',
-										displayName: 'partNumber',
-										description: 'partNumber - string',
-										type: 'string',
-										default: '',
-									},
-									{
-										name: 'isIncluded',
-										displayName: 'isIncluded',
-										description: 'isIncluded - boolean',
-										type: 'boolean',
-										default: false,
-									},
-									{
-										name: 'workspaceId',
-										displayName: 'workspaceId',
-										description: 'workspaceId - string',
+										name: 'documentId',
+										displayName: 'documentId',
+										description: 'documentId - string',
 										type: 'string',
 										default: '',
 									},
@@ -210,11 +177,25 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										name: 'documentId',
-										displayName: 'documentId',
-										description: 'documentId - string',
+										name: 'href',
+										displayName: 'href',
+										description: 'href - string',
 										type: 'string',
 										default: '',
+									},
+									{
+										name: 'id',
+										displayName: 'id',
+										description: 'id - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'isIncluded',
+										displayName: 'isIncluded',
+										description: 'isIncluded - boolean',
+										type: 'boolean',
+										default: false,
 									},
 									{
 										name: 'partId',
@@ -224,9 +205,9 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										default: '',
 									},
 									{
-										name: 'href',
-										displayName: 'href',
-										description: 'href - string',
+										name: 'partNumber',
+										displayName: 'partNumber',
+										description: 'partNumber - string',
 										type: 'string',
 										default: '',
 									},
@@ -273,9 +254,16 @@ export const createReleasePackageDescription: INodeProperties[] = [
 										],
 									},
 									{
-										name: 'id',
-										displayName: 'id',
-										description: 'id - string',
+										name: 'versionId',
+										displayName: 'versionId',
+										description: 'versionId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'workspaceId',
+										displayName: 'workspaceId',
+										description: 'workspaceId - string',
 										type: 'string',
 										default: '',
 									},
@@ -302,15 +290,13 @@ export const createReleasePackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/release/{wfid}',
+					'POST /releasepackages/release/{wfid}',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

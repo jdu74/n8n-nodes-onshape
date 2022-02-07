@@ -14,7 +14,7 @@ export const getSubElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getSubElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getSubElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getSubElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getSubElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
 				],
 			},
 		},

@@ -21,11 +21,11 @@ export const descriptions: INodeProperties[] = [
 		options: [
 			{
 				name: 'getValidRuleOptions',
-				value: 'GET /api/exportrules/options/{otype}/{oid}',
-				description: 'get /api/exportrules/options/{otype}/{oid}',
+				value: 'GET /exportrules/options/{otype}/{oid}',
+				description: 'get /exportrules/options/{otype}/{oid}',
 			},
 		],
-		default: 'GET /api/exportrules/options/{otype}/{oid}',
+		default: 'GET /exportrules/options/{otype}/{oid}',
 		description: 'The operation to perform',
 	},
 	...getValidRuleOptions.description,

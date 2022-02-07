@@ -14,7 +14,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -122,25 +122,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
-				],
-			},
-		},
-	},
-	{
-		name: 'subResource-string(path)',
-		displayName: 'subResource',
-		description: 'subResource - string (path)',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: [
-					'Metadata',
-				],
-				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -158,7 +140,7 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
@@ -199,13 +181,6 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 						type: 'string',
 						default: '',
 					},
-					{
-						name: 'configuration-string(query)',
-						displayName: 'configuration',
-						description: 'configuration - string (query)',
-						type: 'string',
-						default: '',
-					},
 				],
 			},
 		],
@@ -215,29 +190,21 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -256,15 +223,13 @@ export const updateWVEPMetadataDescription: INodeProperties[] = [
 					'Metadata',
 				],
 				operation: [
-					'POST /api/metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
+					'POST /metadata/d/{did}/{wvm}/{wvmid}/e/{eid}/{iden}/{pid}',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

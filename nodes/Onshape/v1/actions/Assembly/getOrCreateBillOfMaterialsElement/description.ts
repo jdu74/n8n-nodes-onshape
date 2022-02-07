@@ -14,7 +14,7 @@ export const getOrCreateBillOfMaterialsElementDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getOrCreateBillOfMaterialsElementDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getOrCreateBillOfMaterialsElementDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
 				],
 			},
 		},

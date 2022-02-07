@@ -14,7 +14,7 @@ export const createObsoletionPackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/obsoletion/{wfid}',
+					'POST /releasepackages/obsoletion/{wfid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const createObsoletionPackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/obsoletion/{wfid}',
+					'POST /releasepackages/obsoletion/{wfid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const createObsoletionPackageDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'POST /api/releasepackages/obsoletion/{wfid}',
+					'POST /releasepackages/obsoletion/{wfid}',
 				],
 			},
 		},

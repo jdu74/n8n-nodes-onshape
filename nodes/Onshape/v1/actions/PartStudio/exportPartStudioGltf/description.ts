@@ -14,7 +14,7 @@ export const exportPartStudioGltfDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const exportPartStudioGltfDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const exportPartStudioGltfDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const exportPartStudioGltfDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const exportPartStudioGltfDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf',
 				],
 			},
 		},

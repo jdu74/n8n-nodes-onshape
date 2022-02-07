@@ -14,7 +14,7 @@ export const getAuditLogDescription: INodeProperties[] = [
 					'Workflow',
 				],
 				operation: [
-					'GET /api/workflow/obj/{objectId}/auditlog',
+					'GET /workflow/obj/{objectId}/auditlog',
 				],
 			},
 		},

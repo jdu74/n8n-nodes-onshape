@@ -14,7 +14,7 @@ export const getPartStudioFeaturesDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartStudioFeaturesDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartStudioFeaturesDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartStudioFeaturesDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getPartStudioFeaturesDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
 				],
 			},
 		},

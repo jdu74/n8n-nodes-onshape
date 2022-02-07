@@ -1,17 +1,17 @@
-import * as createBlobTranslation from './createBlobTranslation';
+import * as uploadFileCreateElement from './uploadFileCreateElement';
 import * as downloadFileWorkspace from './downloadFileWorkspace';
 import * as uploadFileUpdateElement from './uploadFileUpdateElement';
 import * as updateUnits from './updateUnits';
-import * as uploadFileCreateElement from './uploadFileCreateElement';
+import * as createBlobTranslation from './createBlobTranslation';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	createBlobTranslation,
+	uploadFileCreateElement,
 	downloadFileWorkspace,
 	uploadFileUpdateElement,
 	updateUnits,
-	uploadFileCreateElement,
+	createBlobTranslation,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -28,37 +28,37 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'createBlobTranslation',
-				value: 'POST /api/blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-				description: 'Create Translation. - post /api/blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				name: 'uploadFileCreateElement',
+				value: 'POST /blobelements/d/{did}/w/{wid}',
+				description: 'Upload file to new element. - post /blobelements/d/{did}/w/{wid}',
 			},
 			{
 				name: 'downloadFileWorkspace',
-				value: 'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}',
-				description: 'get /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+				value: 'GET /blobelements/d/{did}/w/{wid}/e/{eid}',
+				description: 'get /blobelements/d/{did}/w/{wid}/e/{eid}',
 			},
 			{
 				name: 'uploadFileUpdateElement',
-				value: 'POST /api/blobelements/d/{did}/w/{wid}/e/{eid}',
-				description: 'Update Blob Element. - post /api/blobelements/d/{did}/w/{wid}/e/{eid}',
+				value: 'POST /blobelements/d/{did}/w/{wid}/e/{eid}',
+				description: 'Update Blob Element. - post /blobelements/d/{did}/w/{wid}/e/{eid}',
 			},
 			{
 				name: 'updateUnits',
-				value: 'POST /api/blobelements/d/{did}/w/{wid}/e/{eid}/units',
-				description: 'Update Mesh Units. - post /api/blobelements/d/{did}/w/{wid}/e/{eid}/units',
+				value: 'POST /blobelements/d/{did}/w/{wid}/e/{eid}/units',
+				description: 'Update Mesh Units. - post /blobelements/d/{did}/w/{wid}/e/{eid}/units',
 			},
 			{
-				name: 'uploadFileCreateElement',
-				value: 'POST /api/blobelements/d/{did}/w/{wid}',
-				description: 'Upload file to new element. - post /api/blobelements/d/{did}/w/{wid}',
+				name: 'createBlobTranslation',
+				value: 'POST /blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				description: 'Create Translation. - post /blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
 			},
 		],
-		default: 'POST /api/blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+		default: 'POST /blobelements/d/{did}/w/{wid}',
 		description: 'The operation to perform',
 	},
-	...createBlobTranslation.description,
+	...uploadFileCreateElement.description,
 	...downloadFileWorkspace.description,
 	...uploadFileUpdateElement.description,
 	...updateUnits.description,
-	...uploadFileCreateElement.description,
+	...createBlobTranslation.description,
 ];

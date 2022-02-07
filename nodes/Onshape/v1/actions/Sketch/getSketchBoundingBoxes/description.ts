@@ -14,7 +14,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const getSketchBoundingBoxesDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches/{sid}/boundingboxes',
 				],
 			},
 		},

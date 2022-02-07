@@ -14,7 +14,7 @@ export const getDocumentWorkspacesDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'GET /api/documents/d/{did}/workspaces',
+					'GET /documents/d/{did}/workspaces',
 				],
 			},
 		},

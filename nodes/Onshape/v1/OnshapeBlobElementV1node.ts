@@ -31,7 +31,7 @@ export class OnshapeBlobElementV1 implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 
 		const operation = this.getNodeParameter('operation', 0) as string;
-		const isJson = !(operation === 'GET /api/blobelements/d/{did}/w/{wid}/e/{eid}');
+		const isJson = !(operation === 'GET /blobelements/d/{did}/w/{wid}/e/{eid}');
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];
 		const length = items.length as number;

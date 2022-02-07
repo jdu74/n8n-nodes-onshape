@@ -14,7 +14,7 @@ export const deleteBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const deleteBlobSubelementDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+					'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
 				],
 			},
 		},

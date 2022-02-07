@@ -27,14 +27,19 @@ export async function apiRequest(
 	uri?: string,
 	option: IDataObject = {}): Promise<any> {
 
-	const endpoint = 'https://cad.onshape.com';
+	option = {
+		...option,
+		json : option.json || true
+	}
+
+	const endpoint = 'https://cad.onshape.com/api';
 	const options: OptionsWithUri = {
 		method,
 		qs: query,
 		body,
 		headers,
 		uri: uri || `${endpoint}${resource}`,
-		json: (option.json === undefined || option.json),
+		...option,
 	};
 
 	if (!Object.keys(body).length)
@@ -47,6 +52,7 @@ export async function apiRequest(
 		if (authenticationMethod === 'apiKeys') {
 			const credentials = await this.getCredentials('onshapeApiKeys') as IDataObject;
 			options.headers = buildHeaders(options.method, options.uri, options.headers, options.qs, credentials.clientId, credentials.clientSecret);
+
 			return await this.helpers.request!(options);
 		} else {
 			delete options.auth;

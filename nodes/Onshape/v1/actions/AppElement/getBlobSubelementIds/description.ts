@@ -14,7 +14,7 @@ export const getBlobSubelementIdsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getBlobSubelementIdsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getBlobSubelementIdsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getBlobSubelementIdsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getBlobSubelementIdsDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
 				],
 			},
 		},

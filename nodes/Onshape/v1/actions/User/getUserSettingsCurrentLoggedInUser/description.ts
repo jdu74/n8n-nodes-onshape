@@ -14,7 +14,7 @@ export const getUserSettingsCurrentLoggedInUserDescription: INodeProperties[] = 
 					'User',
 				],
 				operation: [
-					'GET /api/users/settings',
+					'GET /users/settings',
 				],
 			},
 		},

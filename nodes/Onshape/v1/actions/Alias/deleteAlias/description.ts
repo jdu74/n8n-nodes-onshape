@@ -14,7 +14,7 @@ export const deleteAliasDescription: INodeProperties[] = [
 					'Alias',
 				],
 				operation: [
-					'DELETE /api/aliases/{aid}',
+					'DELETE /aliases/{aid}',
 				],
 			},
 		},

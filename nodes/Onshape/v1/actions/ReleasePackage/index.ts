@@ -1,17 +1,17 @@
+import * as getCompanyReleaseWorkflow from './getCompanyReleaseWorkflow';
 import * as createObsoletionPackage from './createObsoletionPackage';
 import * as createReleasePackage from './createReleasePackage';
 import * as getReleasePackage from './getReleasePackage';
 import * as updateReleasePackage from './updateReleasePackage';
-import * as getCompanyReleaseWorkflow from './getCompanyReleaseWorkflow';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
+	getCompanyReleaseWorkflow,
 	createObsoletionPackage,
 	createReleasePackage,
 	getReleasePackage,
 	updateReleasePackage,
-	getCompanyReleaseWorkflow,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -28,37 +28,37 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
+				name: 'getCompanyReleaseWorkflow',
+				value: 'GET /releasepackages/companyreleaseworkflow',
+				description: 'get /releasepackages/companyreleaseworkflow',
+			},
+			{
 				name: 'createObsoletionPackage',
-				value: 'POST /api/releasepackages/obsoletion/{wfid}',
-				description: 'post /api/releasepackages/obsoletion/{wfid}',
+				value: 'POST /releasepackages/obsoletion/{wfid}',
+				description: 'post /releasepackages/obsoletion/{wfid}',
 			},
 			{
 				name: 'createReleasePackage',
-				value: 'POST /api/releasepackages/release/{wfid}',
-				description: 'post /api/releasepackages/release/{wfid}',
+				value: 'POST /releasepackages/release/{wfid}',
+				description: 'post /releasepackages/release/{wfid}',
 			},
 			{
 				name: 'getReleasePackage',
-				value: 'GET /api/releasepackages/{rpid}',
-				description: 'get /api/releasepackages/{rpid}',
+				value: 'GET /releasepackages/{rpid}',
+				description: 'get /releasepackages/{rpid}',
 			},
 			{
 				name: 'updateReleasePackage',
-				value: 'POST /api/releasepackages/{rpid}',
-				description: 'post /api/releasepackages/{rpid}',
-			},
-			{
-				name: 'getCompanyReleaseWorkflow',
-				value: 'GET /api/releasepackages/companyreleaseworkflow',
-				description: 'get /api/releasepackages/companyreleaseworkflow',
+				value: 'POST /releasepackages/{rpid}',
+				description: 'post /releasepackages/{rpid}',
 			},
 		],
-		default: 'POST /api/releasepackages/obsoletion/{wfid}',
+		default: 'GET /releasepackages/companyreleaseworkflow',
 		description: 'The operation to perform',
 	},
+	...getCompanyReleaseWorkflow.description,
 	...createObsoletionPackage.description,
 	...createReleasePackage.description,
 	...getReleasePackage.description,
 	...updateReleasePackage.description,
-	...getCompanyReleaseWorkflow.description,
 ];

@@ -14,7 +14,7 @@ export const getPartStudioFeatureSpecsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartStudioFeatureSpecsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartStudioFeatureSpecsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getPartStudioFeatureSpecsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
 				],
 			},
 		},

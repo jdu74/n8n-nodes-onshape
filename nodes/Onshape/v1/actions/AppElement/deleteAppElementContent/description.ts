@@ -14,7 +14,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},
@@ -104,7 +104,7 @@ export const deleteAppElementContentDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'DELETE /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+					'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
 				],
 			},
 		},

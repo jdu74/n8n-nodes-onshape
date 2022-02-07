@@ -14,7 +14,7 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 			},
 		},
@@ -60,29 +60,21 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -98,12 +90,10 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -124,15 +114,13 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -141,13 +129,6 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 				name: 'description',
 				displayName: 'description',
 				description: 'description - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'parentChangeId',
-				displayName: 'parentChangeId',
-				description: 'parentChangeId - string',
 				type: 'string',
 				default: '',
 			},
@@ -174,13 +155,6 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 								placeholder: 'Add Field',
 								options: [
 									{
-										name: 'sourceElementId',
-										displayName: 'sourceElementId',
-										description: 'sourceElementId - string',
-										type: 'string',
-										default: '',
-									},
-									{
 										displayName: 'associativeDataIds',
 										name: 'associativeDataIds',
 										description: 'associativeDataIds - array',
@@ -206,16 +180,23 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 										],
 									},
 									{
-										name: 'sourceViewId',
-										displayName: 'sourceViewId',
-										description: 'sourceViewId - string',
+										name: 'destinationViewId',
+										displayName: 'destinationViewId',
+										description: 'destinationViewId - string',
 										type: 'string',
 										default: '',
 									},
 									{
-										name: 'destinationViewId',
-										displayName: 'destinationViewId',
-										description: 'destinationViewId - string',
+										name: 'sourceElementId',
+										displayName: 'sourceElementId',
+										description: 'sourceElementId - string',
+										type: 'string',
+										default: '',
+									},
+									{
+										name: 'sourceViewId',
+										displayName: 'sourceViewId',
+										description: 'sourceViewId - string',
 										type: 'string',
 										default: '',
 									},
@@ -224,6 +205,13 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 						],
 					},
 				],
+			},
+			{
+				name: 'parentChangeId',
+				displayName: 'parentChangeId',
+				description: 'parentChangeId - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				name: 'transactionId',
@@ -249,15 +237,13 @@ export const copyAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'POST /api/appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/copyassociativedata',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

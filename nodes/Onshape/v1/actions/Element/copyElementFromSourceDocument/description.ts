@@ -14,7 +14,7 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 			},
 		},
@@ -42,29 +42,21 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -80,12 +72,10 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -106,30 +96,28 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'documentIdSource',
-				displayName: 'documentIdSource',
-				description: 'documentIdSource - string',
+				name: 'anchorElementId',
+				displayName: 'anchorElementId',
+				description: 'anchorElementId - string',
 				type: 'string',
 				default: '',
 			},
 			{
-				name: 'workspaceIdSource',
-				displayName: 'workspaceIdSource',
-				description: 'workspaceIdSource - string',
+				name: 'documentIdSource',
+				displayName: 'documentIdSource',
+				description: 'documentIdSource - string',
 				type: 'string',
 				default: '',
 			},
@@ -141,18 +129,18 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'anchorElementId',
-				displayName: 'anchorElementId',
-				description: 'anchorElementId - string',
-				type: 'string',
-				default: '',
-			},
-			{
 				name: 'isGroupAnchor',
 				displayName: 'isGroupAnchor',
 				description: 'isGroupAnchor - boolean',
 				type: 'boolean',
 				default: false,
+			},
+			{
+				name: 'workspaceIdSource',
+				displayName: 'workspaceIdSource',
+				description: 'workspaceIdSource - string',
+				type: 'string',
+				default: '',
 			},
 		],
 	},
@@ -171,15 +159,13 @@ export const copyElementFromSourceDocumentDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'POST /api/elements/copyelement/{did}/workspace/{wid}',
+					'POST /elements/copyelement/{did}/workspace/{wid}',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

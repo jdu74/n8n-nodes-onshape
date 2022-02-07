@@ -14,7 +14,7 @@ export const getNamedViewsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/e/{eid}/namedViews',
+					'GET /assemblies/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getNamedViewsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/e/{eid}/namedViews',
+					'GET /assemblies/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getNamedViewsDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'GET /api/assemblies/d/{did}/e/{eid}/namedViews',
+					'GET /assemblies/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},

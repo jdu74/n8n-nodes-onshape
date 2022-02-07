@@ -1,42 +1,42 @@
-import * as getFeatures from './getFeatures';
-import * as addFeature from './addFeature';
+import * as getNamedViews from './getNamedViews';
 import * as createAssembly from './createAssembly';
-import * as createInstance from './createInstance';
+import * as getOrCreateBillOfMaterialsElement from './getOrCreateBillOfMaterialsElement';
 import * as updateFeature from './updateFeature';
 import * as deleteFeature from './deleteFeature';
 import * as deleteInstance from './deleteInstance';
-import * as getAssemblyBoundingBoxes from './getAssemblyBoundingBoxes';
+import * as createInstance from './createInstance';
+import * as transformOccurrences from './transformOccurrences';
+import * as insertTransformedInstances from './insertTransformedInstances';
 import * as getAssemblyDefinition from './getAssemblyDefinition';
+import * as getBillOfMaterials from './getBillOfMaterials';
+import * as getAssemblyBoundingBoxes from './getAssemblyBoundingBoxes';
+import * as getFeatures from './getFeatures';
+import * as addFeature from './addFeature';
+import * as getFeatureSpecs from './getFeatureSpecs';
 import * as getAssemblyMassProperties from './getAssemblyMassProperties';
 import * as getAssemblyShadedViews from './getAssemblyShadedViews';
-import * as getBillOfMaterials from './getBillOfMaterials';
-import * as getFeatureSpecs from './getFeatureSpecs';
-import * as getNamedViews from './getNamedViews';
-import * as getOrCreateBillOfMaterialsElement from './getOrCreateBillOfMaterialsElement';
-import * as insertTransformedInstances from './insertTransformedInstances';
-import * as transformOccurrences from './transformOccurrences';
 import * as translateFormat from './translateFormat';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	getFeatures,
-	addFeature,
+	getNamedViews,
 	createAssembly,
-	createInstance,
+	getOrCreateBillOfMaterialsElement,
 	updateFeature,
 	deleteFeature,
 	deleteInstance,
-	getAssemblyBoundingBoxes,
+	createInstance,
+	transformOccurrences,
+	insertTransformedInstances,
 	getAssemblyDefinition,
+	getBillOfMaterials,
+	getAssemblyBoundingBoxes,
+	getFeatures,
+	addFeature,
+	getFeatureSpecs,
 	getAssemblyMassProperties,
 	getAssemblyShadedViews,
-	getBillOfMaterials,
-	getFeatureSpecs,
-	getNamedViews,
-	getOrCreateBillOfMaterialsElement,
-	insertTransformedInstances,
-	transformOccurrences,
 	translateFormat,
 };
 
@@ -54,115 +54,115 @@ export const descriptions: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'getFeatures',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-				description: 'Get Feature List - get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-			},
-			{
-				name: 'addFeature',
-				value: 'POST /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-				description: 'post /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				name: 'getNamedViews',
+				value: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
+				description: 'get /assemblies/d/{did}/e/{eid}/namedViews',
 			},
 			{
 				name: 'createAssembly',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}',
-				description: 'Create Assembly - post /api/assemblies/d/{did}/w/{wid}',
-			},
-			{
-				name: 'createInstance',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-				description: 'Create assembly instance - post /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-			},
-			{
-				name: 'updateFeature',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-				description: 'post /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-			},
-			{
-				name: 'deleteFeature',
-				value: 'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-				description: 'Delete Feature - delete /api/assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-			},
-			{
-				name: 'deleteInstance',
-				value: 'DELETE /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
-				description: 'Delete assembly instance. - delete /api/assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
-			},
-			{
-				name: 'getAssemblyBoundingBoxes',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
-				description: 'Bounding Boxes. - get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
-			},
-			{
-				name: 'getAssemblyDefinition',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
-				description: 'Assembly Definition. - get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
-			},
-			{
-				name: 'getAssemblyMassProperties',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
-				description: 'Mass properties of an Assembly. - get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
-			},
-			{
-				name: 'getAssemblyShadedViews',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
-				description: 'get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
-			},
-			{
-				name: 'getBillOfMaterials',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
-				description: 'Get Bill of Materials - get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
-			},
-			{
-				name: 'getFeatureSpecs',
-				value: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
-				description: 'get /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
-			},
-			{
-				name: 'getNamedViews',
-				value: 'GET /api/assemblies/d/{did}/e/{eid}/namedViews',
-				description: 'get /api/assemblies/d/{did}/e/{eid}/namedViews',
+				value: 'POST /assemblies/d/{did}/w/{wid}',
+				description: 'Create Assembly - post /assemblies/d/{did}/w/{wid}',
 			},
 			{
 				name: 'getOrCreateBillOfMaterialsElement',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
-				description: 'Get or Create Bill of Materials Element - post /api/assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+				description: 'Get or Create Bill of Materials Element - post /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
 			},
 			{
-				name: 'insertTransformedInstances',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
-				description: 'Create and transform assembly instances - post /api/assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+				name: 'updateFeature',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				description: 'post /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+			},
+			{
+				name: 'deleteFeature',
+				value: 'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				description: 'Delete Feature - delete /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+			},
+			{
+				name: 'deleteInstance',
+				value: 'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+				description: 'Delete assembly instance. - delete /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
+			},
+			{
+				name: 'createInstance',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+				description: 'Create assembly instance - post /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 			},
 			{
 				name: 'transformOccurrences',
-				value: 'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
-				description: 'Transform assembly occurrences. - post /api/assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+				description: 'Transform assembly occurrences. - post /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+			},
+			{
+				name: 'insertTransformedInstances',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+				description: 'Create and transform assembly instances - post /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+			},
+			{
+				name: 'getAssemblyDefinition',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				description: 'Assembly Definition. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
+			},
+			{
+				name: 'getBillOfMaterials',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+				description: 'Get Bill of Materials - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+			},
+			{
+				name: 'getAssemblyBoundingBoxes',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+				description: 'Bounding Boxes. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+			},
+			{
+				name: 'getFeatures',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				description: 'Get Feature List - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+			},
+			{
+				name: 'addFeature',
+				value: 'POST /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				description: 'post /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+			},
+			{
+				name: 'getFeatureSpecs',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+				description: 'get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+			},
+			{
+				name: 'getAssemblyMassProperties',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
+				description: 'Mass properties of an Assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
+			},
+			{
+				name: 'getAssemblyShadedViews',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+				description: 'get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 			},
 			{
 				name: 'translateFormat',
-				value: 'POST /api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-				description: 'Create Assembly translation. - post /api/assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				value: 'POST /assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				description: 'Create Assembly translation. - post /assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
 			},
 		],
-		default: 'GET /api/assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+		default: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
 		description: 'The operation to perform',
 	},
-	...getFeatures.description,
-	...addFeature.description,
+	...getNamedViews.description,
 	...createAssembly.description,
-	...createInstance.description,
+	...getOrCreateBillOfMaterialsElement.description,
 	...updateFeature.description,
 	...deleteFeature.description,
 	...deleteInstance.description,
-	...getAssemblyBoundingBoxes.description,
+	...createInstance.description,
+	...transformOccurrences.description,
+	...insertTransformedInstances.description,
 	...getAssemblyDefinition.description,
+	...getBillOfMaterials.description,
+	...getAssemblyBoundingBoxes.description,
+	...getFeatures.description,
+	...addFeature.description,
+	...getFeatureSpecs.description,
 	...getAssemblyMassProperties.description,
 	...getAssemblyShadedViews.description,
-	...getBillOfMaterials.description,
-	...getFeatureSpecs.description,
-	...getNamedViews.description,
-	...getOrCreateBillOfMaterialsElement.description,
-	...insertTransformedInstances.description,
-	...transformOccurrences.description,
 	...translateFormat.description,
 ];

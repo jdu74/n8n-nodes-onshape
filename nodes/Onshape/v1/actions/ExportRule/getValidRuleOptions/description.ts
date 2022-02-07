@@ -14,7 +14,7 @@ export const getValidRuleOptionsDescription: INodeProperties[] = [
 					'ExportRule',
 				],
 				operation: [
-					'GET /api/exportrules/options/{otype}/{oid}',
+					'GET /exportrules/options/{otype}/{oid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getValidRuleOptionsDescription: INodeProperties[] = [
 					'ExportRule',
 				],
 				operation: [
-					'GET /api/exportrules/options/{otype}/{oid}',
+					'GET /exportrules/options/{otype}/{oid}',
 				],
 			},
 		},

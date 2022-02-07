@@ -14,7 +14,7 @@ export const getPartStudioNamedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/e/{eid}/namedViews',
+					'GET /partstudios/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPartStudioNamedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/e/{eid}/namedViews',
+					'GET /partstudios/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getPartStudioNamedViewsDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/e/{eid}/namedViews',
+					'GET /partstudios/d/{did}/e/{eid}/namedViews',
 				],
 			},
 		},

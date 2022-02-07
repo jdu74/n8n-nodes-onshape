@@ -14,7 +14,7 @@ export const getJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getJsonDescription: INodeProperties[] = [
 					'AppElement',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
 				],
 			},
 		},

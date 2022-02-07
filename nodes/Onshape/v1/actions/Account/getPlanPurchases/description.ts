@@ -14,7 +14,7 @@ export const getPlanPurchasesDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'GET /api/accounts/plans/{planId}/purchases',
+					'GET /accounts/plans/{planId}/purchases',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getPlanPurchasesDescription: INodeProperties[] = [
 					'Account',
 				],
 				operation: [
-					'GET /api/accounts/plans/{planId}/purchases',
+					'GET /accounts/plans/{planId}/purchases',
 				],
 			},
 		},

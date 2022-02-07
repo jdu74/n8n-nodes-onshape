@@ -14,7 +14,7 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
@@ -136,29 +136,21 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -174,12 +166,10 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -200,33 +190,17 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
-			{
-				name: 'script',
-				displayName: 'script',
-				description: 'script - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'queries',
-				displayName: 'queries',
-				description: 'queries - object',
-				type: 'json',
-				default: '',
-			},
 			{
 				name: 'libraryVersion',
 				displayName: 'libraryVersion',
@@ -235,10 +209,17 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 				default: 0,
 			},
 			{
-				name: 'serializationVersion',
-				displayName: 'serializationVersion',
-				description: 'serializationVersion - string',
-				type: 'string',
+				name: 'microversionSkew',
+				displayName: 'microversionSkew',
+				description: 'microversionSkew - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
+				name: 'queries',
+				displayName: 'queries',
+				description: 'queries - object',
+				type: 'json',
 				default: '',
 			},
 			{
@@ -249,11 +230,18 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'microversionSkew',
-				displayName: 'microversionSkew',
-				description: 'microversionSkew - boolean',
-				type: 'boolean',
-				default: false,
+				name: 'script',
+				displayName: 'script',
+				description: 'script - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'serializationVersion',
+				displayName: 'serializationVersion',
+				description: 'serializationVersion - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				name: 'sourceMicroversion',
@@ -279,15 +267,13 @@ export const evalFeatureScriptDescription: INodeProperties[] = [
 					'PartStudio',
 				],
 				operation: [
-					'POST /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
+					'POST /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/featurescript',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

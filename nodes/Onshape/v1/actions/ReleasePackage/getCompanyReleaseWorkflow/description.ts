@@ -14,7 +14,7 @@ export const getCompanyReleaseWorkflowDescription: INodeProperties[] = [
 					'ReleasePackage',
 				],
 				operation: [
-					'GET /api/releasepackages/companyreleaseworkflow',
+					'GET /releasepackages/companyreleaseworkflow',
 				],
 			},
 		},

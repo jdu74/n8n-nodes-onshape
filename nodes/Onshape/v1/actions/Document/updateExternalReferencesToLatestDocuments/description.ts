@@ -14,7 +14,7 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 			},
 		},
@@ -60,29 +60,21 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -98,12 +90,10 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -124,15 +114,13 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -179,15 +167,13 @@ export const updateExternalReferencesToLatestDocumentsDescription: INodeProperti
 					'Document',
 				],
 				operation: [
-					'POST /api/documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
+					'POST /documents/d/{did}/w/{wid}/e/{eid}/latestdocumentreferences',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const deleteDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/{did}',
+					'DELETE /documents/{did}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteDocumentDescription: INodeProperties[] = [
 					'Document',
 				],
 				operation: [
-					'DELETE /api/documents/{did}',
+					'DELETE /documents/{did}',
 				],
 			},
 		},

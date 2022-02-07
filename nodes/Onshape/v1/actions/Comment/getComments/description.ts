@@ -14,7 +14,7 @@ export const getCommentsDescription: INodeProperties[] = [
 					'Comment',
 				],
 				operation: [
-					'GET /api/comments',
+					'GET /comments',
 				],
 			},
 		},

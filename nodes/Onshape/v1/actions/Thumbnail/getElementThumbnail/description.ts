@@ -14,7 +14,7 @@ export const getElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getElementThumbnailDescription: INodeProperties[] = [
 					'Thumbnail',
 				],
 				operation: [
-					'GET /api/thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+					'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
 				],
 			},
 		},

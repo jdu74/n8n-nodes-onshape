@@ -14,7 +14,7 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 			},
 		},
@@ -60,29 +60,21 @@ export const createInstanceDescription: INodeProperties[] = [
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
 		type: 'options',
-		default: 'application/json;charset=UTF-8; qs=0.09',
+		default: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 		displayOptions: {
 			show: {
 				resource: [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'application/json;charset=UTF-8; qs=0.09',
-				value: 'application/json;charset=UTF-8; qs=0.09',
-			},
-			{
 				name: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
 				value: 'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-			},
-			{
-				name: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
-				value: 'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 			},
 		],
 	},
@@ -98,12 +90,10 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
@@ -124,25 +114,44 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 				jsonParameters: [
 					false,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},
 		options: [
 			{
-				name: 'isWholePartStudio',
-				displayName: 'isWholePartStudio',
-				description: 'isWholePartStudio - boolean',
-				type: 'boolean',
-				default: false,
+				name: 'configuration',
+				displayName: 'configuration',
+				description: 'configuration - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'documentId',
+				displayName: 'documentId',
+				description: 'documentId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'elementId',
+				displayName: 'elementId',
+				description: 'elementId - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'featureId',
+				displayName: 'featureId',
+				description: 'featureId - string',
+				type: 'string',
+				default: '',
 			},
 			{
 				displayName: 'includePartTypes',
@@ -170,6 +179,13 @@ export const createInstanceDescription: INodeProperties[] = [
 				],
 			},
 			{
+				name: 'isAssembly',
+				displayName: 'isAssembly',
+				description: 'isAssembly - boolean',
+				type: 'boolean',
+				default: false,
+			},
+			{
 				name: 'isHidden',
 				displayName: 'isHidden',
 				description: 'isHidden - boolean',
@@ -184,53 +200,11 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: false,
 			},
 			{
-				name: 'isAssembly',
-				displayName: 'isAssembly',
-				description: 'isAssembly - boolean',
+				name: 'isWholePartStudio',
+				displayName: 'isWholePartStudio',
+				description: 'isWholePartStudio - boolean',
 				type: 'boolean',
 				default: false,
-			},
-			{
-				name: 'configuration',
-				displayName: 'configuration',
-				description: 'configuration - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'revision',
-				displayName: 'revision',
-				description: 'revision - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'versionId',
-				displayName: 'versionId',
-				description: 'versionId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'partNumber',
-				displayName: 'partNumber',
-				description: 'partNumber - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'documentId',
-				displayName: 'documentId',
-				description: 'documentId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				name: 'elementId',
-				displayName: 'elementId',
-				description: 'elementId - string',
-				type: 'string',
-				default: '',
 			},
 			{
 				name: 'microversionId',
@@ -247,9 +221,23 @@ export const createInstanceDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'featureId',
-				displayName: 'featureId',
-				description: 'featureId - string',
+				name: 'partNumber',
+				displayName: 'partNumber',
+				description: 'partNumber - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'revision',
+				displayName: 'revision',
+				description: 'revision - string',
+				type: 'string',
+				default: '',
+			},
+			{
+				name: 'versionId',
+				displayName: 'versionId',
+				description: 'versionId - string',
 				type: 'string',
 				default: '',
 			},
@@ -270,15 +258,13 @@ export const createInstanceDescription: INodeProperties[] = [
 					'Assembly',
 				],
 				operation: [
-					'POST /api/assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+					'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
 				],
 				jsonParameters: [
 					true,
 				],
 				jsonContentType: [
-					'application/json;charset=UTF-8; qs=0.09',
 					'application/vnd.onshape.v2+json;charset=UTF-8;qs=0.2',
-					'application/vnd.onshape.v1+json;charset=UTF-8;qs=0.1',
 				],
 			},
 		},

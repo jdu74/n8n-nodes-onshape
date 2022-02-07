@@ -14,7 +14,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -49,7 +49,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 			},
 		},
@@ -72,7 +72,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 				jsonContentType: [
 					'multipart/form-data',
@@ -96,7 +96,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 				jsonParameters: [
 					false,
@@ -107,6 +107,13 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 			},
 		},
 		options: [
+			{
+				name: 'file',
+				displayName: 'file',
+				description: 'file - binary',
+				type: 'string',
+				default: 'data',
+			},
 			{
 				name: 'allowFaultyParts',
 				displayName: 'allowFaultyParts',
@@ -141,34 +148,6 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 				description: 'extractAssemblyHierarchy - boolean',
 				type: 'boolean',
 				default: false,
-			},
-			{
-				name: 'file',
-				displayName: 'file',
-				description: 'file - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'fileBodyWithDetails',
-				displayName: 'fileBodyWithDetails',
-				description: 'fileBodyWithDetails - object',
-				type: 'json',
-				default: '',
-			},
-			{
-				name: 'fileContentLength',
-				displayName: 'fileContentLength',
-				description: 'fileContentLength - integer',
-				type: 'number',
-				default: 0,
-			},
-			{
-				name: 'fileDetail',
-				displayName: 'fileDetail',
-				description: 'fileDetail - object',
-				type: 'json',
-				default: '',
 			},
 			{
 				name: 'flattenAssemblies',
@@ -210,14 +189,14 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 				displayName: 'locationPosition',
 				description: 'locationPosition - integer',
 				type: 'number',
-				default: 0,
+				default: -1,
 			},
 			{
 				name: 'notifyUser',
 				displayName: 'notifyUser',
 				description: 'notifyUser - boolean',
 				type: 'boolean',
-				default: false,
+				default: true,
 			},
 			{
 				name: 'ownerId',
@@ -241,9 +220,9 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 				default: '',
 			},
 			{
-				name: 'makePublic',
-				displayName: 'makePublic',
-				description: 'makePublic - boolean',
+				name: 'public',
+				displayName: 'public',
+				description: 'public - boolean',
 				type: 'boolean',
 				default: false,
 			},
@@ -266,14 +245,14 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 				displayName: 'storeInDocument',
 				description: 'storeInDocument - boolean',
 				type: 'boolean',
-				default: false,
+				default: true,
 			},
 			{
 				name: 'translate',
 				displayName: 'translate',
 				description: 'translate - boolean',
 				type: 'boolean',
-				default: false,
+				default: true,
 			},
 			{
 				name: 'unit',
@@ -327,7 +306,7 @@ export const uploadFileCreateElementDescription: INodeProperties[] = [
 					'BlobElement',
 				],
 				operation: [
-					'POST /api/blobelements/d/{did}/w/{wid}',
+					'POST /blobelements/d/{did}/w/{wid}',
 				],
 				jsonParameters: [
 					true,

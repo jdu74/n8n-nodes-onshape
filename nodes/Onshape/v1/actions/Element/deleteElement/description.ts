@@ -14,7 +14,7 @@ export const deleteElementDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'DELETE /api/elements/d/{did}/w/{wid}/e/{eid}',
+					'DELETE /elements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const deleteElementDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'DELETE /api/elements/d/{did}/w/{wid}/e/{eid}',
+					'DELETE /elements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const deleteElementDescription: INodeProperties[] = [
 					'Element',
 				],
 				operation: [
-					'DELETE /api/elements/d/{did}/w/{wid}/e/{eid}',
+					'DELETE /elements/d/{did}/w/{wid}/e/{eid}',
 				],
 			},
 		},

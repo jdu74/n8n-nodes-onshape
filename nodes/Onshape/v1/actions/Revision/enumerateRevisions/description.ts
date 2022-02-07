@@ -14,7 +14,7 @@ export const enumerateRevisionsDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}',
+					'GET /revisions/companies/{cid}',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const enumerateRevisionsDescription: INodeProperties[] = [
 					'Revision',
 				],
 				operation: [
-					'GET /api/revisions/companies/{cid}',
+					'GET /revisions/companies/{cid}',
 				],
 			},
 		},

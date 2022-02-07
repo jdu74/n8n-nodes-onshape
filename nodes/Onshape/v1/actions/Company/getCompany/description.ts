@@ -14,7 +14,7 @@ export const getCompanyDescription: INodeProperties[] = [
 					'Company',
 				],
 				operation: [
-					'GET /api/companies/{cid}',
+					'GET /companies/{cid}',
 				],
 			},
 		},

@@ -14,7 +14,7 @@ export const getAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getAssociativeDataDescription: INodeProperties[] = [
 					'AppAssociativeData',
 				],
 				operation: [
-					'GET /api/appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
+					'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/associativedata',
 				],
 			},
 		},

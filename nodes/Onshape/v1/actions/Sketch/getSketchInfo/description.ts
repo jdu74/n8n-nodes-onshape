@@ -14,7 +14,7 @@ export const getSketchInfoDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 				],
 			},
 		},
@@ -32,7 +32,7 @@ export const getSketchInfoDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 				],
 			},
 		},
@@ -50,7 +50,7 @@ export const getSketchInfoDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 				],
 			},
 		},
@@ -68,7 +68,7 @@ export const getSketchInfoDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 				],
 			},
 		},
@@ -86,7 +86,7 @@ export const getSketchInfoDescription: INodeProperties[] = [
 					'Sketch',
 				],
 				operation: [
-					'GET /api/partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
+					'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/sketches',
 				],
 			},
 		},
