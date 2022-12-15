@@ -1,30 +1,23 @@
-import {
-	INodeTypeDescription,
-	INodeVersionedType,
-} from 'n8n-workflow';
+import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { NodeVersionedType } from '../../src/NodeVersionedType';
 import { OnshapeFeatureStudioV1 } from './v1/OnshapeFeatureStudioV1node';
+import { OnshapeFeatureStudioV2 } from './v2/OnshapeFeatureStudioV2node';
 
-export class OnshapeFeatureStudio extends NodeVersionedType {
+export class OnshapeFeatureStudio extends VersionedNodeType {
 	constructor() {
-		const baseDescription: INodeTypeDescription = {
+		const baseDescription: INodeTypeBaseDescription = {
 			displayName: 'OnshapeFeatureStudio',
 			name: 'onshapefeaturestudio',
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Access and write to Feature Studio Elements.',
-			defaultVersion: 1,
-			properties: [],
-			version: 0,
-			defaults: {},
-			inputs: [],
-			outputs: []
+			defaultVersion: 2
 		};
 
-		const nodeVersions: INodeVersionedType['nodeVersions'] = {
+		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeFeatureStudioV1(baseDescription),
+			2: new OnshapeFeatureStudioV2(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

@@ -1,30 +1,23 @@
-import {
-	INodeTypeDescription,
-	INodeVersionedType,
-} from 'n8n-workflow';
+import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { NodeVersionedType } from '../../src/NodeVersionedType';
 import { OnshapeWebhookV1 } from './v1/OnshapeWebhookV1node';
+import { OnshapeWebhookV2 } from './v2/OnshapeWebhookV2node';
 
-export class OnshapeWebhook extends NodeVersionedType {
+export class OnshapeWebhook extends VersionedNodeType {
 	constructor() {
-		const baseDescription: INodeTypeDescription = {
+		const baseDescription: INodeTypeBaseDescription = {
 			displayName: 'OnshapeWebhook',
 			name: 'onshapewebhook',
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Create and manage webhooks.',
-			defaultVersion: 1,
-			properties: [],
-			version: 0,
-			defaults: {},
-			inputs: [],
-			outputs: []
+			defaultVersion: 2
 		};
 
-		const nodeVersions: INodeVersionedType['nodeVersions'] = {
+		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeWebhookV1(baseDescription),
+			2: new OnshapeWebhookV2(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

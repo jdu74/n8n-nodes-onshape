@@ -34,47 +34,47 @@ export class OnshapeTrigger implements INodeType {
 		{
 			value: 'onshape.model.translation.complete',
 			name: 'Translation Request Completed',
-			description: 'occurs when a translation request is completed'
+			description: 'Occurs when a translation request is completed'
 		},
 		{
 			value: 'onshape.model.lifecycle.metadata',
 			name: 'Part/Element Metadata Modified',
-			description: 'occurs when part or element metadata is modified'
+			description: 'Occurs when part or element metadata is modified'
 		},
 		{
 			value: 'onshape.model.lifecycle.createversion',
 			name: 'Document Version Created',
-			description: 'occurs when a new version of a document is created'
+			description: 'Occurs when a new version of a document is created'
 		},
 		{
 			value: 'onshape.model.lifecycle.createworkspace',
 			name: 'New Workspace Created',
-			description: 'occurs when a new workspace is created'
+			description: 'Occurs when a new workspace is created'
 		},
 		{
 			value: 'onshape.model.lifecycle.createelement',
 			name: 'New Element Created',
-			description: 'occurs when a new element is created'
+			description: 'Occurs when a new element is created'
 		},
 		{
 			value: 'onshape.model.lifecycle.deleteelement',
 			name: 'Element Deleted',
-			description: 'occurs when an element is deleted'
+			description: 'Occurs when an element is deleted'
 		},
 		{
 			value: 'onshape.document.lifecycle.statechange',
 			name: 'Document State Changed',
-			description: 'occurs when an document changes state'
+			description: 'Occurs when an document changes state'
 		},
 		{
 			value: 'onshape.model.lifecycle.changed.externalreferences',
 			name: 'Eexternal Reference Changed',
-			description: 'occurs when an external reference changes'
+			description: 'Occurs when an external reference changes'
 		},
 		{
 			value: 'onshape.document.lifecycle.created',
 			name: 'Document Created',
-			description: 'occurs when a document is created'
+			description: 'Occurs when a document is created'
 		},
 		{
 			value: 'onshape.revision.created',
@@ -83,24 +83,24 @@ export class OnshapeTrigger implements INodeType {
 		},
 		{
 			value: 'onshape.comment.create',
-			name: 'Document Comment created',
+			name: 'Document Comment Created',
 			description: 'Occurs when a comment is created in a document'
 		},
 		{
 			value: 'onshape.comment.update',
-			name: 'Document Comment updated',
+			name: 'Document Comment Updated',
 			description: 'Occurs when a comment is updated in a document'
 		},
 		{
 			value: 'onshape.comment.delete',
-			name: 'Document Comment deleted',
+			name: 'Document Comment Deleted',
 			description: 'Occurs when a comment is deleted in a document'
 		},
 	];
 	lstEventsWorkflowGroup = [
 		{
 			value: 'onshape.workflow.transition',
-			name: 'Revision/Release Package transitions',
+			name: 'Revision/Release Package Transitions',
 			description: 'Occurs when a revision or release package transitions through workflow states'
 		},
 	];
@@ -118,28 +118,15 @@ export class OnshapeTrigger implements INodeType {
 		},
 		inputs: [],
 		outputs: ['main'],
-		credentials: [
+		credentials:
+		[
 			{
-				name: 'onshapeApiKeys',
+				name: 'onshapeApiKeysApi',
 				required: true,
-				displayOptions: {
-					show: {
-						authentication: [
-							'apiKeys',
-						],
-					},
-				},
 			},
 			{
-				name: 'onshapeOAuth2',
+				name: 'onshapeOAuth2Api',
 				required: true,
-				displayOptions: {
-					show: {
-						authentication: [
-							'oAuth2',
-						],
-					},
-				},
 			},
 		],
 		webhooks: [
@@ -167,7 +154,6 @@ export class OnshapeTrigger implements INodeType {
 					},
 				],
 				default: 'apiKeys',
-				description: 'Method of authentication.',
 			},
 			{
 				displayName: 'Path',
@@ -176,7 +162,7 @@ export class OnshapeTrigger implements INodeType {
 				default: '',
 				placeholder: 'webhook',
 				required: true,
-				description: 'The path to listen to.',
+				description: 'The path to listen to',
 			},
 			{
 				displayName: 'Event',
@@ -193,7 +179,6 @@ export class OnshapeTrigger implements INodeType {
 			{
 				displayName: "clientId",
 				name: "clientId",
-				description: "clientId",
 				type: "string",
 				default: "",
 				displayOptions: {
@@ -205,7 +190,7 @@ export class OnshapeTrigger implements INodeType {
 			{
 				displayName: "companyId/documentId",
 				name: "idType",
-				description: "idType",
+				description: 'Whether IdType',
 				type: "boolean",
 				default: true,
 				displayOptions: {
@@ -219,7 +204,6 @@ export class OnshapeTrigger implements INodeType {
 			{
 				displayName: "companyId",
 				name: "companyId",
-				description: "companyId",
 				type: "string",
 				default: "",
 				displayOptions: {
@@ -231,9 +215,8 @@ export class OnshapeTrigger implements INodeType {
 				},
 			},
 			{
-				displayName: "companyId ",
-				name: "companyId ",
-				description: "companyId ",
+				displayName: 'companyId',
+				name: 'companyId',
 				type: "string",
 				default: "",
 				displayOptions: {
@@ -249,7 +232,6 @@ export class OnshapeTrigger implements INodeType {
 			{
 				displayName: "documentId",
 				name: "documentId",
-				description: "documentId",
 				type: "string",
 				default: "",
 				displayOptions: {
@@ -264,7 +246,6 @@ export class OnshapeTrigger implements INodeType {
 			{
 				displayName: "documentId",
 				name: "documentId",
-				description: "documentId",
 				type: "string",
 				default: "",
 				displayOptions: {

@@ -1,0 +1,12 @@
+{
+	"node": "n8n-nodes.onshapepublication",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"CAD & PLM ❤"
+	],
+	"resources": {
+		"credentialDocumentation": [{}],
+		"primaryDocumentation": [{}]
+	}
+}

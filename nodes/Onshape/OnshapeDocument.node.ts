@@ -1,30 +1,23 @@
-import {
-	INodeTypeDescription,
-	INodeVersionedType,
-} from 'n8n-workflow';
+import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { NodeVersionedType } from '../../src/NodeVersionedType';
 import { OnshapeDocumentV1 } from './v1/OnshapeDocumentV1node';
+import { OnshapeDocumentV2 } from './v2/OnshapeDocumentV2node';
 
-export class OnshapeDocument extends NodeVersionedType {
+export class OnshapeDocument extends VersionedNodeType {
 	constructor() {
-		const baseDescription: INodeTypeDescription = {
+		const baseDescription: INodeTypeBaseDescription = {
 			displayName: 'OnshapeDocument',
 			name: 'onshapedocument',
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Manage documents.',
-			defaultVersion: 1,
-			properties: [],
-			version: 0,
-			defaults: {},
-			inputs: [],
-			outputs: []
+			defaultVersion: 2
 		};
 
-		const nodeVersions: INodeVersionedType['nodeVersions'] = {
+		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeDocumentV1(baseDescription),
+			2: new OnshapeDocumentV2(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

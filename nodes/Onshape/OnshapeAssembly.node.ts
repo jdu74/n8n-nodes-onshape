@@ -1,30 +1,23 @@
-import {
-	INodeTypeDescription,
-	INodeVersionedType,
-} from 'n8n-workflow';
+import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { NodeVersionedType } from '../../src/NodeVersionedType';
 import { OnshapeAssemblyV1 } from './v1/OnshapeAssemblyV1node';
+import { OnshapeAssemblyV2 } from './v2/OnshapeAssemblyV2node';
 
-export class OnshapeAssembly extends NodeVersionedType {
+export class OnshapeAssembly extends VersionedNodeType {
 	constructor() {
-		const baseDescription: INodeTypeDescription = {
+		const baseDescription: INodeTypeBaseDescription = {
 			displayName: 'OnshapeAssembly',
 			name: 'onshapeassembly',
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Access and manipulate assembly elements.',
-			defaultVersion: 1,
-			properties: [],
-			version: 0,
-			defaults: {},
-			inputs: [],
-			outputs: []
+			defaultVersion: 2
 		};
 
-		const nodeVersions: INodeVersionedType['nodeVersions'] = {
+		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeAssemblyV1(baseDescription),
+			2: new OnshapeAssemblyV2(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

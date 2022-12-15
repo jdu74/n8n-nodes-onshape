@@ -1,30 +1,23 @@
-import {
-	INodeTypeDescription,
-	INodeVersionedType,
-} from 'n8n-workflow';
+import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { NodeVersionedType } from '../../src/NodeVersionedType';
 import { OnshapeBlobElementV1 } from './v1/OnshapeBlobElementV1node';
+import { OnshapeBlobElementV2 } from './v2/OnshapeBlobElementV2node';
 
-export class OnshapeBlobElement extends NodeVersionedType {
+export class OnshapeBlobElement extends VersionedNodeType {
 	constructor() {
-		const baseDescription: INodeTypeDescription = {
+		const baseDescription: INodeTypeBaseDescription = {
 			displayName: 'OnshapeBlobElement',
 			name: 'onshapeblobelement',
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Save and access Blob Elements.',
-			defaultVersion: 1,
-			properties: [],
-			version: 0,
-			defaults: {},
-			inputs: [],
-			outputs: []
+			defaultVersion: 2
 		};
 
-		const nodeVersions: INodeVersionedType['nodeVersions'] = {
+		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeBlobElementV1(baseDescription),
+			2: new OnshapeBlobElementV2(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);
