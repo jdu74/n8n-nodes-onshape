@@ -27,7 +27,7 @@
   ],
   "n8n": {
     "credentials": [
-      "dist/credentials/OnshapeAPIKeys.credentials.js",
+      "dist/credentials/OnshapeApiKeys.credentials.js",
       "dist/credentials/OnshapeOAuth2.credentials.js"
     ],
     "nodes": [

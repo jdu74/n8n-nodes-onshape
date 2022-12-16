@@ -50,14 +50,14 @@ export async function apiRequest(
 	try {
 		const authenticationMethod = this.getNodeParameter('authentication', 0) as string;
 		if (authenticationMethod === 'apiKeys') {
-			const credentials = await this.getCredentials('onshapeApiKeys') as IDataObject;
+			const credentials = await this.getCredentials('onshapeApiKeysApi') as IDataObject;
 			options.headers = buildHeaders(options.method, options.uri, options.headers, options.qs, credentials.clientId, credentials.clientSecret);
 
 			return await this.helpers.request!(options);
 		} else {
 			delete options.auth;
 			//@ts-ignore
-			return await this.helpers.requestOAuth2!.call(this, 'onshapeOAuth2', options, true);
+			return await this.helpers.requestOAuth2!.call(this, 'onshapeOAuth2Api', options, true);
 		}
 	} catch (error: any) {
 		throw new NodeApiError(this.getNode(), error);

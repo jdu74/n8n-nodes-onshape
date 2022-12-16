@@ -18,10 +18,10 @@ export const versionDescription: INodeTypeDescription = {
 	},
 	inputs: ['main'],
 	outputs: ['main'],
-	credentials: 
+	credentials:
 	[
 		{
-			name: 'onshapeApiKeys',
+			name: 'onshapeApiKeysApi',
 			required: true,
 			displayOptions: {
 				show: {
@@ -32,7 +32,7 @@ export const versionDescription: INodeTypeDescription = {
 			},
 		},
 		{
-			name: 'onshapeOAuth2',
+			name: 'onshapeOAuth2Api',
 			required: true,
 			displayOptions: {
 				show: {
