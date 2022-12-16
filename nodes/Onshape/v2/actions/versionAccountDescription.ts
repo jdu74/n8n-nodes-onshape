@@ -23,10 +23,24 @@ export const versionDescription: INodeTypeDescription = {
 		{
 			name: 'onshapeApiKeysApi',
 			required: true,
+			displayOptions: {
+				show: {
+					authentication: [
+						'apiKeys',
+					],
+				},
+			},
 		},
 		{
 			name: 'onshapeOAuth2Api',
 			required: true,
+			displayOptions: {
+				show: {
+					authentication: [
+						'oAuth2',
+					],
+				},
+			},
 		},
 	],
 	properties: [
@@ -59,5 +73,6 @@ export const versionDescription: INodeTypeDescription = {
 				},
 			],
 		},
+		...Account.descriptions,
 	],
 };

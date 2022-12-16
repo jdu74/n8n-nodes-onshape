@@ -6,7 +6,15 @@
 		"CAD & PLM ❤"
 	],
 	"resources": {
-		"credentialDocumentation": [{}],
-		"primaryDocumentation": [{}]
+		"credentialDocumentation": [
+			{
+				"url": "https://onshape-public.github.io/docs/oauth/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://cad.onshape.com/glassworks/explorer/"
+			}
+		]
 	}
 }

@@ -123,10 +123,24 @@ export class OnshapeTrigger implements INodeType {
 			{
 				name: 'onshapeApiKeysApi',
 				required: true,
+				displayOptions: {
+					show: {
+						authentication: [
+							'apiKeys',
+						],
+					},
+				},
 			},
 			{
 				name: 'onshapeOAuth2Api',
 				required: true,
+				displayOptions: {
+					show: {
+						authentication: [
+							'oAuth2',
+						],
+					},
+				},
 			},
 		],
 		webhooks: [

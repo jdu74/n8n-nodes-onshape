@@ -69,6 +69,7 @@
 			"dist/nodes/Onshape/OnshapeTeam.node.js",
 			"dist/nodes/Onshape/OnshapeThumbnail.node.js",
 			"dist/nodes/Onshape/OnshapeTranslation.node.js",
+			"dist/nodes/Onshape/OnshapeTrigger.node.js",
 			"dist/nodes/Onshape/OnshapeUser.node.js",
 			"dist/nodes/Onshape/OnshapeVariables.node.js",
 			"dist/nodes/Onshape/OnshapeVersion.node.js",
