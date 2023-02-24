@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-onshape",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Module for Onshape API use.",
   "keywords": [
     "n8n-community-node-package",
