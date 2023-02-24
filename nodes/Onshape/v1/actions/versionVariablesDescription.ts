@@ -18,7 +18,7 @@ export const versionDescription: INodeTypeDescription = {
 	},
 	inputs: ['main'],
 	outputs: ['main'],
-	credentials: 
+	credentials:
 	[
 		{
 			name: 'onshapeApiKeysApi',
@@ -30,6 +30,12 @@ export const versionDescription: INodeTypeDescription = {
 		},
 	],
 	properties: [
+		{
+			displayName: 'A newer version of this node type is available',
+			name: 'notice',
+			type: 'notice',
+			default: '',
+		},
 		{
 			displayName: 'Authentication',
 			name: 'authentication',

@@ -17,7 +17,7 @@ export class OnshapeThumbnail extends VersionedNodeType {
 
 		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeThumbnailV1(baseDescription),
-			2: new OnshapeThumbnailV2(baseDescription),
+			2: new OnshapeThumbnailV1(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

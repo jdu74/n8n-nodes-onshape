@@ -29,25 +29,27 @@ export class OnshapePartV2 implements INodeType {
 	//methods = { loadOptions };
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+
+		const operation = this.getNodeParameter('operation', 0) as string;
+		const isJson =
+			!(operation === 'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/parasolid') &&
+			!(operation === 'GET /parts/d/{did}/{wvm}/{wvmid}/e/{eid}/partid/{partid}/gltf');
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];
 		const length = items.length as number;
+
 		for (let i = 0; i < length; i++) {
 			try {
 				const iNodeRequest = parseParameters.call(this, i);
 				const responseData = await apiRequest.call(
 					this,
-					iNodeRequest.method,
-					iNodeRequest.path,
-					iNodeRequest.body,
-					iNodeRequest.query,
-					iNodeRequest.headers
+					iNodeRequest.method, iNodeRequest.path,
+					iNodeRequest.body, iNodeRequest.query,
+					iNodeRequest.headers, '', { json: isJson }
 				);
-				if (Array.isArray(responseData)) {
-					returnData.push.apply(returnData, responseData as IDataObject[]);
-				} else {
+				(Array.isArray(responseData)) ?
+					returnData.push.apply(returnData, responseData as IDataObject[]) :
 					returnData.push(responseData as IDataObject);
-				}
 			} catch (error: any) {
 				if (this.continueOnFail()) {
 					returnData.push({ error: error.message });
@@ -56,6 +58,15 @@ export class OnshapePartV2 implements INodeType {
 				throw error;
 			}
 		}
-		return [this.helpers.returnJsonArray(returnData)];
+
+		if (isJson)
+			return [this.helpers.returnJsonArray(returnData)]
+		else {
+			const binary = await Promise.all(returnData.map(async (el: any) => {
+				return { json: {}, binary: { ['data']: await this.helpers.prepareBinaryData(Buffer.from(el, 'utf-8'), 'data', 'text/plain') } };
+			}));
+			return [binary]
+		}
+
 	}
 }
