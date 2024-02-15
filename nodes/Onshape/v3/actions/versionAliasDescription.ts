@@ -1,0 +1,79 @@
+import {
+	INodeProperties,
+	INodeTypeDescription,
+} from 'n8n-workflow';
+
+import * as Alias from './Alias';
+
+export const versionDescription: INodeTypeDescription = {
+	displayName: 'Onshape - Alias',
+	name: 'onshapealias',
+	icon: 'file:onshape.svg',
+	group: ['output'],
+	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
+	description: 'Create and manage enterprise aliases. (Enterprise admins only.) - 1.176.30682-6f8b76b680d2',
+	version: 3,
+	defaults: {
+		name: 'Onshape - Alias'
+	},
+	inputs: ['main'],
+	outputs: ['main'],
+	credentials: 
+	[
+		{
+			name: 'onshapeApiKeysApi',
+			required: true,
+			displayOptions: {
+				show: {
+					authentication: [
+						'apiKeys',
+					],
+				},
+			},
+		},
+		{
+			name: 'onshapeOAuth2Api',
+			required: true,
+			displayOptions: {
+				show: {
+					authentication: [
+						'oAuth2',
+					],
+				},
+			},
+		},
+	],
+	properties: [
+		{
+			displayName: 'Authentication',
+			name: 'authentication',
+			type: 'options',
+			noDataExpression: true,
+			options: [
+				{
+					name: 'ApiKeys',
+					value: 'apiKeys',
+				},
+				{
+					name: 'OAuth2',
+					value: 'oAuth2',
+				},
+			],
+			default: 'apiKeys',
+		},
+		{
+			displayName: 'Resource',
+			name: 'resource',
+			type: 'hidden',
+			default: 'Alias',
+			options: [
+				{
+					name: 'Alias',
+					description: 'Create and manage enterprise aliases. (Enterprise admins only.)',
+					value: 'Alias',
+				},
+			],
+		},
+		...Alias.descriptions,
+	],
+};

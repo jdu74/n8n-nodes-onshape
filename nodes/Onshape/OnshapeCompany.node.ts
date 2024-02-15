@@ -2,6 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeCompanyV1 } from './v1/OnshapeCompanyV1node';
 import { OnshapeCompanyV2 } from './v2/OnshapeCompanyV2node';
+import { OnshapeCompanyV3 } from './v3/OnshapeCompanyV3node';
 
 export class OnshapeCompany extends VersionedNodeType {
 	constructor() {
@@ -12,12 +13,13 @@ export class OnshapeCompany extends VersionedNodeType {
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 			description: 'Access company information.',
-			defaultVersion: 2
+			defaultVersion: 3
 		};
 
 		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeCompanyV1(baseDescription),
 			2: new OnshapeCompanyV2(baseDescription),
+			3: new OnshapeCompanyV3(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

@@ -1,9 +1,6 @@
 import {
-	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
 	IDataObject,
+	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeBaseDescription,
@@ -33,8 +30,8 @@ export class OnshapeThumbnailV2 implements INodeType {
 
 		const operation = this.getNodeParameter('operation', 0) as string;
 
-		const isImage = (operation === 'GET /thumbnails/d/{did}/{wv}/{wvid}/s/{sz}' ||
-			operation === 'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}/ac/{cid}/s/{sz}' ||
+		const isImage = (operation === 'GET /thumbnails/d/{did}/w/{wid}/s/{sz}' ||
+			operation === 'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}' ||
 			operation === 'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}/s/{sz}');
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];

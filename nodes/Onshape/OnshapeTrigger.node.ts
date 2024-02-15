@@ -1,7 +1,7 @@
 import {
 	IHookFunctions,
 	IWebhookFunctions,
-} from 'n8n-core';
+} from 'n8n-workflow';
 
 import {
 	IDataObject,

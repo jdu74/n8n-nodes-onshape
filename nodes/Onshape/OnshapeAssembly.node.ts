@@ -2,6 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAssemblyV1 } from './v1/OnshapeAssemblyV1node';
 import { OnshapeAssemblyV2 } from './v2/OnshapeAssemblyV2node';
+import { OnshapeAssemblyV3 } from './v3/OnshapeAssemblyV3node';
 
 export class OnshapeAssembly extends VersionedNodeType {
 	constructor() {
@@ -11,13 +12,14 @@ export class OnshapeAssembly extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and manipulate assembly elements.',
-			defaultVersion: 2
+			description: 'Create and manage assemblies.',
+			defaultVersion: 3
 		};
 
 		const nodeVersions: IVersionedNodeType['nodeVersions'] = {
 			1: new OnshapeAssemblyV1(baseDescription),
 			2: new OnshapeAssemblyV2(baseDescription),
+			3: new OnshapeAssemblyV3(baseDescription),
 		};
 
 		super(nodeVersions, baseDescription);

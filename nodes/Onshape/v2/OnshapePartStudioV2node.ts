@@ -1,9 +1,6 @@
 import {
-	IExecuteFunctions,
-} from 'n8n-core';
-
-import {
 	IDataObject,
+	IExecuteFunctions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeBaseDescription,
@@ -29,6 +26,9 @@ export class OnshapePartStudioV2 implements INodeType {
 	//methods = { loadOptions };
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+		const operation = this.getNodeParameter('operation', 0) as string;
+		const isJson =
+			!(operation === 'GET /partstudios/d/{did}/{wvm}/{wvmid}/e/{eid}/gltf')
 		const items = this.getInputData();
 		const returnData: IDataObject[] = [];
 		const length = items.length as number;
@@ -41,7 +41,8 @@ export class OnshapePartStudioV2 implements INodeType {
 					iNodeRequest.path,
 					iNodeRequest.body,
 					iNodeRequest.query,
-					iNodeRequest.headers
+					iNodeRequest.headers, '',
+					{ json: isJson }
 				);
 				if (Array.isArray(responseData)) {
 					returnData.push.apply(returnData, responseData as IDataObject[]);
@@ -56,6 +57,15 @@ export class OnshapePartStudioV2 implements INodeType {
 				throw error;
 			}
 		}
-		return [this.helpers.returnJsonArray(returnData)];
+
+		if (isJson)
+			return [this.helpers.returnJsonArray(returnData)]
+		else {
+			const binary = await Promise.all(returnData.map(async (el: any) => {
+				return { json: {}, binary: { ['data']: await this.helpers.prepareBinaryData(Buffer.from(el, 'utf-8'), 'data', 'text/plain') } };
+			}));
+			return [binary]
+		}
+
 	}
 }

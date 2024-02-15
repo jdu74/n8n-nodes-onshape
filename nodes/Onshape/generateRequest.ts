@@ -42,7 +42,6 @@ export function parseParameters(
 	Object.entries(parameters).forEach((element: any) => {
 		const [name, type, loc] = split(element[0]);
 		const value: any = element[1];
-
 		switch (type) {
 			case 'object': {
 				add(loc, processValue(value), result);
@@ -61,7 +60,7 @@ export function parseParameters(
 }
 
 function split(element: any) {
-	const params: any = element.replace(/ /g,'').split(/(?:,|-|\(|\))+/);
+	const params: any = element.replace(/ /g, '').split(/(?:,|-|\(|\))+/);
 	const l = params.length;
 	if (l < 4) return [];
 	const i1 = element.lastIndexOf('-');
@@ -106,7 +105,7 @@ function add(loc: any, request: any, result: any): any {
 	if (loc && request && Object.values(request)[0]) {
 		switch (loc) {
 			case 'body': {
-				Object.assign(result[loc], request);
+				result[loc] = request;
 				break;
 			}
 			case 'path': {
@@ -123,13 +122,15 @@ function add(loc: any, request: any, result: any): any {
 	return result;
 }
 
-function string2Object(s: string) {
-	return JSON.parse(s
-		.replace(/\n/g, '')
-		.replace(/\r/g, '')
-		.replace(/\t/g, '')
-		.replace(' ', '')
-		.trim());
+function string2Object(s: any) {
+	return (typeof s === 'string')
+		? JSON.parse(s
+			.replace(/\n/g, '')
+			.replace(/\r/g, '')
+			.replace(/\t/g, '')
+			.replace(' ', '')
+			.trim())
+		: s
 }
 
 function type(name: string, value: any): any {

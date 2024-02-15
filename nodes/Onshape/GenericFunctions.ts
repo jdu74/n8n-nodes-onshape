@@ -3,7 +3,7 @@ import {
 	IHookFunctions,
 	ILoadOptionsFunctions,
 	IWebhookFunctions,
-} from 'n8n-core';
+} from 'n8n-workflow';
 
 import {
 	OptionsWithUri,
