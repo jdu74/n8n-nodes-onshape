@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAPIApplicationV1 } from './v1/OnshapeAPIApplicationV1node';
 import { OnshapeAPIApplicationV2 } from './v2/OnshapeAPIApplicationV2node';
-import { OnshapeAPIApplicationV3 } from './v3/OnshapeAPIApplicationV3node';
+import { OnshapeAPIApplication as OnshapeAPIApplicationV3 } from './v3/OnshapeAPIApplicationnode';
 
 export class OnshapeAPIApplication extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeAPIApplication extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Manage application preferences.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

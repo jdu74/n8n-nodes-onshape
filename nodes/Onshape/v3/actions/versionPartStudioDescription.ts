@@ -1,5 +1,4 @@
 import {
-	INodeProperties,
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
@@ -11,7 +10,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Access and modify Part Studios. - 1.176.30682-6f8b76b680d2',
+	description: 'undefined - 1.176.30682-6f8b76b680d2',
 	version: 3,
 	defaults: {
 		name: 'Onshape - PartStudio'
@@ -68,8 +67,7 @@ export const versionDescription: INodeTypeDescription = {
 			default: 'PartStudio',
 			options: [
 				{
-					name: 'PartStudio',
-					description: 'Access and modify Part Studios.',
+					name: 'Part Studio',
 					value: 'PartStudio',
 				},
 			],

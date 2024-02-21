@@ -13,6 +13,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -20,20 +21,21 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /openapi',
 		options: [
 			{
 				name: 'getOpenApi',
 				value: 'GET /openapi',
-				description: 'The Onshape API OpenAPI specification is returned in the JSON format. - get /openapi',
+				description: 'Get the OpenAPI specification for the Onshape REST API. - get /openapi',
+				action: 'Get Open Api',
 			},
 			{
 				name: 'getTags',
 				value: 'GET /openapi/tags',
-				description: 'Tags are used to group operations. For example, `Document` groups operations on documents. - get /openapi/tags',
+				description: 'Get the list of tags in the Onshape OpenAPI specification. - get /openapi/tags',
+				action: 'Get Tags',
 			},
 		],
-		default: 'GET /openapi',
-		description: 'The operation to perform',
 	},
 	...GetOpenApi.description,
 	...GetTags.description,

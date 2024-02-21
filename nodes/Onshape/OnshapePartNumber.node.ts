@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapePartNumberV1 } from './v1/OnshapePartNumberV1node';
 import { OnshapePartNumberV2 } from './v2/OnshapePartNumberV2node';
-import { OnshapePartNumberV3 } from './v3/OnshapePartNumberV3node';
+import { OnshapePartNumber as OnshapePartNumberV3 } from './v3/OnshapePartNumbernode';
 
 export class OnshapePartNumber extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapePartNumber extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create valid part numbers.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

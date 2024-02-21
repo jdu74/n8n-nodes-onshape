@@ -41,7 +41,7 @@ export const RevertUnchangedToRevisionsDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'application/json;charset=UTF-8; qs=0.09',
 		displayOptions: {
 			show: {
@@ -196,6 +196,32 @@ export const RevertUnchangedToRevisionsDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Document',
+				],
+				operation: [
+					'POST /documents/d/{did}/w/{wid}/revertunchangedtorevisions',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

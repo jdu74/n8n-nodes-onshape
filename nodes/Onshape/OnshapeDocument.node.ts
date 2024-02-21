@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeDocumentV1 } from './v1/OnshapeDocumentV1node';
 import { OnshapeDocumentV2 } from './v2/OnshapeDocumentV2node';
-import { OnshapeDocumentV3 } from './v3/OnshapeDocumentV3node';
+import { OnshapeDocument as OnshapeDocumentV3 } from './v3/OnshapeDocumentnode';
 
 export class OnshapeDocument extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeDocument extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create and manage documents.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAccountV1 } from './v1/OnshapeAccountV1node';
 import { OnshapeAccountV2 } from './v2/OnshapeAccountV2node';
-import { OnshapeAccountV3 } from './v3/OnshapeAccountV3node';
+import { OnshapeAccount as OnshapeAccountV3 } from './v3/OnshapeAccountnode';
 
 export class OnshapeAccount extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeAccount extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Manage user purchases, subscriptions, and consumables.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapePartV1 } from './v1/OnshapePartV1node';
 import { OnshapePartV2 } from './v2/OnshapePartV2node';
-import { OnshapePartV3 } from './v3/OnshapePartV3node';
+import { OnshapePart as OnshapePartV3 } from './v3/OnshapePartnode';
 
 export class OnshapePart extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapePart extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Export Parts and access Part details.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeElementV1 } from './v1/OnshapeElementV1node';
 import { OnshapeElementV2 } from './v2/OnshapeElementV2node';
-import { OnshapeElementV3 } from './v3/OnshapeElementV3node';
+import { OnshapeElement as OnshapeElementV3 } from './v3/OnshapeElementnode';
 
 export class OnshapeElement extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeElement extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and manage Elements.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

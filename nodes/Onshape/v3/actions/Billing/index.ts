@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /billing/plans/client/{cid}',
 		options: [
 			{
 				name: 'getClientPlans',
 				value: 'GET /billing/plans/client/{cid}',
-				description: 'This API should be used within the context of an OAuth-enabled application. - get /billing/plans/client/{cid}',
+				description: 'Get all billing plans and their information for an application by client ID. - get /billing/plans/client/{cid}',
+				action: 'Get Client Plans',
 			},
 		],
-		default: 'GET /billing/plans/client/{cid}',
-		description: 'The operation to perform',
 	},
 	...GetClientPlans.description,
 ];

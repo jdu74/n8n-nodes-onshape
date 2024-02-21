@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAliasV1 } from './v1/OnshapeAliasV1node';
 import { OnshapeAliasV2 } from './v2/OnshapeAliasV2node';
-import { OnshapeAliasV3 } from './v3/OnshapeAliasV3node';
+import { OnshapeAlias as OnshapeAliasV3 } from './v3/OnshapeAliasnode';
 
 export class OnshapeAlias extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeAlias extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create and manage enterprise aliases. (Enterprise admins only.)',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

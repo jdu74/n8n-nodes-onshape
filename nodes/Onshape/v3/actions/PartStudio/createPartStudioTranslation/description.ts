@@ -77,7 +77,7 @@ export const CreatePartStudioTranslationDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'application/json;charset=UTF-8; qs=0.09',
 		displayOptions: {
 			show: {
@@ -100,7 +100,7 @@ export const CreatePartStudioTranslationDescription: INodeProperties[] = [
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
-		type: 'boolean',
+		type: 'hidden',
 		default: false,
 		displayOptions: {
 			show: {
@@ -112,6 +112,27 @@ export const CreatePartStudioTranslationDescription: INodeProperties[] = [
 				],
 				jsonContentType: [
 					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
+	},
+	{
+		displayName: 'formatName',
+		name: 'formatName-string(body)',
+		description: 'formatName - string(body)',
+		type: 'options',
+		typeOptions: {
+			loadOptionsMethod: 'getPartFormatNameFields',
+		},
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: [
+					'PartStudio',
+				],
+				operation: [
+					'POST /partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations',
 				],
 			},
 		},
@@ -337,13 +358,6 @@ export const CreatePartStudioTranslationDescription: INodeProperties[] = [
 				displayName: 'foreignId',
 				name: 'foreignId',
 				description: 'foreignId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'formatName',
-				name: 'formatName',
-				description: 'formatName - string',
 				type: 'string',
 				default: '',
 			},
@@ -723,6 +737,32 @@ export const CreatePartStudioTranslationDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'PartStudio',
+				],
+				operation: [
+					'POST /partstudios/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

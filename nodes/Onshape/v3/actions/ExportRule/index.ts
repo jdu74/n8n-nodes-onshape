@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /exportrules/options/{cu}/{cuid}',
 		options: [
 			{
 				name: 'getValidRuleOptions',
 				value: 'GET /exportrules/options/{cu}/{cuid}',
-				description: 'Does NOT get the rules themselves; it gets the information used to create them. - get /exportrules/options/{cu}/{cuid}',
+				description: ' Get a list of valid export rule options for the user or company. - get /exportrules/options/{cu}/{cuid}',
+				action: 'Get Valid Rule Options',
 			},
 		],
-		default: 'GET /exportrules/options/{cu}/{cuid}',
-		description: 'The operation to perform',
 	},
 	...GetValidRuleOptions.description,
 ];

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeWebhookV1 } from './v1/OnshapeWebhookV1node';
 import { OnshapeWebhookV2 } from './v2/OnshapeWebhookV2node';
-import { OnshapeWebhookV3 } from './v3/OnshapeWebhookV3node';
+import { OnshapeWebhook as OnshapeWebhookV3 } from './v3/OnshapeWebhooknode';
 
 export class OnshapeWebhook extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeWebhook extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create and manage [webhooks](https://onshape-public.github.io/docs/app-dev/webhook/).',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

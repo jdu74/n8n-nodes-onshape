@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeUserV1 } from './v1/OnshapeUserV1node';
 import { OnshapeUserV2 } from './v2/OnshapeUserV2node';
-import { OnshapeUserV3 } from './v3/OnshapeUserV3node';
+import { OnshapeUser as OnshapeUserV3 } from './v3/OnshapeUsernode';
 
 export class OnshapeUser extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeUser extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access user information.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

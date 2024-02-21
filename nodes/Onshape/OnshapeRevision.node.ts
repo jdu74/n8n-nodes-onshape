@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeRevisionV1 } from './v1/OnshapeRevisionV1node';
 import { OnshapeRevisionV2 } from './v2/OnshapeRevisionV2node';
-import { OnshapeRevisionV3 } from './v3/OnshapeRevisionV3node';
+import { OnshapeRevision as OnshapeRevisionV3 } from './v3/OnshapeRevisionnode';
 
 export class OnshapeRevision extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeRevision extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access, delete, and enumerate revisions.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeTeamV1 } from './v1/OnshapeTeamV1node';
 import { OnshapeTeamV2 } from './v2/OnshapeTeamV2node';
-import { OnshapeTeamV3 } from './v3/OnshapeTeamV3node';
+import { OnshapeTeam as OnshapeTeamV3 } from './v3/OnshapeTeamnode';
 
 export class OnshapeTeam extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeTeam extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access team information.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

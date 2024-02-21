@@ -23,7 +23,7 @@ export const AddAttachmentDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'multipart/form-data',
 		displayOptions: {
 			show: {
@@ -97,6 +97,32 @@ export const AddAttachmentDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Comment',
+				],
+				operation: [
+					'POST /comments/{cid}/attachment',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

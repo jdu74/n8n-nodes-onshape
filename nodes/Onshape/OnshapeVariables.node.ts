@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeVariablesV1 } from './v1/OnshapeVariablesV1node';
 import { OnshapeVariablesV2 } from './v2/OnshapeVariablesV2node';
-import { OnshapeVariablesV3 } from './v3/OnshapeVariablesV3node';
+import { OnshapeVariables as OnshapeVariablesV3 } from './v3/OnshapeVariablesnode';
 
 export class OnshapeVariables extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeVariables extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create, modify, and access variables.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

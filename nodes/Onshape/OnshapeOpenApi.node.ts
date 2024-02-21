@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeOpenApiV1 } from './v1/OnshapeOpenApiV1node';
 import { OnshapeOpenApiV2 } from './v2/OnshapeOpenApiV2node';
-import { OnshapeOpenApiV3 } from './v3/OnshapeOpenApiV3node';
+import { OnshapeOpenApi as OnshapeOpenApiV3 } from './v3/OnshapeOpenApinode';
 
 export class OnshapeOpenApi extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeOpenApi extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Get the OpenAPI specification for the Onshape API.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

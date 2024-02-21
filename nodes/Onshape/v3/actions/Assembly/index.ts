@@ -1,49 +1,49 @@
-import * as GetNamedViews from './getNamedViews';
+import * as AddFeature from './addFeature';
 import * as CreateAssembly from './createAssembly';
-import * as GetOrCreateBillOfMaterialsElement from './getOrCreateBillOfMaterialsElement';
-import * as UpdateFeature from './updateFeature';
+import * as CreateInstance from './createInstance';
 import * as DeleteFeature from './deleteFeature';
 import * as DeleteInstance from './deleteInstance';
-import * as CreateInstance from './createInstance';
-import * as Modify from './modify';
-import * as TransformOccurrences from './transformOccurrences';
-import * as InsertTransformedInstances from './insertTransformedInstances';
-import * as GetAssemblyDefinition from './getAssemblyDefinition';
-import * as GetBillOfMaterials from './getBillOfMaterials';
 import * as GetAssemblyBoundingBoxes from './getAssemblyBoundingBoxes';
+import * as GetAssemblyDefinition from './getAssemblyDefinition';
+import * as GetAssemblyMassProperties from './getAssemblyMassProperties';
+import * as GetAssemblyShadedViews from './getAssemblyShadedViews';
+import * as GetBillOfMaterials from './getBillOfMaterials';
 import * as GetExplodedViews from './getExplodedViews';
 import * as GetFeatures from './getFeatures';
-import * as AddFeature from './addFeature';
 import * as GetFeatureSpecs from './getFeatureSpecs';
-import * as GetAssemblyMassProperties from './getAssemblyMassProperties';
 import * as GetNamedPositions from './getNamedPositions';
-import * as GetAssemblyShadedViews from './getAssemblyShadedViews';
+import * as GetNamedViews from './getNamedViews';
+import * as GetOrCreateBillOfMaterialsElement from './getOrCreateBillOfMaterialsElement';
+import * as InsertTransformedInstances from './insertTransformedInstances';
+import * as Modify from './modify';
+import * as TransformOccurrences from './transformOccurrences';
 import * as TranslateFormat from './translateFormat';
+import * as UpdateFeature from './updateFeature';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	GetNamedViews,
+	AddFeature,
 	CreateAssembly,
-	GetOrCreateBillOfMaterialsElement,
-	UpdateFeature,
+	CreateInstance,
 	DeleteFeature,
 	DeleteInstance,
-	CreateInstance,
-	Modify,
-	TransformOccurrences,
-	InsertTransformedInstances,
-	GetAssemblyDefinition,
-	GetBillOfMaterials,
 	GetAssemblyBoundingBoxes,
+	GetAssemblyDefinition,
+	GetAssemblyMassProperties,
+	GetAssemblyShadedViews,
+	GetBillOfMaterials,
 	GetExplodedViews,
 	GetFeatures,
-	AddFeature,
 	GetFeatureSpecs,
-	GetAssemblyMassProperties,
 	GetNamedPositions,
-	GetAssemblyShadedViews,
+	GetNamedViews,
+	GetOrCreateBillOfMaterialsElement,
+	InsertTransformedInstances,
+	Modify,
+	TransformOccurrences,
 	TranslateFormat,
+	UpdateFeature,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -51,6 +51,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -58,135 +59,155 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
 		options: [
 			{
-				name: 'getNamedViews',
-				value: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
-				description: 'Get the view data for all named views for the specified element. - get /assemblies/d/{did}/e/{eid}/namedViews',
+				name: 'addFeature',
+				value: 'POST /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				description: 'Add a feature to the assembly feature list. - post /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				action: 'Add Feature',
 			},
 			{
 				name: 'createAssembly',
 				value: 'POST /assemblies/d/{did}/w/{wid}',
 				description: 'Create a new assembly tab in the document. - post /assemblies/d/{did}/w/{wid}',
+				action: 'Create Assembly',
 			},
 			{
-				name: 'getOrCreateBillOfMaterialsElement',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
-				description: 'Gets the Bill Of Materials (BOM) for the specified assembly, or creates a BOM if none exist. - post /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
-			},
-			{
-				name: 'updateFeature',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
-				description: 'Update an existing feature for an Assembly. - post /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				name: 'createInstance',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+				description: 'Insert an instance of a part, sketch, assembly, or Part Studio into an assembly. - post /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
+				action: 'Create Instance',
 			},
 			{
 				name: 'deleteFeature',
 				value: 'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
 				description: 'Delete a feature from an assembly. - delete /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				action: 'Delete Feature',
 			},
 			{
 				name: 'deleteInstance',
 				value: 'DELETE /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
 				description: 'Delete an instance of an assembly. - delete /assemblies/d/{did}/w/{wid}/e/{eid}/instance/nodeid/{nid}',
-			},
-			{
-				name: 'createInstance',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-				description: 'Part Studio instances may include multiple parts. - post /assemblies/d/{did}/w/{wid}/e/{eid}/instances',
-			},
-			{
-				name: 'modify',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/modify',
-				description: 'This endpoint can include multiple modifications to an assembly with one change. For example, it can delete/suppress/unsuppress/transform multiple instances. It creates one history entry in the document history list. - post /assemblies/d/{did}/w/{wid}/e/{eid}/modify',
-			},
-			{
-				name: 'transformOccurrences',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
-				description: 'Transform a list of assembly occurrences. - post /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
-			},
-			{
-				name: 'insertTransformedInstances',
-				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
-				description: 'Create new instances with transformation. - post /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
-			},
-			{
-				name: 'getAssemblyDefinition',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
-				description: 'All coordinates and translation matrix components are in meters (m). - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
-			},
-			{
-				name: 'getBillOfMaterials',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
-				description: 'Returns the BOM in JSON in the Onshape BOM Standard format. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+				action: 'Delete Instance',
 			},
 			{
 				name: 'getAssemblyBoundingBoxes',
 				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
 				description: 'Get bounding box information for the specified assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/boundingboxes',
+				action: 'Get Assembly Bounding Boxes',
 			},
 			{
-				name: 'getExplodedViews',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/explodedviews',
-				description: 'Get a list of exploded views for the specified assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/explodedviews',
-			},
-			{
-				name: 'getFeatures',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-				description: 'Get the definitions of the specified features in an assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-			},
-			{
-				name: 'addFeature',
-				value: 'POST /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-				description: 'Add a feature to the assembly feature list. - post /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
-			},
-			{
-				name: 'getFeatureSpecs',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
-				description: 'Get the feature spec definitions for an assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+				name: 'getAssemblyDefinition',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				description: 'Get definition information for the specified assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}',
+				action: 'Get Assembly Definition',
 			},
 			{
 				name: 'getAssemblyMassProperties',
 				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
-				description: 'The assembly must contain parts that have assigned density or are globally overridden. If three mass properties are returned: the first is the calculated mass, and the second and third are the minimum and maximum possible values, considering tolerance. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
-			},
-			{
-				name: 'getNamedPositions',
-				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/namedpositions',
-				description: 'Get a list of all named positions for the assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/namedpositions',
+				description: 'Get the mass properties for the assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/massproperties',
+				action: 'Get Assembly Mass Properties',
 			},
 			{
 				name: 'getAssemblyShadedViews',
 				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
 				description: 'Get an array of shaded view images for the document. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/shadedviews',
+				action: 'Get Assembly Shaded Views',
+			},
+			{
+				name: 'getBillOfMaterials',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+				description: 'Get the Bill Of Materials (BOM) content for the specified assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/bom',
+				action: 'Get Bill Of Materials',
+			},
+			{
+				name: 'getExplodedViews',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/explodedviews',
+				description: 'Get a list of exploded views for the specified assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/explodedviews',
+				action: 'Get Exploded Views',
+			},
+			{
+				name: 'getFeatures',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				description: 'Get the definitions of the specified features in an assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/features',
+				action: 'Get Features',
+			},
+			{
+				name: 'getFeatureSpecs',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+				description: 'Get the feature spec definitions for an assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/featurespecs',
+				action: 'Get Feature Specs',
+			},
+			{
+				name: 'getNamedPositions',
+				value: 'GET /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/namedpositions',
+				description: 'Get a list of all named positions for the assembly. - get /assemblies/d/{did}/{wvm}/{wvmid}/e/{eid}/namedpositions',
+				action: 'Get Named Positions',
+			},
+			{
+				name: 'getNamedViews',
+				value: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
+				description: 'Get the view data for all named views for the specified element. - get /assemblies/d/{did}/e/{eid}/namedViews',
+				action: 'Get Named Views',
+			},
+			{
+				name: 'getOrCreateBillOfMaterialsElement',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+				description: 'Gets the Bill Of Materials (BOM) for the specified assembly, or creates a BOM if none exist. - post /assemblies/d/{did}/w/{wid}/e/{eid}/bomelement',
+				action: 'Get Or Create Bill Of Materials Element',
+			},
+			{
+				name: 'insertTransformedInstances',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+				description: 'Create new instances with transformation. - post /assemblies/d/{did}/w/{wid}/e/{eid}/transformedinstances',
+				action: 'Insert Transformed Instances',
+			},
+			{
+				name: 'modify',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/modify',
+				description: 'Modify an assembly. - post /assemblies/d/{did}/w/{wid}/e/{eid}/modify',
+				action: 'Modify',
+			},
+			{
+				name: 'transformOccurrences',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+				description: 'Transform a list of assembly occurrences. - post /assemblies/d/{did}/w/{wid}/e/{eid}/occurrencetransforms',
+				action: 'Transform Occurrences',
 			},
 			{
 				name: 'translateFormat',
 				value: 'POST /assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
-				description: '* Use `formatName` in the JSON request body to specify the export file type. Use [Translations/getAllTranslatorFormats](https://cad.onshape.com/glassworks/explorer/#/Translation/getAllTranslatorFormats) to get a list of valid export file formats. Confirm that `couldBeAssembly=true.`\n* Set `storeInDocument` to `true` to export to a data file. Set to `false` to export to a blob element in the same document. \n* See [API Guide: Model Translation](https://onshape-public.github.io/docs/api-adv/translation/) for more details. - post /assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				description: 'Export the assembly to another format. - post /assemblies/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				action: 'Translate Format',
+			},
+			{
+				name: 'updateFeature',
+				value: 'POST /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				description: 'Update an existing feature for an Assembly. - post /assemblies/d/{did}/w/{wid}/e/{eid}/features/featureid/{fid}',
+				action: 'Update Feature',
 			},
 		],
-		default: 'GET /assemblies/d/{did}/e/{eid}/namedViews',
-		description: 'The operation to perform',
 	},
-	...GetNamedViews.description,
+	...AddFeature.description,
 	...CreateAssembly.description,
-	...GetOrCreateBillOfMaterialsElement.description,
-	...UpdateFeature.description,
+	...CreateInstance.description,
 	...DeleteFeature.description,
 	...DeleteInstance.description,
-	...CreateInstance.description,
-	...Modify.description,
-	...TransformOccurrences.description,
-	...InsertTransformedInstances.description,
-	...GetAssemblyDefinition.description,
-	...GetBillOfMaterials.description,
 	...GetAssemblyBoundingBoxes.description,
+	...GetAssemblyDefinition.description,
+	...GetAssemblyMassProperties.description,
+	...GetAssemblyShadedViews.description,
+	...GetBillOfMaterials.description,
 	...GetExplodedViews.description,
 	...GetFeatures.description,
-	...AddFeature.description,
 	...GetFeatureSpecs.description,
-	...GetAssemblyMassProperties.description,
 	...GetNamedPositions.description,
-	...GetAssemblyShadedViews.description,
+	...GetNamedViews.description,
+	...GetOrCreateBillOfMaterialsElement.description,
+	...InsertTransformedInstances.description,
+	...Modify.description,
+	...TransformOccurrences.description,
 	...TranslateFormat.description,
+	...UpdateFeature.description,
 ];

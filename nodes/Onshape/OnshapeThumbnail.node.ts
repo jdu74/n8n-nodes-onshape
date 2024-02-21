@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeThumbnailV1 } from './v1/OnshapeThumbnailV1node';
 import { OnshapeThumbnailV2 } from './v2/OnshapeThumbnailV2node';
-import { OnshapeThumbnailV3 } from './v3/OnshapeThumbnailV3node';
+import { OnshapeThumbnail as OnshapeThumbnailV3 } from './v3/OnshapeThumbnailnode';
 
 export class OnshapeThumbnail extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeThumbnail extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access, modify, and delete thumbnails.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

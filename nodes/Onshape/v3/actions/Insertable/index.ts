@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /insertables/d/{did}/latest',
 		options: [
 			{
 				name: 'getLatestInDocument',
 				value: 'GET /insertables/d/{did}/latest',
-				description: '* Returns only the latest revision of released insertables. \n* Use the document ID (`did`) parameter to specify the source document, not the insertion target. \n* For example, you can insert a custom Feature library into another custom Feature library, insert Parts into an Assembly or a Drawing, etc. - get /insertables/d/{did}/latest',
+				description: 'Get a list of things in this document that can be inserted elsewhere. - get /insertables/d/{did}/latest',
+				action: 'Get Latest In Document',
 			},
 		],
-		default: 'GET /insertables/d/{did}/latest',
-		description: 'The operation to perform',
 	},
 	...GetLatestInDocument.description,
 ];

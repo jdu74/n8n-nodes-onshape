@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeFeatureStudioV1 } from './v1/OnshapeFeatureStudioV1node';
 import { OnshapeFeatureStudioV2 } from './v2/OnshapeFeatureStudioV2node';
-import { OnshapeFeatureStudioV3 } from './v3/OnshapeFeatureStudioV3node';
+import { OnshapeFeatureStudio as OnshapeFeatureStudioV3 } from './v3/OnshapeFeatureStudionode';
 
 export class OnshapeFeatureStudio extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeFeatureStudio extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and manage Feature Studio Elements.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

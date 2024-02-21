@@ -1,5 +1,4 @@
 import {
-	INodeProperties,
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
@@ -11,7 +10,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Manage the application-specific metadata that associates application data with Onshape data. - 1.176.30682-6f8b76b680d2',
+	description: 'undefined - 1.176.30682-6f8b76b680d2',
 	version: 3,
 	defaults: {
 		name: 'Onshape - AppAssociativeData'
@@ -68,8 +67,7 @@ export const versionDescription: INodeTypeDescription = {
 			default: 'AppAssociativeData',
 			options: [
 				{
-					name: 'AppAssociativeData',
-					description: 'Manage the application-specific metadata that associates application data with Onshape data.',
+					name: 'App Associative Data',
 					value: 'AppAssociativeData',
 				},
 			],

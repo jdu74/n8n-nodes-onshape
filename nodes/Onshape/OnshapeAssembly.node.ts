@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAssemblyV1 } from './v1/OnshapeAssemblyV1node';
 import { OnshapeAssemblyV2 } from './v2/OnshapeAssemblyV2node';
-import { OnshapeAssemblyV3 } from './v3/OnshapeAssemblyV3node';
+import { OnshapeAssembly as OnshapeAssemblyV3 } from './v3/OnshapeAssemblynode';
 
 export class OnshapeAssembly extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeAssembly extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create and manage assemblies.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

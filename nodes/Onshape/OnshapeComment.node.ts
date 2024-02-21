@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeCommentV1 } from './v1/OnshapeCommentV1node';
 import { OnshapeCommentV2 } from './v2/OnshapeCommentV2node';
-import { OnshapeCommentV3 } from './v3/OnshapeCommentV3node';
+import { OnshapeComment as OnshapeCommentV3 } from './v3/OnshapeCommentnode';
 
 export class OnshapeComment extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeComment extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create, read, update, and delete comments.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

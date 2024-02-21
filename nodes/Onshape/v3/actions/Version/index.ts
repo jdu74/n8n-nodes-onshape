@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /versions',
 		options: [
 			{
 				name: 'getAllVersions',
 				value: 'GET /versions',
 				description: 'Get all versions of the Onshape REST APIs. - get /versions',
+				action: 'Get All Versions',
 			},
 		],
-		default: 'GET /versions',
-		description: 'The operation to perform',
 	},
 	...GetAllVersions.description,
 ];

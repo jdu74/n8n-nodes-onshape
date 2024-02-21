@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeBlobElementV1 } from './v1/OnshapeBlobElementV1node';
 import { OnshapeBlobElementV2 } from './v2/OnshapeBlobElementV2node';
-import { OnshapeBlobElementV3 } from './v3/OnshapeBlobElementV3node';
+import { OnshapeBlobElement as OnshapeBlobElementV3 } from './v3/OnshapeBlobElementnode';
 
 export class OnshapeBlobElement extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeBlobElement extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create, modify, and translate blob elements.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

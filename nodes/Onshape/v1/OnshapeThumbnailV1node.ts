@@ -7,10 +7,10 @@ import {
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
-import { apiRequest } from '../GenericFunctions';
+import { apiRequest } from './GenericFunctions';
 import { versionDescription } from './actions/versionThumbnailDescription';
 // import { loadOptions } from './methods';
-import { parseParameters } from '../generateRequest';
+import { parseParameters } from './generateRequest';
 import { URL } from 'url';
 
 export class OnshapeThumbnailV1 implements INodeType {

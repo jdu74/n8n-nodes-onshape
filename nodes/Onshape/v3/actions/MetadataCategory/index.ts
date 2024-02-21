@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /metadatacategory/categoryproperties',
 		options: [
 			{
 				name: 'getCategoryProperties',
 				value: 'GET /metadatacategory/categoryproperties',
-				description: "An object's category specifies its type: Part, Assembly, Drawing, etc. Available properties depend on the object's category. - get /metadatacategory/categoryproperties",
+				description: 'Get properties associated with the specified metadata categories. - get /metadatacategory/categoryproperties',
+				action: 'Get Category Properties',
 			},
 		],
-		default: 'GET /metadatacategory/categoryproperties',
-		description: 'The operation to perform',
 	},
 	...GetCategoryProperties.description,
 ];

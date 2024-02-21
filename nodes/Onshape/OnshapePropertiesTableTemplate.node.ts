@@ -1,6 +1,6 @@
 import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { OnshapePropertiesTableTemplateV3 } from './v3/OnshapePropertiesTableTemplateV3node';
+import { OnshapePropertiesTableTemplate as OnshapePropertiesTableTemplateV3 } from './v3/OnshapePropertiesTableTemplatenode';
 
 export class OnshapePropertiesTableTemplate extends VersionedNodeType {
 	constructor() {
@@ -10,7 +10,7 @@ export class OnshapePropertiesTableTemplate extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Create, access, and delete templates for properties tables.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

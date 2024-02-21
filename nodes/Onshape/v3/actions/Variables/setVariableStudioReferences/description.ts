@@ -96,7 +96,7 @@ export const SetVariableStudioReferencesDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'application/json;charset=UTF-8; qs=0.09',
 		displayOptions: {
 			show: {
@@ -244,6 +244,32 @@ export const SetVariableStudioReferencesDescription: INodeProperties[] = [
 				],
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Variables',
+				],
+				operation: [
+					'POST /variables/d/{did}/w/{wid}/e/{eid}/variablestudioreferences',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

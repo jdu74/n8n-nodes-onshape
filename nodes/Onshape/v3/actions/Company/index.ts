@@ -1,19 +1,19 @@
+import * as AddUserToCompany from './addUserToCompany';
 import * as FindCompany from './findCompany';
 import * as GetCompany from './getCompany';
 import * as GetDocumentsByName from './getDocumentsByName';
-import * as AddUserToCompany from './addUserToCompany';
-import * as UpdateCompanyUser from './updateCompanyUser';
 import * as RemoveUserFromCompany from './removeUserFromCompany';
+import * as UpdateCompanyUser from './updateCompanyUser';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
+	AddUserToCompany,
 	FindCompany,
 	GetCompany,
 	GetDocumentsByName,
-	AddUserToCompany,
-	UpdateCompanyUser,
 	RemoveUserFromCompany,
+	UpdateCompanyUser,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -21,6 +21,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -28,45 +29,50 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /companies',
 		options: [
+			{
+				name: 'addUserToCompany',
+				value: 'POST /companies/{cid}/users',
+				description: 'Add a user to a company. - post /companies/{cid}/users',
+				action: 'Add User To Company',
+			},
 			{
 				name: 'findCompany',
 				value: 'GET /companies',
-				description: 'If no user is specified, will return all companies associated with the current user. - get /companies',
+				description: 'Get all companies to which the specified user belongs. - get /companies',
+				action: 'Find Company',
 			},
 			{
 				name: 'getCompany',
 				value: 'GET /companies/{cid}',
 				description: 'Get company information by company ID. - get /companies/{cid}',
+				action: 'Get Company',
 			},
 			{
 				name: 'getDocumentsByName',
 				value: 'GET /companies/{cid}/documentsbyname',
-				description: 'This API can only be called by company admins. Use the `name` field for the exact document name string. - get /companies/{cid}/documentsbyname',
-			},
-			{
-				name: 'addUserToCompany',
-				value: 'POST /companies/{cid}/users',
-				description: 'Returns the company user info. - post /companies/{cid}/users',
-			},
-			{
-				name: 'updateCompanyUser',
-				value: 'POST /companies/{cid}/users/{uid}',
-				description: 'Returns updated company user info. Global permissions can only be updated by the company admin. - post /companies/{cid}/users/{uid}',
+				description: 'Get document by exact document name. - get /companies/{cid}/documentsbyname',
+				action: 'Get Documents By Name',
 			},
 			{
 				name: 'removeUserFromCompany',
 				value: 'DELETE /companies/{cid}/users/{uid}',
 				description: 'Remove a user from a company, company teams, and all the direct shares. - delete /companies/{cid}/users/{uid}',
+				action: 'Remove User From Company',
+			},
+			{
+				name: 'updateCompanyUser',
+				value: 'POST /companies/{cid}/users/{uid}',
+				description: "Update the company's information for a user. - post /companies/{cid}/users/{uid}",
+				action: 'Update Company User',
 			},
 		],
-		default: 'GET /companies',
-		description: 'The operation to perform',
 	},
+	...AddUserToCompany.description,
 	...FindCompany.description,
 	...GetCompany.description,
 	...GetDocumentsByName.description,
-	...AddUserToCompany.description,
-	...UpdateCompanyUser.description,
 	...RemoveUserFromCompany.description,
+	...UpdateCompanyUser.description,
 ];

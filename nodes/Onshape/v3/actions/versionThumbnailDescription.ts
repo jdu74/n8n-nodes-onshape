@@ -1,5 +1,4 @@
 import {
-	INodeProperties,
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
@@ -11,7 +10,7 @@ export const versionDescription: INodeTypeDescription = {
 	icon: 'file:onshape.svg',
 	group: ['output'],
 	subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-	description: 'Access, modify, and delete thumbnails. - 1.176.30682-6f8b76b680d2',
+	description: 'undefined - 1.176.30682-6f8b76b680d2',
 	version: 3,
 	defaults: {
 		name: 'Onshape - Thumbnail'
@@ -69,7 +68,6 @@ export const versionDescription: INodeTypeDescription = {
 			options: [
 				{
 					name: 'Thumbnail',
-					description: 'Access, modify, and delete thumbnails.',
 					value: 'Thumbnail',
 				},
 			],

@@ -7,10 +7,10 @@ import {
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
-import { apiRequest } from '../GenericFunctions';
+import { apiRequest } from './GenericFunctions';
 import { versionDescription } from './actions/versionThumbnailDescription';
 // import { loadOptions } from './methods';
-import { parseParameters } from '../generateRequest';
+import { parseParameters } from './generateRequest';
 import { URL } from 'url';
 
 export class OnshapeThumbnailV2 implements INodeType {
@@ -50,7 +50,6 @@ export class OnshapeThumbnailV2 implements INodeType {
 					iNodeRequest.body, iNodeRequest.query,
 					iNodeRequest.headers, '', (isImage) ? { encoding: null } : {}
 				);
-
 				if (Array.isArray(responseData)) {
 					returnData.push.apply(returnData, responseData as IDataObject[]);
 				} else {
@@ -69,7 +68,12 @@ export class OnshapeThumbnailV2 implements INodeType {
 			return [this.helpers.returnJsonArray(returnData)]
 		else {
 			const binary: any = await Promise.all(returnData.map(async (el: any) => {
-				return { json: {}, binary: { thumbnail: await this.helpers.prepareBinaryData(Buffer.from(el)) } };
+				return {
+					json: {},
+					binary: {
+						thumbnail: await this.helpers.prepareBinaryData(Buffer.from(el))
+					}
+				};
 			}));
 			return [binary]
 		}

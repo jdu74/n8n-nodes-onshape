@@ -1,29 +1,29 @@
-import * as GetThumbnailForDocument from './getThumbnailForDocument';
-import * as GetThumbnailForDocumentAndVersion from './getThumbnailForDocumentAndVersion';
+import * as DeleteApplicationThumbnails from './deleteApplicationThumbnails';
 import * as GetDocumentThumbnail from './getDocumentThumbnail';
-import * as GetElementThumbnailWithApiConfiguration from './getElementThumbnailWithApiConfiguration';
 import * as GetDocumentThumbnailWithSize from './getDocumentThumbnailWithSize';
 import * as GetElementThumbnail from './getElementThumbnail';
-import * as SetApplicationElementThumbnail from './setApplicationElementThumbnail';
-import * as DeleteApplicationThumbnails from './deleteApplicationThumbnails';
+import * as GetElementThumbnailWithApiConfiguration from './getElementThumbnailWithApiConfiguration';
 import * as GetElementThumbnailWithSize from './getElementThumbnailWithSize';
-import * as GetThumbnailForDocumentOld from './getThumbnailForDocumentOld';
+import * as GetThumbnailForDocument from './getThumbnailForDocument';
+import * as GetThumbnailForDocumentAndVersion from './getThumbnailForDocumentAndVersion';
 import * as GetThumbnailForDocumentAndVersionOld from './getThumbnailForDocumentAndVersionOld';
+import * as GetThumbnailForDocumentOld from './getThumbnailForDocumentOld';
+import * as SetApplicationElementThumbnail from './setApplicationElementThumbnail';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	GetThumbnailForDocument,
-	GetThumbnailForDocumentAndVersion,
+	DeleteApplicationThumbnails,
 	GetDocumentThumbnail,
-	GetElementThumbnailWithApiConfiguration,
 	GetDocumentThumbnailWithSize,
 	GetElementThumbnail,
-	SetApplicationElementThumbnail,
-	DeleteApplicationThumbnails,
+	GetElementThumbnailWithApiConfiguration,
 	GetElementThumbnailWithSize,
-	GetThumbnailForDocumentOld,
+	GetThumbnailForDocument,
+	GetThumbnailForDocumentAndVersion,
 	GetThumbnailForDocumentAndVersionOld,
+	GetThumbnailForDocumentOld,
+	SetApplicationElementThumbnail,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -31,6 +31,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -38,75 +39,85 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /thumbnails/d/{did}',
 		options: [
 			{
-				name: 'getThumbnailForDocument',
-				value: 'GET /thumbnails/d/{did}',
-				description: '* By default, returns thumbnail info for the element with the most-recently generated image. If you pinned an element for the document thumbnail, that element will always be used for the document-level thumbnail, if it exists in the workspace.\n* The default workspace may vary by user; the image served depends on the signed-in user.\n* See also: [Tech tip on how to change a document thumbnail in onshape](https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-change-a-document-thumbnail-in-onshape) - get /thumbnails/d/{did}',
-			},
-			{
-				name: 'getThumbnailForDocumentAndVersion',
-				value: 'GET /thumbnails/d/{did}/v/{vid}',
-				description: '* By default, returns thumbnail info for the element with the most-recently generated image. If you pinned an element for the document thumbnail, that element will always be used for the document-level thumbnail, if it exists in the workspace.\n* See also: [Tech tip on how to change a document thumbnail in onshape](https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-change-a-document-thumbnail-in-onshape) - get /thumbnails/d/{did}/v/{vid}',
+				name: 'deleteApplicationThumbnails',
+				value: 'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+				description: "Delete an element's thumbnail. - delete /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}",
+				action: 'Delete Application Thumbnails',
 			},
 			{
 				name: 'getDocumentThumbnail',
 				value: 'GET /thumbnails/d/{did}/w/{wid}',
-				description: '* By default, returns thumbnail info for the element with the most-recently generated image. If you pinned an element for the document thumbnail, that element will always be used for the document-level thumbnail, if it exists in the workspace.\n* See also: [Tech tip on how to change a document thumbnail in onshape](https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-change-a-document-thumbnail-in-onshape) - get /thumbnails/d/{did}/w/{wid}',
-			},
-			{
-				name: 'getElementThumbnailWithApiConfiguration',
-				value: 'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
-				description: 'Returns the thumbnail image for an element at a specified version, with the given configuration. - get /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+				description: 'Get the thumbnail info for a workspace. - get /thumbnails/d/{did}/w/{wid}',
+				action: 'Get Document Thumbnail',
 			},
 			{
 				name: 'getDocumentThumbnailWithSize',
 				value: 'GET /thumbnails/d/{did}/w/{wid}/s/{sz}',
-				description: '* By default, returns thumbnail image for the element with the most-recently generated image. If you pinned an element for the document thumbnail, that element will always be used for the document-level thumbnail, if it exists in the workspace.\n* See also: [Tech tip on how to change a document thumbnail in onshape](https://www.onshape.com/en/resource-center/tech-tips/tech-tip-how-to-change-a-document-thumbnail-in-onshape) - get /thumbnails/d/{did}/w/{wid}/s/{sz}',
+				description: 'Get the thumbnail image with the given size for a document. - get /thumbnails/d/{did}/w/{wid}/s/{sz}',
+				action: 'Get Document Thumbnail With Size',
 			},
 			{
 				name: 'getElementThumbnail',
 				value: 'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
-				description: 'Returns thumbnail info for the given document, workspace or version, and element. - get /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+				description: 'Get the thumbnail info structure for an element. - get /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+				action: 'Get Element Thumbnail',
 			},
 			{
-				name: 'setApplicationElementThumbnail',
-				value: 'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
-				description: '* Allows 3rd-party applications to set thumbnails for their elements. \n* Application elements can have both primary and secondary thumbnails. A primary thumbnail represents the top-level of the element. A secondary thumbnail can represent sub-components of the element (e.g., a drawing sheet).\n* To update one or more thumbnails, you must set the overwrite query param to `true` and supply the entire set of thumbnails. All previous thumbnails will be deleted prior to updating the element with the latest images. - post /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
-			},
-			{
-				name: 'deleteApplicationThumbnails',
-				value: 'DELETE /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
-				description: "Deletes an application element's thumbnail and images for the given document, workspace or version, and element combination. - delete /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}",
+				name: 'getElementThumbnailWithApiConfiguration',
+				value: 'GET /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+				description: 'Get the thumbnail image with the given configuration for an element. - get /thumbnails/d/{did}/w/{wid}/e/{eid}/ac/{cid}/s/{sz}',
+				action: 'Get Element Thumbnail With Api Configuration',
 			},
 			{
 				name: 'getElementThumbnailWithSize',
 				value: 'GET /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}/s/{sz}',
 				description: 'Get the thumbnail image with the given size for an element. - get /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}/s/{sz}',
+				action: 'Get Element Thumbnail With Size',
 			},
 			{
-				name: 'getThumbnailForDocumentOld',
-				value: 'GET /thumbnails/document/{did}',
-				description: 'This API exists for historical reasons. It uses `/document/` in the path, rather than the standard `/d/` to specify the document. - get /thumbnails/document/{did}',
+				name: 'getThumbnailForDocument',
+				value: 'GET /thumbnails/d/{did}',
+				description: 'Get the thumbnail info for a document in the default workspace. - get /thumbnails/d/{did}',
+				action: 'Get Thumbnail For Document',
+			},
+			{
+				name: 'getThumbnailForDocumentAndVersion',
+				value: 'GET /thumbnails/d/{did}/v/{vid}',
+				description: 'Get the thumbnail info for a version of a document. - get /thumbnails/d/{did}/v/{vid}',
+				action: 'Get Thumbnail For Document And Version',
 			},
 			{
 				name: 'getThumbnailForDocumentAndVersionOld',
 				value: 'GET /thumbnails/document/{did}/version/{vid}',
-				description: 'This API exists for historical reasons. It uses `/document/` in the path, rather than the standard `/d/` to specify the document. - get /thumbnails/document/{did}/version/{vid}',
+				description: 'This endpoint will be deprecated soon. Use `getThumbnailForDocumentAndVersion` instead. - get /thumbnails/document/{did}/version/{vid}',
+				action: 'Get Thumbnail For Document And Version Old',
+			},
+			{
+				name: 'getThumbnailForDocumentOld',
+				value: 'GET /thumbnails/document/{did}',
+				description: 'This endpoint will be deprecated soon. Use `getThumbnailForDocument` instead. - get /thumbnails/document/{did}',
+				action: 'Get Thumbnail For Document Old',
+			},
+			{
+				name: 'setApplicationElementThumbnail',
+				value: 'POST /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+				description: 'Set the thumbnail image for an application element. - post /thumbnails/d/{did}/{wv}/{wvid}/e/{eid}',
+				action: 'Set Application Element Thumbnail',
 			},
 		],
-		default: 'GET /thumbnails/d/{did}',
-		description: 'The operation to perform',
 	},
-	...GetThumbnailForDocument.description,
-	...GetThumbnailForDocumentAndVersion.description,
+	...DeleteApplicationThumbnails.description,
 	...GetDocumentThumbnail.description,
-	...GetElementThumbnailWithApiConfiguration.description,
 	...GetDocumentThumbnailWithSize.description,
 	...GetElementThumbnail.description,
-	...SetApplicationElementThumbnail.description,
-	...DeleteApplicationThumbnails.description,
+	...GetElementThumbnailWithApiConfiguration.description,
 	...GetElementThumbnailWithSize.description,
-	...GetThumbnailForDocumentOld.description,
+	...GetThumbnailForDocument.description,
+	...GetThumbnailForDocumentAndVersion.description,
 	...GetThumbnailForDocumentAndVersionOld.description,
+	...GetThumbnailForDocumentOld.description,
+	...SetApplicationElementThumbnail.description,
 ];

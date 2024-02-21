@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeFolderV1 } from './v1/OnshapeFolderV1node';
 import { OnshapeFolderV2 } from './v2/OnshapeFolderV2node';
-import { OnshapeFolderV3 } from './v3/OnshapeFolderV3node';
+import { OnshapeFolder as OnshapeFolderV3 } from './v3/OnshapeFoldernode';
 
 export class OnshapeFolder extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeFolder extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and modify folder sharing permissions.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

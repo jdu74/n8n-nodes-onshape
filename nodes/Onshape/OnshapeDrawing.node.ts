@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeDrawingV1 } from './v1/OnshapeDrawingV1node';
 import { OnshapeDrawingV2 } from './v2/OnshapeDrawingV2node';
-import { OnshapeDrawingV3 } from './v3/OnshapeDrawingV3node';
+import { OnshapeDrawing as OnshapeDrawingV3 } from './v3/OnshapeDrawingnode';
 
 export class OnshapeDrawing extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeDrawing extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access, create, and translate drawings.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

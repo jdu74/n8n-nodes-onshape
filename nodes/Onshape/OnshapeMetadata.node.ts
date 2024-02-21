@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeMetadataV1 } from './v1/OnshapeMetadataV1node';
 import { OnshapeMetadataV2 } from './v2/OnshapeMetadataV2node';
-import { OnshapeMetadataV3 } from './v3/OnshapeMetadataV3node';
+import { OnshapeMetadata as OnshapeMetadataV3 } from './v3/OnshapeMetadatanode';
 
 export class OnshapeMetadata extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeMetadata extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and modify metadata.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

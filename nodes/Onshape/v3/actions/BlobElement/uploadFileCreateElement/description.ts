@@ -78,7 +78,7 @@ export const UploadFileCreateElementDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'multipart/form-data',
 		displayOptions: {
 			show: {
@@ -334,6 +334,32 @@ export const UploadFileCreateElementDescription: INodeProperties[] = [
 				default: false,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'BlobElement',
+				],
+				operation: [
+					'POST /blobelements/d/{did}/w/{wid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

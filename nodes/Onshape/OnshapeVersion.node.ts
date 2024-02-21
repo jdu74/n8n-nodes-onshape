@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeVersionV1 } from './v1/OnshapeVersionV1node';
 import { OnshapeVersionV2 } from './v2/OnshapeVersionV2node';
-import { OnshapeVersionV3 } from './v3/OnshapeVersionV3node';
+import { OnshapeVersion as OnshapeVersionV3 } from './v3/OnshapeVersionnode';
 
 export class OnshapeVersion extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeVersion extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Get all versions of the Onshape REST APIs.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

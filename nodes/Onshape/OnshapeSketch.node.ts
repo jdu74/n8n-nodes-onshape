@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeSketchV1 } from './v1/OnshapeSketchV1node';
 import { OnshapeSketchV2 } from './v2/OnshapeSketchV2node';
-import { OnshapeSketchV3 } from './v3/OnshapeSketchV3node';
+import { OnshapeSketch as OnshapeSketchV3 } from './v3/OnshapeSketchnode';
 
 export class OnshapeSketch extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeSketch extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access sketch information.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

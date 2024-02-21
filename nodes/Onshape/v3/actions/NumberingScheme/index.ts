@@ -11,6 +11,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -18,15 +19,15 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'POST /numberingscheme/nextnumbers',
 		options: [
 			{
 				name: 'nextNumbers',
 				value: 'POST /numberingscheme/nextnumbers',
 				description: 'Send the items to generate numbers for, and return the next valid available part numbers. - post /numberingscheme/nextnumbers',
+				action: 'Next Numbers',
 			},
 		],
-		default: 'POST /numberingscheme/nextnumbers',
-		description: 'The operation to perform',
 	},
 	...NextNumbers.description,
 ];

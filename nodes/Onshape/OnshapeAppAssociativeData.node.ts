@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeAppAssociativeDataV1 } from './v1/OnshapeAppAssociativeDataV1node';
 import { OnshapeAppAssociativeDataV2 } from './v2/OnshapeAppAssociativeDataV2node';
-import { OnshapeAppAssociativeDataV3 } from './v3/OnshapeAppAssociativeDataV3node';
+import { OnshapeAppAssociativeData as OnshapeAppAssociativeDataV3 } from './v3/OnshapeAppAssociativeDatanode';
 
 export class OnshapeAppAssociativeData extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeAppAssociativeData extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Manage the application-specific metadata that associates application data with Onshape data.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

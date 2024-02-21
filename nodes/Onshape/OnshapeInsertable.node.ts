@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeInsertableV1 } from './v1/OnshapeInsertableV1node';
 import { OnshapeInsertableV2 } from './v2/OnshapeInsertableV2node';
-import { OnshapeInsertableV3 } from './v3/OnshapeInsertableV3node';
+import { OnshapeInsertable as OnshapeInsertableV3 } from './v3/OnshapeInsertablenode';
 
 export class OnshapeInsertable extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeInsertable extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access the list of things that can be inserted into a document.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

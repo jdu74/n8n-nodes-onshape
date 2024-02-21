@@ -41,7 +41,7 @@ export const CreateTranslationDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'multipart/form-data',
 		displayOptions: {
 			show: {
@@ -297,6 +297,32 @@ export const CreateTranslationDescription: INodeProperties[] = [
 				default: false,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Translation',
+				],
+				operation: [
+					'POST /translations/d/{did}/w/{wid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

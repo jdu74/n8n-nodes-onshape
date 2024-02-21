@@ -1,15 +1,15 @@
-import * as GetCompanyReleaseWorkflow from './getCompanyReleaseWorkflow';
 import * as CreateObsoletionPackage from './createObsoletionPackage';
 import * as CreateReleasePackage from './createReleasePackage';
+import * as GetCompanyReleaseWorkflow from './getCompanyReleaseWorkflow';
 import * as GetReleasePackage from './getReleasePackage';
 import * as UpdateReleasePackage from './updateReleasePackage';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	GetCompanyReleaseWorkflow,
 	CreateObsoletionPackage,
 	CreateReleasePackage,
+	GetCompanyReleaseWorkflow,
 	GetReleasePackage,
 	UpdateReleasePackage,
 };
@@ -19,6 +19,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -26,39 +27,43 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /releasepackages/companyreleaseworkflow',
 		options: [
-			{
-				name: 'getCompanyReleaseWorkflow',
-				value: 'GET /releasepackages/companyreleaseworkflow',
-				description: 'Get information about the release/obsoletion workflow for a company-owned document. - get /releasepackages/companyreleaseworkflow',
-			},
 			{
 				name: 'createObsoletionPackage',
 				value: 'POST /releasepackages/obsoletion/{wfid}',
 				description: 'Create an obsoletion package to make an existing revision obsolete. - post /releasepackages/obsoletion/{wfid}',
+				action: 'Create Obsoletion Package',
 			},
 			{
 				name: 'createReleasePackage',
 				value: 'POST /releasepackages/release/{wfid}',
-				description: 'All revisionable items must be from the same document. Once a release package is successfully created, use `updateReleasePackage` to update all desired item/package properties, and transition it to the desired state. - post /releasepackages/release/{wfid}',
+				description: 'Create a new release package for one or more items. - post /releasepackages/release/{wfid}',
+				action: 'Create Release Package',
+			},
+			{
+				name: 'getCompanyReleaseWorkflow',
+				value: 'GET /releasepackages/companyreleaseworkflow',
+				description: 'Get information about the release/obsoletion workflow for a company-owned document. - get /releasepackages/companyreleaseworkflow',
+				action: 'Get Company Release Workflow',
 			},
 			{
 				name: 'getReleasePackage',
 				value: 'GET /releasepackages/{rpid}',
 				description: 'Get details about the specified release package. - get /releasepackages/{rpid}',
+				action: 'Get Release Package',
 			},
 			{
 				name: 'updateReleasePackage',
 				value: 'POST /releasepackages/{rpid}',
-				description: 'Use the `wfaction` query param to also perform a workflow transition. - post /releasepackages/{rpid}',
+				description: 'Update the release/obsoletion package/item properties. - post /releasepackages/{rpid}',
+				action: 'Update Release Package',
 			},
 		],
-		default: 'GET /releasepackages/companyreleaseworkflow',
-		description: 'The operation to perform',
 	},
-	...GetCompanyReleaseWorkflow.description,
 	...CreateObsoletionPackage.description,
 	...CreateReleasePackage.description,
+	...GetCompanyReleaseWorkflow.description,
 	...GetReleasePackage.description,
 	...UpdateReleasePackage.description,
 ];

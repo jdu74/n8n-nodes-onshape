@@ -77,7 +77,7 @@ export const UploadBlobSubelementDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'multipart/form-data',
 		displayOptions: {
 			show: {
@@ -179,6 +179,32 @@ export const UploadBlobSubelementDescription: INodeProperties[] = [
 				default: -1,
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'AppElement',
+				],
+				operation: [
+					'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'multipart/form-data',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

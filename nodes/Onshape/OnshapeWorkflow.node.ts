@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeWorkflowV1 } from './v1/OnshapeWorkflowV1node';
 import { OnshapeWorkflowV2 } from './v2/OnshapeWorkflowV2node';
-import { OnshapeWorkflowV3 } from './v3/OnshapeWorkflowV3node';
+import { OnshapeWorkflow as OnshapeWorkflowV3 } from './v3/OnshapeWorkflownode';
 
 export class OnshapeWorkflow extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeWorkflow extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and modify workflows.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -7,10 +7,10 @@ import {
 	INodeTypeDescription,
 } from 'n8n-workflow';
 
-import { apiRequest } from '../GenericFunctions';
+import { apiRequest } from './GenericFunctions';
 import { versionDescription } from './actions/versionWorkflowableTestObjectDescription';
 // import { loadOptions } from './methods';
-import { parseParameters } from '../generateRequest';
+import { parseParameters } from './generateRequest';
 
 export class OnshapeWorkflowableTestObjectV1 implements INodeType {
 

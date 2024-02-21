@@ -74,6 +74,27 @@ export const CreateBlobTranslationDescription: INodeProperties[] = [
 		},
 	},
 	{
+		displayName: 'formatName',
+		name: 'formatName-string(body)',
+		description: 'formatName - string(body)',
+		type: 'options',
+		typeOptions: {
+			loadOptionsMethod: 'getPartFormatNameFields',
+		},
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: [
+					'BlobElement',
+				],
+				operation: [
+					'POST /blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				],
+			},
+		},
+	},
+	{
 		displayName: 'additionalFields',
 		name: 'additionalFields',
 		description: 'additionalFields - fixedCollection',
@@ -114,7 +135,7 @@ export const CreateBlobTranslationDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'application/json;charset=UTF-8; qs=0.09',
 		displayOptions: {
 			show: {
@@ -137,7 +158,7 @@ export const CreateBlobTranslationDescription: INodeProperties[] = [
 		displayName: 'JSON Parameters',
 		name: 'jsonParameters',
 		description: 'jsonParameters - boolean',
-		type: 'boolean',
+		type: 'hidden',
 		default: false,
 		displayOptions: {
 			show: {
@@ -374,13 +395,6 @@ export const CreateBlobTranslationDescription: INodeProperties[] = [
 				displayName: 'foreignId',
 				name: 'foreignId',
 				description: 'foreignId - string',
-				type: 'string',
-				default: '',
-			},
-			{
-				displayName: 'formatName',
-				name: 'formatName',
-				description: 'formatName - string',
 				type: 'string',
 				default: '',
 			},
@@ -760,6 +774,32 @@ export const CreateBlobTranslationDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'BlobElement',
+				],
+				operation: [
+					'POST /blobelements/d/{did}/{wv}/{wvid}/e/{eid}/translations',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

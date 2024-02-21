@@ -1,57 +1,57 @@
-import * as CreateElement from './createElement';
-import * as BulkCreateElement from './bulkCreateElement';
-import * as DownloadBlobSubelementWorkspace from './downloadBlobSubelementWorkspace';
-import * as UploadBlobSubelement from './uploadBlobSubelement';
-import * as DeleteBlobSubelement from './deleteBlobSubelement';
-import * as GetElementTransactions from './getElementTransactions';
-import * as StartTransaction from './startTransaction';
 import * as AbortTransaction from './abortTransaction';
+import * as BulkCreateElement from './bulkCreateElement';
 import * as CommitTransactions from './commitTransactions';
-import * as DownloadBlobSubelement from './downloadBlobSubelement';
-import * as GetBlobSubelementIds from './getBlobSubelementIds';
 import * as CompareAppElementJson from './compareAppElementJson';
-import * as GetSubElementContent from './getSubElementContent';
-import * as UpdateAppElement from './updateAppElement';
+import * as CreateElement from './createElement';
+import * as CreateReference from './createReference';
+import * as DeleteAppElementContent from './deleteAppElementContent';
+import * as DeleteAppElementContentBatch from './deleteAppElementContentBatch';
+import * as DeleteBlobSubelement from './deleteBlobSubelement';
+import * as DeleteReference from './deleteReference';
+import * as DownloadBlobSubelement from './downloadBlobSubelement';
+import * as DownloadBlobSubelementWorkspace from './downloadBlobSubelementWorkspace';
 import * as GetAppElementHistory from './getAppElementHistory';
-import * as GetSubelementIds from './getSubelementIds';
+import * as GetBlobSubelementIds from './getBlobSubelementIds';
+import * as GetElementTransactions from './getElementTransactions';
 import * as GetJson from './getJson';
 import * as GetJsonPaths from './getJsonPaths';
-import * as DeleteAppElementContentBatch from './deleteAppElementContentBatch';
-import * as DeleteAppElementContent from './deleteAppElementContent';
-import * as CreateReference from './createReference';
+import * as GetSubElementContent from './getSubElementContent';
+import * as GetSubelementIds from './getSubelementIds';
 import * as ResolveReference from './resolveReference';
-import * as UpdateReference from './updateReference';
-import * as DeleteReference from './deleteReference';
 import * as ResolveReferences from './resolveReferences';
+import * as StartTransaction from './startTransaction';
+import * as UpdateAppElement from './updateAppElement';
+import * as UpdateReference from './updateReference';
+import * as UploadBlobSubelement from './uploadBlobSubelement';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
-	CreateElement,
-	BulkCreateElement,
-	DownloadBlobSubelementWorkspace,
-	UploadBlobSubelement,
-	DeleteBlobSubelement,
-	GetElementTransactions,
-	StartTransaction,
 	AbortTransaction,
+	BulkCreateElement,
 	CommitTransactions,
-	DownloadBlobSubelement,
-	GetBlobSubelementIds,
 	CompareAppElementJson,
-	GetSubElementContent,
-	UpdateAppElement,
+	CreateElement,
+	CreateReference,
+	DeleteAppElementContent,
+	DeleteAppElementContentBatch,
+	DeleteBlobSubelement,
+	DeleteReference,
+	DownloadBlobSubelement,
+	DownloadBlobSubelementWorkspace,
 	GetAppElementHistory,
-	GetSubelementIds,
+	GetBlobSubelementIds,
+	GetElementTransactions,
 	GetJson,
 	GetJsonPaths,
-	DeleteAppElementContentBatch,
-	DeleteAppElementContent,
-	CreateReference,
+	GetSubElementContent,
+	GetSubelementIds,
 	ResolveReference,
-	UpdateReference,
-	DeleteReference,
 	ResolveReferences,
+	StartTransaction,
+	UpdateAppElement,
+	UpdateReference,
+	UploadBlobSubelement,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -59,6 +59,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -66,159 +67,183 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'POST /appelements/d/{did}/w/{wid}',
 		options: [
 			{
-				name: 'createElement',
-				value: 'POST /appelements/d/{did}/w/{wid}',
-				description: 'Create a new application element. - post /appelements/d/{did}/w/{wid}',
+				name: 'abortTransaction',
+				value: 'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+				description: 'Abort a transaction. - delete /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+				action: 'Abort Transaction',
 			},
 			{
 				name: 'bulkCreateElement',
 				value: 'POST /appelements/d/{did}/w/{wid}/bulkcreate',
-				description: 'Call this faster API instead of creating multiple app elements one at a time or in parallel. - post /appelements/d/{did}/w/{wid}/bulkcreate',
-			},
-			{
-				name: 'downloadBlobSubelementWorkspace',
-				value: 'GET /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-				description: 'The downloaded file can be used to retrieve stored subelements. - get /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-			},
-			{
-				name: 'uploadBlobSubelement',
-				value: 'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-				description: 'Request body parameters are multipart fields, so you must use `"Content-Type":"multipart/form-data"` in the request header. - post /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-			},
-			{
-				name: 'deleteBlobSubelement',
-				value: 'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-				description: 'Delete a blob subelement from an app element. - delete /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
-			},
-			{
-				name: 'getElementTransactions',
-				value: 'GET /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
-				description: 'Get a list of all transactions performed on an element. - get /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
-			},
-			{
-				name: 'startTransaction',
-				value: 'POST /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
-				description: 'Creates a microbranch (i.e., a branch for a new microversion). - post /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
-			},
-			{
-				name: 'abortTransaction',
-				value: 'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
-				description: 'Deletes a microbranch (i.e., the branch with the microversion for the transaction). - delete /appelements/d/{did}/w/{wid}/e/{eid}/transactions/{tid}',
+				description: 'Create multiple empty application elements at once. - post /appelements/d/{did}/w/{wid}/bulkcreate',
+				action: 'Bulk Create Element',
 			},
 			{
 				name: 'commitTransactions',
 				value: 'POST /appelements/d/{did}/w/{wid}/transactions',
-				description: 'If successful, all transactions will be committed to a single microversion. If the call raises an error, nothing will be committed. - post /appelements/d/{did}/w/{wid}/transactions',
-			},
-			{
-				name: 'downloadBlobSubelement',
-				value: 'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
-				description: 'Download a blob subelement as a file. - get /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
-			},
-			{
-				name: 'getBlobSubelementIds',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
-				description: 'Get a list of all blob subelement IDs for the specified workspace, version, or microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+				description: 'Merge multiple transactions into one microversion. - post /appelements/d/{did}/w/{wid}/transactions',
+				action: 'Commit Transactions',
 			},
 			{
 				name: 'compareAppElementJson',
 				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
-				description: 'Specify the source workspace/version/microversion in the URL and specify the target workspace/version/microversion in the query parameters. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+				description: 'Compare app element JSON trees between workspaces/versions/microversions in a document. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/compare',
+				action: 'Compare App Element Json',
 			},
 			{
-				name: 'getSubElementContent',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-				description: 'Get a list of all subelement IDs in a specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-			},
-			{
-				name: 'updateAppElement',
-				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-				description: 'Update the content for the specified app element. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
-			},
-			{
-				name: 'getAppElementHistory',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
-				description: 'Get the history of the specified all element. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
-			},
-			{
-				name: 'getSubelementIds',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids',
-				description: 'Get a list of all subelement IDs in a specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids',
-			},
-			{
-				name: 'getJson',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
-				description: 'Get the full JSON tree for the specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
-			},
-			{
-				name: 'getJsonPaths',
-				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/jsonpaths',
-				description: 'Use this endpoint to return the JSON at the specified path instead of returning the entire JSON for the element. This POST endpoint does not write any information. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/jsonpaths',
-			},
-			{
-				name: 'deleteAppElementContentBatch',
-				value: 'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements',
-				description: 'Delete multiple subelements array by document ID, workspace or version or microversion ID, tab ID, and subelement IDs. - delete /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements',
-			},
-			{
-				name: 'deleteAppElementContent',
-				value: 'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
-				description: 'Deletes the content from the specified app element. - delete /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+				name: 'createElement',
+				value: 'POST /appelements/d/{did}/w/{wid}',
+				description: 'Create a new application element. - post /appelements/d/{did}/w/{wid}',
+				action: 'Create Element',
 			},
 			{
 				name: 'createReference',
 				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references',
 				description: 'Creates a reference to an app element. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references',
+				action: 'Create Reference',
 			},
 			{
-				name: 'resolveReference',
-				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-				description: 'For single operations only. Use `resolveReferences` for bulk operations. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				name: 'deleteAppElementContent',
+				value: 'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+				description: 'Deletes the content from the specified app element. - delete /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements/{sid}',
+				action: 'Delete App Element Content',
 			},
 			{
-				name: 'updateReference',
-				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
-				description: 'Update an app element reference. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				name: 'deleteAppElementContentBatch',
+				value: 'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements',
+				description: 'Delete multiple subelements array by document ID, workspace or version or microversion ID, tab ID, and subelement IDs. - delete /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/subelements',
+				action: 'Delete App Element Content Batch',
+			},
+			{
+				name: 'deleteBlobSubelement',
+				value: 'DELETE /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				description: 'Delete a blob subelement from an app element. - delete /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				action: 'Delete Blob Subelement',
 			},
 			{
 				name: 'deleteReference',
 				value: 'DELETE /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
 				description: 'Delete an app element reference. - delete /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				action: 'Delete Reference',
+			},
+			{
+				name: 'downloadBlobSubelement',
+				value: 'GET /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+				description: 'Download a blob subelement from the specified app element. - get /appelements/d/{did}/{vm}/{vmid}/e/{eid}/blob/{bid}',
+				action: 'Download Blob Subelement',
+			},
+			{
+				name: 'downloadBlobSubelementWorkspace',
+				value: 'GET /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				description: "Download the blob element (i.e., a file) stored in an app element in a document's workspace. - get /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}",
+				action: 'Download Blob Subelement Workspace',
+			},
+			{
+				name: 'getAppElementHistory',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+				description: 'Get the history of the specified all element. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/history',
+				action: 'Get App Element History',
+			},
+			{
+				name: 'getBlobSubelementIds',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+				description: 'Get a list of all blob subelement IDs for the specified workspace, version, or microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/blob',
+				action: 'Get Blob Subelement Ids',
+			},
+			{
+				name: 'getElementTransactions',
+				value: 'GET /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+				description: 'Get a list of all transactions performed on an element. - get /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+				action: 'Get Element Transactions',
+			},
+			{
+				name: 'getJson',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+				description: 'Get the full JSON tree for the specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/json',
+				action: 'Get Json',
+			},
+			{
+				name: 'getJsonPaths',
+				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/jsonpaths',
+				description: 'Get the JSON at specified paths for an element. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/jsonpaths',
+				action: 'Get Json Paths',
+			},
+			{
+				name: 'getSubElementContent',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+				description: 'Get a list of all subelement IDs in a specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+				action: 'Get Sub Element Content',
+			},
+			{
+				name: 'getSubelementIds',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids',
+				description: 'Get a list of all subelement IDs in a specified workspace/version/microversion. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content/ids',
+				action: 'Get Subelement Ids',
+			},
+			{
+				name: 'resolveReference',
+				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				description: 'Resolves a single reference to an app element. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				action: 'Resolve Reference',
 			},
 			{
 				name: 'resolveReferences',
 				value: 'GET /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences',
-				description: 'For bulk operations only. Use `resolveReference` for a single operation. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences',
+				description: 'Resolves bulk app element references. - get /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/resolvereferences',
+				action: 'Resolve References',
+			},
+			{
+				name: 'startTransaction',
+				value: 'POST /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+				description: 'Start a transaction - post /appelements/d/{did}/w/{wid}/e/{eid}/transactions',
+				action: 'Start Transaction',
+			},
+			{
+				name: 'updateAppElement',
+				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+				description: 'Update the content for the specified app element. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/content',
+				action: 'Update App Element',
+			},
+			{
+				name: 'updateReference',
+				value: 'POST /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				description: 'Update an app element reference. - post /appelements/d/{did}/{wvm}/{wvmid}/e/{eid}/references/{rid}',
+				action: 'Update Reference',
+			},
+			{
+				name: 'uploadBlobSubelement',
+				value: 'POST /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				description: 'Create a new blob subelement from an uploaded file. - post /appelements/d/{did}/w/{wid}/e/{eid}/blob/{bid}',
+				action: 'Upload Blob Subelement',
 			},
 		],
-		default: 'POST /appelements/d/{did}/w/{wid}',
-		description: 'The operation to perform',
 	},
-	...CreateElement.description,
-	...BulkCreateElement.description,
-	...DownloadBlobSubelementWorkspace.description,
-	...UploadBlobSubelement.description,
-	...DeleteBlobSubelement.description,
-	...GetElementTransactions.description,
-	...StartTransaction.description,
 	...AbortTransaction.description,
+	...BulkCreateElement.description,
 	...CommitTransactions.description,
-	...DownloadBlobSubelement.description,
-	...GetBlobSubelementIds.description,
 	...CompareAppElementJson.description,
-	...GetSubElementContent.description,
-	...UpdateAppElement.description,
+	...CreateElement.description,
+	...CreateReference.description,
+	...DeleteAppElementContent.description,
+	...DeleteAppElementContentBatch.description,
+	...DeleteBlobSubelement.description,
+	...DeleteReference.description,
+	...DownloadBlobSubelement.description,
+	...DownloadBlobSubelementWorkspace.description,
 	...GetAppElementHistory.description,
-	...GetSubelementIds.description,
+	...GetBlobSubelementIds.description,
+	...GetElementTransactions.description,
 	...GetJson.description,
 	...GetJsonPaths.description,
-	...DeleteAppElementContentBatch.description,
-	...DeleteAppElementContent.description,
-	...CreateReference.description,
+	...GetSubElementContent.description,
+	...GetSubelementIds.description,
 	...ResolveReference.description,
-	...UpdateReference.description,
-	...DeleteReference.description,
 	...ResolveReferences.description,
+	...StartTransaction.description,
+	...UpdateAppElement.description,
+	...UpdateReference.description,
+	...UploadBlobSubelement.description,
 ];

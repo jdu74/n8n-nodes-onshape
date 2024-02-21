@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeReleasePackageV1 } from './v1/OnshapeReleasePackageV1node';
 import { OnshapeReleasePackageV2 } from './v2/OnshapeReleasePackageV2node';
-import { OnshapeReleasePackageV3 } from './v3/OnshapeReleasePackageV3node';
+import { OnshapeReleasePackage as OnshapeReleasePackageV3 } from './v3/OnshapeReleasePackagenode';
 
 export class OnshapeReleasePackage extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeReleasePackage extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and update Release Management workflows.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

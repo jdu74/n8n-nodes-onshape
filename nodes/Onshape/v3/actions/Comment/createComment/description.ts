@@ -5,7 +5,7 @@ export const CreateCommentDescription: INodeProperties[] = [
 		displayName: 'JSON Content-Type',
 		name: 'jsonContentType',
 		description: 'JSON Content-Type',
-		type: 'options',
+		type: 'hidden',
 		default: 'application/json;charset=UTF-8; qs=0.09',
 		displayOptions: {
 			show: {
@@ -244,6 +244,32 @@ export const CreateCommentDescription: INodeProperties[] = [
 				default: '',
 			},
 		],
+	},
+	{
+		displayName: 'JSON Object',
+		name: 'jsonObject2-json(body)',
+		description: 'jsonObject - json',
+		type: 'json',
+		default: '',
+		typeOptions: {
+			alwaysOpenEditWindow: true,
+		},
+		displayOptions: {
+			show: {
+				resource: [
+					'Comment',
+				],
+				operation: [
+					'POST /comments',
+				],
+				jsonParameters: [
+					true,
+				],
+				jsonContentType: [
+					'application/json;charset=UTF-8; qs=0.09',
+				],
+			},
+		},
 	},
 	{
 		displayName: 'JSON Object',

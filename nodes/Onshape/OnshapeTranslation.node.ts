@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeTranslationV1 } from './v1/OnshapeTranslationV1node';
 import { OnshapeTranslationV2 } from './v2/OnshapeTranslationV2node';
-import { OnshapeTranslationV3 } from './v3/OnshapeTranslationV3node';
+import { OnshapeTranslation as OnshapeTranslationV3 } from './v3/OnshapeTranslationnode';
 
 export class OnshapeTranslation extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeTranslation extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Import and export Onshape surfaces, parts, Part Studios, Assemblies, and subassemblies to/from other file formats (STL, PARASOLID, SOLIDWORKS, etc).',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

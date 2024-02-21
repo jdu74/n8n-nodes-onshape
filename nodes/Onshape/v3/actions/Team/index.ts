@@ -1,13 +1,13 @@
 import * as Find from './find';
-import * as GetTeam from './getTeam';
 import * as GetMembers from './getMembers';
+import * as GetTeam from './getTeam';
 
 import { INodeProperties } from 'n8n-workflow';
 
 export {
 	Find,
-	GetTeam,
 	GetMembers,
+	GetTeam,
 };
 
 export const descriptions: INodeProperties[] = [
@@ -15,6 +15,7 @@ export const descriptions: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
+		noDataExpression: true,
 		displayOptions: {
 			show: {
 				resource: [
@@ -22,27 +23,29 @@ export const descriptions: INodeProperties[] = [
 				],
 			},
 		},
+		default: 'GET /teams',
 		options: [
 			{
 				name: 'find',
 				value: 'GET /teams',
 				description: 'Get a list of all teams the current user belongs to. - get /teams',
+				action: 'Find',
+			},
+			{
+				name: 'getMembers',
+				value: 'GET /teams/{tid}/members',
+				description: "Get a list of a team's members. - get /teams/{tid}/members",
+				action: 'Get Members',
 			},
 			{
 				name: 'getTeam',
 				value: 'GET /teams/{tid}',
 				description: 'Get team information by team ID. - get /teams/{tid}',
-			},
-			{
-				name: 'getMembers',
-				value: 'GET /teams/{tid}/members',
-				description: 'Returns a maximum of 20 per page. - get /teams/{tid}/members',
+				action: 'Get Team',
 			},
 		],
-		default: 'GET /teams',
-		description: 'The operation to perform',
 	},
 	...Find.description,
-	...GetTeam.description,
 	...GetMembers.description,
+	...GetTeam.description,
 ];

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapePartStudioV1 } from './v1/OnshapePartStudioV1node';
 import { OnshapePartStudioV2 } from './v2/OnshapePartStudioV2node';
-import { OnshapePartStudioV3 } from './v3/OnshapePartStudioV3node';
+import { OnshapePartStudio as OnshapePartStudioV3 } from './v3/OnshapePartStudionode';
 
 export class OnshapePartStudio extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapePartStudio extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access and modify Part Studios.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

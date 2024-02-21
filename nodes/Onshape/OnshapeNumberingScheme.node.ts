@@ -1,6 +1,6 @@
 import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 'n8n-workflow';
 
-import { OnshapeNumberingSchemeV3 } from './v3/OnshapeNumberingSchemeV3node';
+import { OnshapeNumberingScheme as OnshapeNumberingSchemeV3 } from './v3/OnshapeNumberingSchemenode';
 
 export class OnshapeNumberingScheme extends VersionedNodeType {
 	constructor() {
@@ -10,7 +10,7 @@ export class OnshapeNumberingScheme extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Manage the set of valid Part numbers.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

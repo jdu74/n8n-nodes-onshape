@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapeExportRuleV1 } from './v1/OnshapeExportRuleV1node';
 import { OnshapeExportRuleV2 } from './v2/OnshapeExportRuleV2node';
-import { OnshapeExportRuleV3 } from './v3/OnshapeExportRuleV3node';
+import { OnshapeExportRule as OnshapeExportRuleV3 } from './v3/OnshapeExportRulenode';
 
 export class OnshapeExportRule extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapeExportRule extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access valid export rules.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 

@@ -2,7 +2,7 @@ import { INodeTypeBaseDescription, IVersionedNodeType, VersionedNodeType } from 
 
 import { OnshapePublicationV1 } from './v1/OnshapePublicationV1node';
 import { OnshapePublicationV2 } from './v2/OnshapePublicationV2node';
-import { OnshapePublicationV3 } from './v3/OnshapePublicationV3node';
+import { OnshapePublication as OnshapePublicationV3 } from './v3/OnshapePublicationnode';
 
 export class OnshapePublication extends VersionedNodeType {
 	constructor() {
@@ -12,7 +12,7 @@ export class OnshapePublication extends VersionedNodeType {
 			icon: 'file:onshape.svg',
 			group: ['output'],
 			subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-			description: 'Access publication information.',
+			description: 'undefined',
 			defaultVersion: 3
 		};
 
